@@ -1,54 +1,40 @@
 @if(count($newsR02) > 0)
-<div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-<div class="newspaper-4">
-    <div class="heading mt-4">
-        <a title="المزيد في سياسة" href="{{Common::mobileLink()}}politic" style="text-decoration: none;
-        color: black;"><span style="padding:10px 15px;background: #f5f8f9;    font-size: 20px;
-            font-weight: 700;">سياسة</span></a><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-        viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-        <rect y="25" width="10" height="25" fill="#2E4866" />
-        <rect width="10" height="25" fill="#C2111E" />
-    </svg>
-    </div>
-    <!-- horizantal line -->
-    <hr class="red-line">
-    <div class="row">
-        
-        <?php $article = $newsR02[0];unset($newsR02[0]); ?>
-        
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
-            <div class="main-box">
-                @if($article->image)
-                <a href="{{Common::article_link($article)}}">
-                <img class="img-fluid" src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" alt="">
-            </a>
-            @endif
-                <div class="main-box-text">
-                    <p><a href="{{Common::article_link($article)}}">{{$article->title}}</a></p>
+<div class="heading mt-4">
+            <span>سياسة</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
+            viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
+            <rect y="25" width="10" height="25" fill="#2E4866" />
+            <rect width="10" height="25" fill="#C2111E" />
+        </svg>
+</div>
+        <!-- horizantal line -->
+        <hr class="red-line">
+        <div class="row">
+        <?php foreach($newsR02 as $key=>$article) { ?>
+            @if($key < 3)
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
+                <div class="main-box">
+                    <a href="{{Common::article_link($article)}}">
+                        <img class="img-fluid" src="{{ $article->image ? $fileRepo->getLarge($article->image, true, $article->md5_file) : 'admin/assets/img/no-image.png' }}"  alt="{{$article->image_caption?$article->image_caption:$article->title}}" />
+                    </a>
+                    <!-- <img class="img-fluid" src="./images/newspaper-01.png" alt=""> -->
+                    <div class="main-box-text">
+                        <p><a style="color:black; text-decoration:none;" href="{{Common::article_link($article)}}">{{$article->title}}</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <?php foreach($newsR02 as $index=>$article) { ?>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
-            <div class="main-box">
-                @if($article->image)
-                <a href="{{Common::article_link($article)}}">
-                <img class="img-fluid" src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" alt="">
-            </a>
-            @endif
-                <div class="main-box-text">
-                    <p><a href="{{Common::article_link($article)}}">{{$article->title}}</a></p>
+            @else
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3">
+                <div class="main-div d-flex">
+                    <div>
+                        <p class="pe-2"><a style="color:black; text-decoration:none;" href="{{Common::article_link($article)}}">{{$article->title}}</a><p>
+                    </div>
+                    <div>
+                        <img class="img-fluid" src="{{ $article->image ? $fileRepo->getLarge($article->image, true, $article->md5_file) : 'admin/assets/img/no-image.png' }}"  alt="{{$article->image_caption?$article->image_caption:$article->title}}" />
+                    </div>
                 </div>
             </div>
+            @endif
+            <?php } ?>
+
         </div>
-        <?php } ?>
-    </div>
-
-
-</div>
-</div>
-<div class="col-md-2"></div>
-</div>
 @endif
