@@ -15,7 +15,21 @@
     <!-- horizantal line -->
     <hr class="red-line">
     <div class="row">
+        
         <?php $article = $newsR02[0];unset($newsR02[0]); ?>
+        
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
+            <div class="main-box">
+                @if($article->image)
+                <a href="{{Common::article_link($article)}}">
+                <img class="img-fluid" src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" alt="">
+            </a>
+            @endif
+                <div class="main-box-text">
+                    <p><a href="{{Common::article_link($article)}}">{{$article->title}}</a></p>
+                </div>
+            </div>
+        </div>
         <?php foreach($newsR02 as $index=>$article) { ?>
         <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
             <div class="main-box">

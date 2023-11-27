@@ -19,11 +19,15 @@
           
                 <div class="news-main-box d-flex">
                     <div>
-                        <p>إقليم الإندلس.. الاحتفاء بالمغرب وتنوعه الثقافي خلال شهر نونبر</p>
+                        <p><a href="{{Common::article_link($article)}}">{{$article->title}}</a></p>
                     </div>
+                    @if($article->image)
                     <div>
-                        <img src="./images/news-radius-1.png" alt="">
+                        <a href="{{Common::article_link($article)}}">
+                            <img src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" width="113" height="89" alt="{{$article->image_caption?$article->image_caption:$article->title}}" /><br />
+                        </a>
                     </div>
+                    @endif
                 </div>
             </div>
             <?php foreach($newsR03 as $index=>$article) { ?>
@@ -34,7 +38,7 @@
                     </div>
                     @if($article->image)
                     <div href="{{Common::article_link($article)}}">
-                       <a ><img width="113px" height="89px" src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" alt=""></a>
+                       <a ><img width="113" height="89" src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" alt=""></a>
                     </div>
                     @endif
                 </div>
