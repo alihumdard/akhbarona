@@ -1,3 +1,4 @@
+<h1>Section 2</h1>
 <div id="headline">
     <div id="rotating_headlines" class="box_headline">
         @foreach($fancyHeadlines as $index=>$article)

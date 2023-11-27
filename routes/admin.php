@@ -1,17 +1,17 @@
 <?php
-Route::any('uploadmedia', ['as' => 'uploadmedia', 'uses' => 'MediaController@uploadmedia']);
-Route::any('pickvideo', ['as' => 'pickvideo', 'uses' => 'MediaController@pickvideo']);
-Route::get('login', ['as' => 'adminLogin', 'uses' => 'Auth\AuthController@getLogin']);
-Route::post('login', ['as' => 'postAdminLogin', 'uses' => 'Auth\AuthController@postLogin']);
+Route::any('uploadmedia', ['as'=>'uploadmedia','uses'=>'MediaController@uploadmedia']);
+Route::any('pickvideo', ['as'=>'pickvideo','uses'=>'MediaController@pickvideo']);
+Route::get('login', ['as'=>'adminLogin','uses'=>'Auth\AuthController@getLogin']);
+Route::post('login', ['as'=>'postAdminLogin','uses'=>'Auth\AuthController@postLogin']);
 Route::get('logout', [
     'as' => 'auth.logout',
     'uses' => 'Auth\AuthController@getLogout'
 ]);
 // Register password reset routes only if it is enabled inside website settings.
-Route::get('password/remind', ['as' => 'forgotPassword', 'uses' => 'Auth\PasswordController@forgotPassword']);
-Route::post('password/remind', ['as' => 'sendPassword', 'uses' => 'Auth\PasswordController@sendPasswordReminder']);
-Route::get('password/reset/{token}', ['as' => 'resetPassword', 'uses' => 'Auth\PasswordController@getReset']);
-Route::post('password/reset', ['as' => 'postResetPassword', 'uses' => 'Auth\PasswordController@postReset']);
+Route::get('password/remind', ['as'=>'forgotPassword','uses'=>'Auth\PasswordController@forgotPassword']);
+Route::post('password/remind', ['as'=>'sendPassword','uses'=>'Auth\PasswordController@sendPasswordReminder']);
+Route::get('password/reset/{token}', ['as'=>'resetPassword','uses'=>'Auth\PasswordController@getReset']);
+Route::post('password/reset', ['as'=>'postResetPassword','uses'=>'Auth\PasswordController@postReset']);
 
 Route::group(['middleware' => 'auth'], function () {
 
@@ -314,8 +314,7 @@ Route::group(['middleware' => 'auth'], function () {
         ->name('ckfinder_browser');
     // user filter
     Route::delete(
-        'user/delete-filter/{userFilter}',
-        [
+        'user/delete-filter/{userFilter}', [
             'as' => 'user.delFilter',
             'uses' => 'UserFilterController@delFilter'
         ]

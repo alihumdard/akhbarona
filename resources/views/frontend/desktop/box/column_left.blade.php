@@ -1,3 +1,4 @@
+<h1>Section 4</h1>
 @include("frontend.desktop.adv.left_banner_1")
 @include("frontend.desktop.adv.left_banner_home_2")
 @include("frontend.desktop.box.news_l1",$columnLeft)

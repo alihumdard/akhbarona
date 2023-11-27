@@ -1,0 +1,1 @@
+<div><a href="<?php echo e(Config::get("app.url")); ?>publish.html" target="_self"><img src="<?php echo e(Config::get("app.cdn_url")); ?>files/banners/300x100_618624471.jpg" border="0" width="300" height="90"/></a> </div><?php /**PATH C:\xampp\htdocs\akhabarona\resources\views/frontend/desktop/adv/left_banner_article_2.blade.php ENDPATH**/ ?>

@@ -12,9 +12,6 @@
 @section('content')
 
     @include('admin.partials.messages')
-
-
-
     <div class="card">
         <div class="card-body" style="padding: 5px 0px !important;">
             <div class="row">

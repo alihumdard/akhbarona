@@ -1,3 +1,4 @@
+
 @extends("frontend.desktop.layouts.homepage")
 @section("page-title"){{$setting["VIVVO_WEBSITE_TITLE"]}}@stop
 @section("page-des"){{$setting["VIVVO_GENERAL_META_DESCRIPTION"]}}@stop
@@ -25,6 +26,7 @@
 @stop
 @section("content")
 <div id="container">
+    {{--  ************************************************************Content section start from here******************************************************************  --}}
     @include("frontend.desktop.adv.ad_tabs_home")
     @include("frontend.desktop.box.ticker_typer_homepage",[$arrTicker])
     <div id="content">
@@ -47,6 +49,7 @@
             </div>
         </div>
         <div class="clearFix"><!--asd--></div>
+        {{--  ************************************************************Content section end here******************************************************************  --}}
     </div>
 
 @stop

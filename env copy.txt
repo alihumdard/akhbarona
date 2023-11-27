@@ -1,0 +1,59 @@
+APP_NAME=Akhbarona
+APP_ENV=local
+APP_KEY=base64:4a5qhpTiDmlzzZIHEAlT8/bbFiKX0wxySIogvD7obrc=
+APP_DEBUG=true
+; APP_URL=http://akhbarona.localhost/public/
+APP_URL=http://127.0.0.1/public/
+; SITE_CDN_URL=http://akhbarona.localhost/public/
+SITE_CDN_URL=http://127.0.0.1/public/
+TIMEZONE=America/Chicago
+LOG_CHANNEL=daily
+
+DB_CONNECTION=mysql
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=astad_akhbarona
+DB_USERNAME=root
+DB_PASSWORD=
+
+BROADCAST_DRIVER=log
+CACHE_DRIVER=none
+QUEUE_CONNECTION=sync
+SESSION_DRIVER=memcached
+SESSION_LIFETIME=120
+SESSION_STORE=memcached
+
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+FTP_HOST = 'https://noeman.net/'
+FTP_SERVER='ftp.noeman.net'
+FTP_USER  = 'dev@noeman.net'
+FTP_PASSWORD= 'Logic@123##$$'
+VIDEO_FOLDER= videos
+VIDEO_FOLDER_PATH = public_html/videos/ 
+
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=null
+MAIL_FROM_NAME="${APP_NAME}"
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+PUSHER_APP_CLUSTER=mt1
+
+MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+

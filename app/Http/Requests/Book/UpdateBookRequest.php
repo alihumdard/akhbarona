@@ -6,7 +6,6 @@ use App\Http\Requests\Request;
 
 class UpdateBookRequest extends Request
 {
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,3 +23,4 @@ class UpdateBookRequest extends Request
         return $this->route('book');
     }
 }
+

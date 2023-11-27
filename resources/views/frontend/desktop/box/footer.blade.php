@@ -4,68 +4,122 @@ $total = count($menus);
 $setting = \App\Models\Config::getAllValue();
 $mainUrl = Common::mobileLink();
 ?>
-<div class="footer">
-    <div id="footer_columns">
-    <div id="footer_column_left">
-        <div class="footer_logo">
-            <a href="{{$mainUrl}}"><img src="{{Config::get("app.cdn_url")}}themes/akhbarona210/img/footer_logo.png" alt="{{$setting["VIVVO_WEBSITE_TITLE"]}}" title="{{$setting["VIVVO_WEBSITE_TITLE"]}}" /></a>
-            <div class="static_footer_logo">جميع الحقوق محفوظة</div>
-            <div class="static_footer_logo">أخبارنا المغربية © {{date("Y")}} - 2011</div>
-        </div>
-    </div>
-    <div id="footer_column_center">
-        <div class="footer_center">
-            <ul>
-
-                @if($total)
-                    @foreach($menus as $menu)
-                        <li>
-                            <a href="{{Common::link("frontend.category.index",[$menu->sefriendly,1])}}">
-                                {{$menu->category_name}}
-                            </a>
-                        </li>
-                    @endforeach
-                @endif
-                &nbsp;<a href="{{$mainUrl}}last">الأخيرة</a> |
-                <a href="{{$mainUrl}}education">مستجدات التعليم</a> |
-                <a href="{{$mainUrl}}national">أخبار وطنية</a> |
-                <a href="{{$mainUrl}}writers">أقلام حرة</a> |
-                <a href="{{$mainUrl}}society">حوادث وقضايا</a> |
-                <a href="{{$mainUrl}}woman">ركن المرأة</a> |
-                <a href="{{$mainUrl}}problems">مشاكل وحلول</a> |
-                <a href="{{$mainUrl}}videos">شاشة أخبارنا</a>
-            </ul>
-            <div class="static_footer_center">
-                <a href="javascript:bookmarksite(document.URL);">{{Config::get("site.lang.LNG_ADD_FAVORITES")}}</a>
-                @if(\App\Helper\Common::isMobile())
-                    | <a href="{{$mainUrl}}?is_desktop=0">نسخة الموبايل</a>
-                @endif
-                    | <a href="{{$mainUrl}}feed/index.rss">Rss</a> / <a href="{{$mainUrl}}feed/index.atom">Atom</a>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+    <div class="newspaper-sec">
+    <footer class="footer-sec mt-3">
+        <div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                    <h4>أخبارنا</h4>
+                    <div dir="rtl" style="border-right: 1px solid #5B728D;">
+    
+                        <ul class="footer-links">
+                            <li>
+                                <a href="{{$mainUrl}}submit.html">للنشر في الموقع</a>
+                            </li>
+                            <li>
+                                <a href="{{$mainUrl}}team.html">فريق العمل</a>
+                            </li>
+                            <li>
+                                <a href="{{$mainUrl}}conditions.html">شروط استخدام الموقع</a>
+                            </li>
+                            <li>
+                                <a href="{{$mainUrl}}contact/">إتصل بنا</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <div>
+                        <h4>الأقسام</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div dir="rtl">
+                                    <ul class="footer-links">
+                                        @if($total)
+                                            @foreach($menus->take(3) as $menu)
+                                                <li>
+                                                    <a href="{{Common::link("frontend.category.index",[$menu->sefriendly,1])}}">
+                                                        {{$menu->category_name}}
+                                                    </a>
+                                                </li>
+                                            @endforeach
+                                        @endif
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div dir="rtl">
+                                    <ul class="footer-links">
+                                        @foreach($menus->slice(3, 4) as $menu)
+                                            <li>
+                                                <a href="{{Common::link("frontend.category.index",[$menu->sefriendly,1])}}">
+                                                    {{$menu->category_name}}
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div dir="rtl" style="border-right: 1px solid #5B728D;">
+                                    <ul class="footer-links">
+                                        @foreach($menus->slice(7, 4) as $menu)
+                                            <li>
+                                                <a href="{{Common::link("frontend.category.index",[$menu->sefriendly,1])}}">
+                                                    {{$menu->category_name}}
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                    <div class="footer-social-links">
+                        <a href="{{$mainUrl}}"><img class="img-fluid" src="{{Config::get("app.cdn_url")}}themes/akhbarona210/img/footer_logo.png" alt="{{$setting["VIVVO_WEBSITE_TITLE"]}}" title="{{$setting["VIVVO_WEBSITE_TITLE"]}}" /></a>
+                        <h3 class="">تابعنا:</h3>
+                        <div class="">
+                            <a href="#"><img src="./images/top-facebook.png" alt=""></a>
+                            <a href="#"><img src="./images/top-instagram.png" alt=""></a>
+                            <a href="#"><img src="./images/top-twitter.png" alt=""></a>
+                            <a href="#"><img src="./images/top-youbute.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="contact-btn mt-3">
+                        <h5>حمل تطيق أخبارنا:</h5>
+                        <a href="#">
+                            <img class="img-fluid" src="./images/playstore.png" alt="">
+                        </a>
+                        &nbsp;
+                        <a href="#">
+                            <img class="img-fluid" src="./images/appstore.png" alt="">
+                        </a>
+                        &nbsp;
+                        <a href="#">
+                            <img class="img-fluid" src="./images/appgallery.png" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="footer_column_right">
-        <div class="footer_left">
-            <div class="static_footer_left"><a href="{{$mainUrl}}submit.html">للنشر في الموقع</a></div>
-            <div class="static_footer_left"><a href="{{$mainUrl}}team.html">فريق العمل</a></div>
-            <div class="static_footer_left"><a href="{{$mainUrl}}conditions.html">شروط استخدام الموقع</a></div>
-            <div class="static_footer_left"><a href="{{$mainUrl}}contact/">إتصل بنا</a></div>
+        <div class="copyright text-center mt-3">
+            <p class="mb-0">جميع الحقوق محفوظة أخبارنا المغربية © {{date("Y")}} - 2011</p>
         </div>
+    </footer>
     </div>
-    @if(Config::get("site.VIVVO_ANALYTICS_TRACKER_ID"))
-        <script type="text/javascript">(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'https://www')+'.google-analytics.com/ga.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(ga);})();</script>
-    @endif
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-1600248-7']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
     </div>
+    <div class="col-md-2"></div>
 </div>
 <script>
     function bookmarksite(url){

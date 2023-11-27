@@ -1,4 +1,5 @@
-﻿<?php $cdnUrl = Config::get('app.cdn_url').'themes/mobile/';$appUrl = Config::get("app.url")?>
+﻿
+<?php $cdnUrl = Config::get('app.cdn_url').'themes/mobile/';$appUrl = Config::get("app.url")?>
 
 <div class="inner cover">
 <div class="header-menu">

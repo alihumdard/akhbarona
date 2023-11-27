@@ -19,3 +19,4 @@ class Registration
         return $next($request);
     }
 }
+
