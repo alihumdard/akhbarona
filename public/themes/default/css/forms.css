@@ -1,0 +1,107 @@
+form {padding:0px; margin:0px;}
+
+*:focus {outline:none;}
+
+input, select, textarea {padding:3px;}
+
+textarea {font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+
+textarea:focus, textarea.default_fields:focus {background:#fffdd1; border:1px solid #7dbef1; -moz-box-shadow:0 0 5px #7dbef1; -webkit-box-shadow:0 0 5px #7dbef1;}
+
+textarea.default_fields {width:250px; height:150px; border:1px solid #a7acb2;}
+
+.form_line {
+	margin-bottom:6px;
+	padding-bottom:6px;
+	width:100%;
+	overflow:hidden; /* if used, needs to be hidden because of Opera */
+}
+
+*:first-child+html .form_line {margin-bottom:0px; padding-bottom:6px;}
+
+input.text {color:#666;}
+
+input.text:focus {background:#fffdd1; border:1px solid #7dbef1; -moz-box-shadow:0 0 5px #7dbef1; -webkit-box-shadow:0 0 5px #7dbef1;}
+
+input.default_fields, select.default_fields {width:250px; border:1px solid #a7acb2;}
+
+input.button, button { 
+	border:1px solid #a00000;
+	padding:4px 6px 3px;
+	background:#a80000 url(../img/button_bg.gif) top repeat-x;
+	color:#fff;
+	text-shadow:0px 1px 0px #666;
+	overflow:visible;
+}
+
+input.button:hover, button:hover {background:#a00000;}
+
+.formElement p {margin-top:0;}
+
+/***************** Box forms *******************/
+#dynamic_box_right .form_line div.submit {text-align:right; line-height:20px;}
+
+#dynamic_box_right .form_line div.submit a {float:left; padding-top:3px;}
+
+/*************** CONTENT FORMS *******************************************************************************************************************/
+/******************************************************************************************************************************************************/
+
+#dynamic_box_center div.form_line label {
+	text-align:right;
+	padding:3px 0px 3px 3px;
+	display:block; 
+	float:left;
+	width:30%;
+	font-size:12px;
+	color:#666;
+}
+
+#dynamic_box_center div.formElement {float:left; margin-left:6px; display:inline; z-index:auto;}
+
+#dynamic_box_center div.formElement label {
+	padding:0px;
+	width:auto;
+	text-align:left;
+	float:none;
+	display:block;
+	font-weight:normal;
+}
+
+/***** Comments form *****/
+textarea.add_comment {width:588px; height:150px; padding:5px; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+
+#comment_form_holder div.form_line label {text-align:left; width:22%;}
+
+#comment_form_holder div.formElement {margin-left:0px;}
+
+input.tag_link_href, 
+input.tag_link_content {width:170px; margin-right:10px;}
+
+/***** Email to a friend *****/
+input.email_article {width:278px;}
+
+textarea.email_article {width:278px;}  
+
+/***************** User registration form (ajax validations) *******************/
+
+.tos_label {color:#666;}
+
+.tos_box {border:1px solid #a7acb2; padding:6px; margin-top:6px; width:350px; height:200px; overflow:scroll;}
+
+.tos_box pre {padding:0; margin:0; font-family:Arial, Helvetica, sans-serif;}
+
+#error_message {background:#fcd6d4; margin-bottom:6px;}
+
+#error_message p {margin:2px 0px; padding:4px; color:#555;}
+
+.validation {
+	padding:2px 0px 2px 18px; 
+	font-size:11px; 
+	font-weight:bold;
+}
+
+.not_valid {background:url(../img/validation_not_valid.gif) 0 0 no-repeat; color:#f3735d;}
+
+.checking {background:url(../img/validation_info.gif) 0 0 no-repeat; color:#6b99c5;}
+
+.valid {background:url(../img/validation_valid.gif) 0 0 no-repeat; color:#80ca73;}

@@ -1,0 +1,59 @@
+.box_caric {margin-bottom:5px;}
+
+.box_white_caric {padding:5px 5px 5px 5px; border:1px solid #ccc;}
+
+#article_category_stripe div.scroller { 
+	width: 100%; 
+	overflow: hidden;
+	float: right;
+}
+	
+#article_category_stripe div.scroller div.section {
+	width:100%;
+	overflow:hidden;
+	float:none;
+}
+
+#article_category_stripe div.scroller div.content {height: auto;}
+
+#article_category_stripe div#section2 {
+	background:#666666;
+	color:#ffffff;
+}
+
+.control_arrow {float:left; padding-bottom: 6px;}
+
+.arrow_bottom {margin-top:595px;}
+
+#article_category_stripe div.stripe_summary_holder {
+	overflow:hidden; 
+	margin-bottom:5px;
+}
+
+#article_category_stripe div.stripe_summary_holder div.summary {font-size:11px;}
+
+#article_category_stripe div.stripe_summary_holder a {color:#CA0405; font-size:11px; font-weight:bold;}
+
+#article_category_stripe div.image img {border: 5px solid #cccccc;}
+
+#article_category_stripe div.image  img:hover {border: 5px solid #cc3399;}
+
+h2.article_title_caric
+{
+    background-color: #dedede;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    margin-bottom: 11px;
+    font-size: 16px;
+	text-align: center;
+    font-weight: bold;
+	line-height: 20px;
+}
+h2.article_title_caric a
+{
+    color:#ca0002;
+}
+h2.article_title_caric a:hover
+{
+    color:#f4ab0e;
+}

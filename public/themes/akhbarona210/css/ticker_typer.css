@@ -1,0 +1,21 @@
+ul.ticker {
+	overflow:hidden;
+	width:970px;
+	height:32px;
+	line-height:32px;
+	background:#c51320 url(../img/ticker_typer_bg.png) left bottom repeat-x;
+	margin-bottom:5px;
+}
+
+ul.ticker ul, ul.ticker strong {float:right;}
+
+#content_sw ul.ticker li a {background:none; font-weight:normal; display:inline; padding:0 5px 0 5px; font-size: 16px; font-weight:bold; color:#fff;}
+
+ul.ticker strong {margin-right:5px;}
+
+#content_sw ul.ticker a.a_category {
+	text-transform:uppercase; 
+	border-left: 1px solid #f8ae58;
+	color:#000;
+	font-weight:bold;
+}

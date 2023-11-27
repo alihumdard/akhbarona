@@ -1,0 +1,3 @@
+document.observe("dom:loaded", function() {
+	$$('body')[0].insert({top: '<div id="admin_closed_site" style="padding:8px;text-align:center;background:#FCD6D4;border-bottom:1px solid #FB9A97;color:#555555;font-weight:bold;"><img src="themes/default/img/alert.gif" style="margin-bottom:-3px;" /> The website is currently closed for public. Please go to Administration >> Preferences to make it viewable again.</div>'});
+});

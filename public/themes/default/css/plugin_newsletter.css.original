@@ -1,0 +1,8 @@
+
+#box_newsletter {}
+
+#box_newsletter div.button_holder { height: 20px; padding: 4px;}
+
+#box_newsletter div.button_holder input { float: right;}
+
+#newsletter_form_holder { padding: 6px;}

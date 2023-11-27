@@ -1,0 +1,14 @@
+.box_headline {padding: 0.5em; border: 0.1em solid #BEBEBE; background-color: #eee;}
+
+.box_headline h1 { padding: 0.1em 0;}
+
+.headline_article_holder { width: 100%; overflow:hidden;}
+
+.headline_image { 
+	float: left;
+	margin-right: 0.3em;
+}
+
+.headline_body {padding: 0.5em;}
+
+.headline_link { text-align: right; font-weight: bold;}

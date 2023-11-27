@@ -1,0 +1,35 @@
+[09-Nov-2023 02:00:12 America/Chicago] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/buonremo/docker.tspsolution.com/vendor/composer/ClassLoader.php(444): include('/home/buonremo/...')
+#2 /home/buonremo/docker.tspsolution.com/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile()
+#3 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass()
+#4 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect()
+#5 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config()
+#6 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap()
+#8 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#11 /home/buonremo/docker.tspsolution.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle()
+#12 {main} in /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[09-Nov-2023 02:06:01 America/Chicago] PHP Fatal error:  During inheritance of ArrayAccess: Uncaught ErrorException: Return type of Illuminate\Support\Collection::offsetExists($key) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Support/Collection.php:1277
+Stack trace:
+#0 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Support/Collection.php(11): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError()
+#1 /home/buonremo/docker.tspsolution.com/vendor/composer/ClassLoader.php(444): include('/home/buonremo/...')
+#2 /home/buonremo/docker.tspsolution.com/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile()
+#3 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Support/helpers.php(109): Composer\Autoload\ClassLoader->loadClass()
+#4 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(89): collect()
+#5 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/PackageManifest.php(78): Illuminate\Foundation\PackageManifest->config()
+#6 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterFacades.php(26): Illuminate\Foundation\PackageManifest->aliases()
+#7 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\Foundation\Bootstrap\RegisterFacades->bootstrap()
+#8 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(156): Illuminate\Foundation\Application->bootstrapWith()
+#9 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(140): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter()
+#11 /home/buonremo/docker.tspsolution.com/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle()
+#12 {main} in /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 11
+[09-Nov-2023 02:18:36 America/Chicago] PHP Fatal error:  Interface 'JsonSerializable' not found in /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Support/Enumerable.php on line 11
+[09-Nov-2023 08:19:17 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.2.5". You are running 7.1.33. in /home/buonremo/docker.tspsolution.com/vendor/composer/platform_check.php on line 24
+[09-Nov-2023 02:19:51 America/Chicago] PHP Fatal error:  Interface 'JsonSerializable' not found in /home/buonremo/docker.tspsolution.com/vendor/laravel/framework/src/Illuminate/Support/Enumerable.php on line 11
+[09-Nov-2023 08:27:11 UTC] PHP Warning:  require(/home/buonremo/docker.tspsolution.com/vendor/composer/../laravel/framework/src/Illuminate/Foundation/helpers.php): failed to open stream: No such file or directory in /home/buonremo/docker.tspsolution.com/vendor/composer/autoload_real.php on line 71
+[09-Nov-2023 08:27:11 UTC] PHP Fatal error:  require(): Failed opening required '/home/buonremo/docker.tspsolution.com/vendor/composer/../laravel/framework/src/Illuminate/Foundation/helpers.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/buonremo/docker.tspsolution.com/vendor/composer/autoload_real.php on line 71

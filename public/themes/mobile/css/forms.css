@@ -1,0 +1,72 @@
+/* Styles for forms */
+
+form { /******* Used for all forms in Vivvo *********/
+	padding: 0px;
+	margin: 0px;
+}
+
+input, select, textarea { }
+
+select  {}
+
+textarea  {border: 1px solid #7F9DB9;}
+
+.form_line {
+	margin-bottom: 6px;
+	padding-bottom: 6px;
+	width: 100%;
+	overflow: hidden; /* if used, needs to be hidden because of Opera */
+}
+
+*:first-child+html .form_line {margin-bottom: 0px; padding-bottom: 6px;}
+
+
+input.text {border: 1px solid #7F9DB9;}
+
+select.options { border: 1px solid #7F9DB9;}
+
+
+
+input.submit_button, button { 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+}
+
+.formElement p { margin-top: 0;}
+
+/***************** Box forms *******************/
+
+#dynamic_box_right .form_line label {}
+
+#dynamic_box_right .form_line div.submit { text-align: right;}
+
+#dynamic_box_right .form_line div.submit a { float: left; padding-top: 3px; color: #C90404;}
+
+/*************** CONTENT FORMS *******************************************************************************************************************/
+/******************************************************************************************************************************************************/
+
+#dynamic_box_center div.form_line label {
+	text-align: right;
+	padding: 3px 0px 3px 3px;
+	display: block; 
+	float: right;
+	width: 25%;
+	font-size: 14px;
+	color: #666666;
+}
+
+#dynamic_box_center div.formElement {float: right; margin-right: 6px; display: inline; z-index: auto;}
+
+#dynamic_box_center div.formElement label {
+	padding: 0px;
+	width: auto;
+	text-align: right;
+	float: none;
+	display: block;
+	font-weight: normal;
+}
+
+
+
+
+

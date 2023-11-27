@@ -1,0 +1,37 @@
+.ticker_summary_sw h3 {font-size: 15px;}
+
+.ticker_summary_sw div.summary { font-size: 12px; height: 60px; overflow: hidden;}
+
+.ticker_summary_sw a {color: #000;}
+
+.ticker_summary_sw span.ticker_category {color: #cccccc;}
+
+.ticker_summary_sw span.ticker_category a {color: #000000;}
+
+.ticker_summary_sw .scroller {
+	height:auto; 
+}
+
+.ticker_summary_sw .section {
+	height:70px;
+	width: auto;
+	float: none;
+	padding: 6px 4px 6px 0px;
+	border-bottom: 1px solid #BEBEBE;
+}
+
+.ticker_summary_sw .row_1 {background-color: #F1F1F1;}
+
+.ticker_summary_sw img {border: 3px solid #ccc;}
+
+.story_stamp_sw { font-size: 14px; padding-top: 5px; color: #000; font-weight: bold;}
+
+.story_stamp_sw a { color: #812c8e }
+
+.story_stamp_sw a:hover { color: #fc0606 }
+
+.story_author_sw
+{
+    font-weight: bold;
+    color: #fc0606;
+}

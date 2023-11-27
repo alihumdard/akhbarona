@@ -1,0 +1,59 @@
+
+.box_stripes { 
+	width: 100%; 
+	overflow: hidden;
+	margin: 0px 6px;
+	width: 978px;
+	border-bottom: 3px solid #CCCCCC; 
+}
+
+
+.controls { 
+	padding: 6px; 
+	background-color: #eeeeee; 
+	border-bottom: 1px solid  #BEBEBE; 
+	margin-top: 12px;
+}
+
+.controls a { color: #A5A5A5;}
+
+.controls img { vertical-align: middle;}
+
+.controls span.section_next { float: right;}
+
+.scroller {
+	height:175px;
+	width:100%;
+	overflow:hidden;
+}
+
+.section {
+	width:978px;
+	height:164px;
+	overflow:hidden;
+	float:left;
+	padding-left: 4px;
+	padding-top: 6px;
+	
+}
+
+.box_stripes div.image { 
+	float: none; 
+	border: 1px solid #CCCCCC;
+	text-align: center;
+	margin-bottom: 4px; 
+}
+
+.box_stripes div.stripe_summary_holder { 
+	width: 182px; 
+	height:164px; 
+	float: left; 
+	padding: 0px 6px 0px 6px;
+	border-right: 1px solid  #A5A5A5;
+}
+
+
+.box_stripes div.stripe_summary_text_holder h3 a {
+	color: #C90404; 
+	font-size: 14px;
+}

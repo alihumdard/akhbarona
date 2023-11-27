@@ -1,0 +1,27 @@
+input.article_title {font-size:16px; font-weight:bold; color:#555; width:98%;}
+
+#box_pagination {background:#eee; color:#666;}
+
+#box_pagination span.pagination {float:right; font-weight:bold;}
+
+#box_pagination span.page_button {font-weight:normal; color:#004276; cursor:pointer;}
+
+#box_pagination span.page_button:hover {color:#ca0002;}
+
+#box_pagination span.pagination_total {color:#ca0002;}
+
+#dynamic_box_right div#box_my_pending_stories ul li {padding:4px 14px 4px 4px; background:url(../img/right_box_bullet.gif) right no-repeat;}
+
+.form_submit_button {text-align:right;}
+
+.form_submit_button button {font-size:14px; font-weight:bold;}
+
+#dynamic_box_center div.form_line label.single_line {width:90px; text-align:left;}
+
+#dynamic_box_center div.form_line {color:#666;}
+
+.dump {margin-bottom:6px;}
+
+.dump span.error {display:block; padding:6px; background:#fcd6d4; border:1px solid #fb9a97;}
+
+.dump span.info {display:block; padding:6px; background:#e8f0ff; border:1px solid #cedefc;}

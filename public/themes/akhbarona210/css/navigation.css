@@ -1,0 +1,122 @@
+#mainNav {
+	background: #ffffff url(../img/nav_bg.gif) top repeat-x;
+	border-bottom: 1px solid #a8aeb2; 
+	height: 33px;
+}
+
+#mainNav ul
+{
+	padding-right: 0;
+	margin-right: 0;
+	color: #555555;
+	float: right;
+}
+
+#mainNav ul li { display: inline; }
+
+#mainNav ul li a
+{
+	height:33px;
+	line-height:33px;
+	padding:0 11px;
+	color: #424242;
+	text-decoration: none;
+	float: right;
+	border-left: 1px solid #a8aeb2;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#mainNav ul li a:hover {color: #fff;}
+
+#mainNav .show_all {float:left;}
+
+#mainNav .show_all a {
+	font-weight:bold;
+	font-size:12px;
+	padding:0px 10px; 
+	line-height:33px;
+	background:url(../img/nav_expand.gif) right no-repeat;
+}
+
+#mainNav .show_all a.collapse { background:url(../img/nav_collapse.gif) right no-repeat;}
+
+#navbox {
+	padding:6px; 
+	border-right:1px solid #A5A5A5; 
+	border-bottom:1px solid #A5A5A5; 
+	border-left:1px solid #A5A5A5; 
+	background: #fff url(../img/navbox_bg.gif) top repeat-x;
+}
+
+.navbox_holder {width:100%; overflow:hidden; background:url(../img/navbox_col_bg.gif) center repeat-y;}
+
+.navbox_column {float:right; width:149px; padding-left: 12px;}
+
+.main_list {padding-bottom:10px;}
+
+.sub_list {padding-top:3px;}
+
+.sub_list li a {color:#3366CC; font-size:11px;}
+
+/* Section colors*/
+
+#mainNav li.section_1 a span {border-bottom:3px solid #c40d23;}
+
+#mainNav li.section_2 a span {border-bottom:3px solid #3fadaa;}
+
+#mainNav li.section_3 a span {border-bottom:3px solid #e54658;}
+
+#mainNav li.section_4 a span {border-bottom:3px solid #3db935;}
+
+#mainNav li.section_5 a span {border-bottom:3px solid #5099bf;}
+
+#mainNav li.section_6 a span {border-bottom:3px solid #840d8f;}
+
+#mainNav li.section_15 a span {border-bottom:3px solid #4a7801;}
+
+#mainNav li.section_8 a span {border-bottom:3px solid #ad532f;}
+
+#mainNav li.section_9 a span {border-bottom:3px solid #f1b619;}
+
+#mainNav li.section_16 a span {border-bottom:3px solid #11b1ff;}
+
+#mainNav li.section_100 a span {border-bottom:3px solid #272567;}
+
+#mainNav li.section_14 a span {border-bottom:3px solid #A8AEB2;}
+
+#mainNav li.section_13 a span {border-bottom:3px solid #FE0000;}
+
+#mainNav li.oglasee a {color:#FC5E03; background:url(../img/oglasee_eye.gif) 6px 8px no-repeat;}
+
+#mainNav li.oglasee a span {padding-right:20px; border-bottom: 3px solid #FC5E03;}
+
+
+
+#mainNav li.section_1 a:hover {color: #c40d23;}
+
+#mainNav li.section_2 a:hover {color: #3fadaa;}
+
+#mainNav li.section_3 a:hover {color: #e54658;}
+
+#mainNav li.section_4 a:hover {color: #3db935;}
+
+#mainNav li.section_5 a:hover {color: #5099bf;}
+
+#mainNav li.section_6 a:hover {color: #840d8f;}
+
+#mainNav li.section_15 a:hover {color: #4a7801;}
+
+#mainNav li.section_8 a:hover {color: #ad532f;}
+
+#mainNav li.section_9 a:hover {color: #f1b619;}
+
+#mainNav li.section_16 a:hover {color: #11b1ff;}
+
+#mainNav li.section_100 a:hover {color: #272567;}
+
+#mainNav li.section_14 a:hover {color: #A8AEB2;}
+
+#mainNav li.section_13 a:hover {color: #FE0000;}
+
+#mainNav li.oglasee a:hover {color: #FC5E03;}

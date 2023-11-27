@@ -1,0 +1,29 @@
+.ticker_summary h3 {font-size: 15px;}
+
+.ticker_summary div.summary { font-size: 11px; height: 45px; overflow: hidden;}
+
+.ticker_summary a {color: #000;}
+
+.ticker_summary span.ticker_category {color: #cccccc;}
+
+.ticker_summary span.ticker_category a {color: #000000;}
+
+.ticker_summary .scroller {
+	height:315px; 
+}
+
+.ticker_summary .section {
+	height:50px;
+	width: auto;
+	float: none;
+	padding: 6px 4px 6px 0px;
+	border-bottom: 1px solid #BEBEBE;
+}
+
+.ticker_summary .row_1 {background-color: #F1F1F1;}
+
+.ticker_summary img {border: 2px solid #ccc;}
+
+.ticker_date {color: #fc0606; font-weight:bold;}
+
+.ticker_date span {color: #a6a3a3;}

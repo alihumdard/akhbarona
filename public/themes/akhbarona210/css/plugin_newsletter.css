@@ -1,0 +1,9 @@
+#newsletter_form_holder {padding:6px;}
+
+input.newsletter_input {font-size:14px; width:190px; margin-right:2px;}
+
+#newsletter_dump {font-size:14px; font-weight:bold;}
+
+#newsletter_dump span.error {color:#f3735d;}
+
+#newsletter_dump span.info {color:#6b99c5;}

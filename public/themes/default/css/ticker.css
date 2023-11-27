@@ -1,0 +1,20 @@
+.ticker { 
+	height: 20px; 
+	border-bottom: 1px solid #DDDDDD; 
+	padding: 0px 0px 6px 6px;
+	margin: 0px 6px;
+}
+
+.ticker a {color: #CA0405;}
+
+.ticker span.ticker_category {color: #cccccc;}
+
+.ticker span.ticker_category a {color: #000000;}
+
+.ticker .scroller {
+	height:20px;
+}
+
+.ticker .section {
+	height:20px;
+}

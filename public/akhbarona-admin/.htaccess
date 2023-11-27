@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "akhbarona admin"
+AuthUserFile "/home/akhbar/.htpasswds/public_html/akhbarona-admin/passwd"
+require valid-user

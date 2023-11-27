@@ -1,0 +1,49 @@
+body {}
+
+
+#container {
+	width: 100%;
+	margin: 0px auto;
+	text-align: left;
+}
+
+#header {}
+
+#content { }
+
+#dynamic_box_left {
+	margin: 0;
+	float: left;
+}
+
+#dynamic_box_center {
+	float: left;
+}
+
+#dynamic_box_right {
+	margin: 0;
+	float: right;
+}
+
+#content_footer {clear: both;}
+
+#footer {clear: both;}
+
+/*********deafault layout**********/
+#layout_default div#dynamic_box_center {width: 100%;}
+
+/******************** LAYOUT BOXES********************/
+#main_news_box {float: left;}
+
+.main_news_box_row {width: 100%; overflow: hidden;}
+
+.main_news_category { 
+	margin: 0.5em; /****styles****/
+}
+
+.category_news_category { 
+	float:left; 
+	display: inline;
+	width:261px; 
+	margin: 6px; /****styles****/
+}

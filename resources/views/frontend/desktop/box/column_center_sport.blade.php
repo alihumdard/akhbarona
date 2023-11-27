@@ -1,0 +1,8 @@
+@include("frontend.desktop.box.news_sport_r01",[$setting,$fileRepo,$newsSportR01])
+@include("frontend.desktop.box.news_sport_r02",[$setting,$fileRepo,$newsSportR02])
+@include("frontend.desktop.box.news_sport_r03",[$setting,$fileRepo,$newsSportR03])
+@include("frontend.desktop.box.news_sport_r04",[$setting,$fileRepo,$newsSportR04])
+@include("frontend.desktop.box.news_sport_r05",[$setting,$fileRepo,$newsSportR05])
+@include("frontend.desktop.box.news_sport_r06",[$setting,$fileRepo,$newsSportR06])
+@include("frontend.desktop.box.news_sport_r07",[$setting,$fileRepo,$newsSportR07])
+@include("frontend.desktop.box.news_sport_r08",[$setting,$fileRepo,$newsSportR08])

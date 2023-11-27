@@ -1,0 +1,35 @@
+.poll_question {color:#c51320; font-size:15px; font-weight:bold;}
+
+.box_poll label {display:block; border-bottom:1px solid #ddd; padding:4px 0px;}
+
+.box_poll label img {vertical-align:middle;}
+
+.box_poll div.button_holder {line-height:30px; padding-top:6px; width:100%; overflow:hidden;}
+
+a.view_polls {float:left; font-size:14px; font-weight:bold; color:#c51320;}
+
+/*** Poll page ***/
+.poll_box_holder {border-bottom:1px solid #ddd; margin:12px 0px;}
+
+.poll_box_header {border-bottom:1px solid #ddd; margin-bottom:6px; padding-bottom:4px;}
+
+.poll_box_header span {color:#666;}
+
+.poll_line {
+	margin-bottom:6px;
+	padding-bottom:6px;
+	width:98%;
+	overflow:hidden; /*** if used, needs to be hidden because of Opera ***/
+}
+
+.poll_line img {vertical-align:middle;}
+
+.poll_answer_title {
+	text-align:left;
+	padding:0px 3px 2px 3px;
+	display:block; 
+	float:right;
+	width:46%;
+	font-size:12px;
+	color:#666;
+}

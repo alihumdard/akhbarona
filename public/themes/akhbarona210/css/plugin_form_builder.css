@@ -1,0 +1,85 @@
+.error { background-color: #FFFFD5; border-top: 1px solid #FFFFB2; border-bottom: 1px solid #FFFFB2;}
+
+div.error_message {background: #FFFFD5 url(../img/alert.gif) 4px 4px no-repeat; padding: 4px 0px 4px 26px;}
+
+div.error_message p {margin: 0; padding: 0px 0px 4px 0px; color: #666666;}
+
+.required {background: url(../img/icon_required.gif) right 3px no-repeat; padding-right: 10px;}
+
+input.form_builder_text, 
+textarea.form_builder_textarea, 
+select.form_builder_options {border:1px solid #7F9DB9;}
+
+input.form_builder_text {width: 90%;}
+
+textarea.form_builder_textarea {width: 90%;}
+
+select.form_builder_options {width: 91%;}
+
+div.box_form div.formElement img {vertical-align:top; cursor:pointer;}
+
+div.box_form div.form_line p {padding: 0 6px; margin: 0;}
+
+div.box_form div.form_line strong {font-size: 14px;}
+
+
+/*** Left column form ***/
+#dynamic_box_left div.box_form div.box_content { padding: 0 4px;}
+
+#dynamic_box_left div.box_form div.formElement {padding-top: 4px;}
+
+#dynamic_box_left div.box_form div.checkbox {display:inline;} /* checbox in one line */
+
+#dynamic_box_left div.box_form div.formElement label, 
+#dynamic_box_left div.box_form div.form_line label {font-size: 11px;}
+
+#dynamic_box_left div.box_form div.form_line {border-bottom: 1px solid #EEEEEE;}
+
+/*** Right column form ***/
+#dynamic_box_right div.box_form div.checkbox {display:inline;} /* checbox in one line */
+
+#dynamic_box_right div.box_form div.formElement {padding-top: 4px;}
+
+/*** Center column form ***/
+#dynamic_box_center div.box_form div.form_line label {padding-right: 10px;}
+
+#dynamic_box_center div.box_form div.formElement {width: 60%;}
+
+#dynamic_box_center div.box_form div.formElement label {display:inline;}
+
+#dynamic_box_center div.box_form div.box_title {
+	border-bottom:1px solid #EEEEEE; 
+	font-size:18px; 
+	margin-bottom:12px; 
+	padding-bottom:4px;
+}
+
+
+/*** Tooltips ***/
+.tooltip {
+	position: absolute!important;
+	overflow:hidden;
+	font-size: 12px;
+	z-index: 10000!important;
+}
+.tooltip .xtop, .tooltip .xbottom { display: block; background: transparent; font-size: 1px; }
+.tooltip .xb1, .tooltip .xb2, .tooltip .xb3, .tooltip .xb4 { display: block; overflow: hidden; }
+.tooltip .xb1, .tooltip .xb2, .tooltip .xb3 { height: 1px; }
+.tooltip .xb2, .tooltip .xb3, .tooltip .xb4 { background: #666; border-left: 1px solid #333; border-right: 1px solid #333; }
+.tooltip .xbottom .xb2, .tooltip .xbottom .xb3, .tooltip .xbottom .xb4 { background: #666; }
+.tooltip .xb1 { margin: 0 5px; background: #333; }
+.tooltip .xb2 { margin: 0 3px; border-width: 0 2px; }
+.tooltip .xb3 { margin: 0 2px; }
+.tooltip .xb4 { height: 2px; margin: 0 1px; }
+
+.tooltip .xboxcontent {
+	padding: 0 .5em;
+	margin: 0;
+	color: #000;
+	text-shadow: 2px 2px 0px #CCC;
+	word-wrap:break-word;
+	border: 1px solid #333;
+	border-width: 0px 1px 0 1px;
+	background-color: #666;
+	text-align: left;
+}

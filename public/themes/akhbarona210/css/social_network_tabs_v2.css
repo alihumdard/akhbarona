@@ -1,0 +1,33 @@
+/* ==== START Social Network Tabs Button By Sawa24.com ==== */
+
+.social_network_tabs{
+    float: right;
+    height: 0;
+    position: relative;
+    right: -45px;
+    text-align: right;
+    width: 34px;
+	z-index:5000;
+}
+
+.social_network_tabs img{
+	margin:4px;
+	height:32px;
+	width:32px;
+}
+
+.social_network_tabs a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+.facebook{top:30px;}
+
+.twitter{top:65px;}
+
+.rss{top:100px;}
+
+.contact{top:132px;}
+
+/* ==== END Social Network Tabs Button By Sawa24.com ==== */

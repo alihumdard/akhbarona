@@ -1,0 +1,186 @@
+body {
+	margin:0;
+	padding:0;
+	border:0;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+}
+
+#container {
+	/*background-position: center top;
+	background-image: url('../img/body_bg.png');
+	background-repeat: repeat-y;*/
+	width: 970px;
+	margin: 0px auto;
+	text-align: right;
+	/*padding:0px 130px 60px 130px*/
+}
+/*www*/
+#containers {width:970px; margin:0px auto; text-align:right;}
+
+#content {overflow:hidden; padding:0 5px;}
+
+#dynamic_box_left {margin:0; float:right;}
+
+#dynamic_box_center {float:right;}
+
+#dynamic_box_right {margin:0; float:left;}
+
+#content_footer {clear:both;}
+
+#footer {clear:both;}
+
+/********** two column default layout *************/
+#layout_two_column div#dynamic_box_right {width:300px;}
+#layout_two_column div#dynamic_box_left {display:none;}
+#layout_two_column div#dynamic_box_center {width:650px;}
+#layout_two_column div#dynamic_box_center  div#latest_news_right {width:480px; float:right;}
+#layout_two_column div#dynamic_box_center  div#latest_news_left {width:160px; float:left;}
+#layout_two_column div#dynamic_box_center  div#health_news_right {width:320px; float:right;}
+#layout_two_column div#dynamic_box_center  div#health_news_left {width:320px; float:left;}
+#layout_two_column div#dynamic_box_center  div#comment_right {width:420px; float:right;}
+#layout_two_column div#dynamic_box_center  div#comment_left {width:200px; float:left;}
+
+/*********deafault layout**********/
+#layout_default div#dynamic_box_right {width:300px; padding-right:10px;}
+#layout_default div#dynamic_box_left {width:160px; padding-left:10px;}
+#layout_default div#dynamic_box_center {width:420px; padding:0 10px;}
+
+/************ three columns ***************/
+#layout_three_columns div#dynamic_box_right {width:300px; padding-right:10px;}
+#layout_three_columns div#dynamic_box_left {width:160px; padding-left:10px;}
+#layout_three_columns div#dynamic_box_center {width:420px; padding:0 10px;}
+
+/************ equal ***************/
+#layout_equal div#dynamic_box_right {width:296px; padding-right:10px;}
+#layout_equal div#dynamic_box_left {width:296px; padding-left:10px;}
+#layout_equal div#dynamic_box_center {width:286px; padding:0 10px;}
+
+/************ equal rights ***************/
+#layout_equal_rights div#dynamic_box_right {width:240px; padding-right:10px;}
+#layout_equal_rights div#dynamic_box_left {width:400px; padding-left:20px;}
+#layout_equal_rights div#dynamic_box_center {width:240px; padding-left:10px;}
+
+/************ non equal ***************/
+#layout_non_equal div#dynamic_box_right {width:300px; padding-right:20px;}
+#layout_non_equal div#dynamic_box_left {width:320px; padding-left:20px;}
+#layout_non_equal div#dynamic_box_center {width:250px;}
+
+/************ FOOTER COLUMNS ************/
+#footer_columns {width: 970px; overflow:hidden;}
+
+#footer_column_left {
+	margin: 0;
+	float: right;
+}
+
+#footer_column_center {
+	float: right;
+}
+
+#footer_column_right {
+	margin: 0;
+	float: left;
+}
+
+/********* FOOTER COLUMNS layout **********/
+#footer_columns div#footer_column_left {width: 240px;}
+#footer_columns div#footer_column_center {width: 470px;}
+#footer_columns div#footer_column_right {width: 240px;}
+
+/************ Article COLUMNS ************/
+#article_columns {width: 650px; overflow:hidden;}
+
+#article_column_left {
+	margin: 0;
+	float: left;
+}
+
+#article_column_center {
+	float: right;
+}
+
+#article_column_right {
+	margin: 0;
+	float: right;
+}
+
+/********* Article COLUMNS layout **********/
+#article_columns div#article_column_left {width: none;}
+#article_columns div#article_column_center {width: 450px;}
+#article_columns div#article_column_right {width: 200px;}
+/************* CONTENT FEATURES *****************/
+#content_features_left {float:right;}
+
+#content_features_right {float:right;}
+
+.features_equal_default {width:100%; overflow:hidden;}
+
+/*********** equal_default *********************/
+.features_equal_default #content_features_left {width:180px;}
+.features_equal_default #content_features_right {width:460px;}
+
+/*********** equal *********************/
+.features_equal #content_features_left {width:460px;}
+.features_equal #content_features_right {width:460px;}
+
+/*********** left *********************/
+.features_left #content_features_left {width:680px;}
+.features_left #content_features_right {width:310px;}
+
+/*********** right *********************/
+.features_right #content_features_left {width:310px;}
+.features_right #content_features_right {width:680px;}
+
+/*********** equal_three *********************/
+.features_inside .content_features_col {width:190px; float:right; margin:0 5px;}
+
+/*********** inside *********************/
+.features_inside {width:600px; overflow:hidden;}
+.features_inside #content_features_left {width:335px; padding-left:20px;}
+.features_inside #content_features_right {width:245px;}
+
+/******************** LAYOUT BOXES********************/
+#main_news_box {float:right;}
+
+.main_news_box_row {width:100%; overflow:hidden;}
+
+.main_news_box_row .cell_0 {margin-right:10px}
+
+.main_news_box_row .cell_1 {margin-left:10px;}
+
+.main_news_category { 
+	float:right; 
+	display:inline;
+	width:290px; 
+}
+
+/******************** 2TOOLTIPS4 ********************/
+.tooltip {
+	position:absolute!important;
+	overflow:hidden;
+	font-size:12px;
+	z-index:10000!important;
+}
+
+.tooltip .xtop, .tooltip .xbottom {display:block; background:transparent; font-size:1px;}
+.tooltip .xb1, .tooltip .xb2, .tooltip .xb3, .tooltip .xb4 {display:block; overflow:hidden;}
+.tooltip .xb1, .tooltip .xb2, .tooltip .xb3 {height:1px;}
+.tooltip .xb2, .tooltip .xb3, .tooltip .xb4 {background:#666; border-left:1px solid #333; border-right:1px solid #333;}
+.tooltip .xbottom .xb2, .tooltip .xbottom .xb3, .tooltip .xbottom .xb4 {background:#666;}
+.tooltip .xb1 {margin:0 5px; background:#333;}
+.tooltip .xb2 {margin:0 3px; border-width:0 2px;}
+.tooltip .xb3 {margin:0 2px;}
+.tooltip .xb4 {height:2px; margin:0 1px;}
+
+.tooltip .xboxcontent {
+	padding:0 .5em;
+	margin:0;
+	color:#000;
+	word-wrap:break-word;
+	border:1px solid #333;
+	border-width:0px 1px 0 1px;
+	background-color:#666;
+	text-align:right;
+}

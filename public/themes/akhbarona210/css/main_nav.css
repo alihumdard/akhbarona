@@ -1,0 +1,161 @@
+#mainNav {padding-top:15px; height:38px; width:100%; z-index:9999;}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+#mainNav {padding-top:12px; height:38px; width:100%; z-index:9999;}
+}
+
+/* first level */
+ul.menu {
+	/*float:left;*/
+	height:100%;
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-weight:bold;
+	font-size:15px;
+}
+
+ul.menu li {
+	position:relative;
+	float:right;
+	line-height:1.6;
+	border-left:1px solid #565656;
+}
+
+ul.menu li a {
+	display:block;
+	width:auto;
+	padding:4px 12px;
+	text-decoration:none;
+	color:#fff;
+	/*text-shadow:0px 1px 0px #f3f3f3;*/
+	/*background:transparent url(../img/proto_nav_separator.png) no-repeat right 2px;*/
+}
+
+ul.menu li.last a {background:transparent;}
+
+ul.menu li a.sub {padding-left:15px; /*background:transparent url(../img/proto_nav_separator.png) no-repeat right -30px;*/}
+
+ul.menu li:hover,
+ul.menu li.hover,
+ul.menu li.selected {background:#3c5471; height:33px;border-left: 1px solid #3c5471;margin-right: -1px;}
+
+ul.menu li:hover a,
+ul.menu li.hover a,
+ul.menu li.selected a {color:#fff; text-shadow:none;}
+
+ul.menu li.active a {color:#f15c30;}
+
+/* second level */
+ul.menu ul {
+	padding:0;
+	margin:0;
+	list-style:none;
+	top:32px;
+	width:168px;
+	font-weight:normal;
+}
+
+/* resetting first level */
+ul.menu ul ul {}
+
+ul.menu li:hover li,
+ul.menu li:hover li a,
+ul.menu li.hover li,
+ul.menu li.hover li a {background:#565656; color:#f2f2f2;}
+
+/* submenu markup */
+ul.menu li li {
+	width:100%;
+	border-top:1px solid #565656;
+	border-left:1px solid #565656;
+	border-right:1px solid #565656;
+}
+
+ul.menu li li.last {border-bottom:1px solid #565656;}
+
+ul.menu li li a {padding:5px 10px 5px 5px;}
+
+ul.menu li:hover li:hover a,
+ul.menu li.hover li.hover a {background:#676767; color:#fff;}
+
+ul.menu li:hover li.active a,
+ul.menu li.hover li.active a {color:#f15c30;}
+
+ul.menu li li a.sub {
+	padding-left:15px;
+	background:url(../img/proto_arrow_right.png) no-repeat 5% 50%;
+}
+
+ul.menu li:hover li:hover a.sub,
+ul.menu li.hover li.hover a.sub {background:#676767 url(../img/proto_arrow_right.png) no-repeat 5% 50%;}
+
+/* third level */
+/* resetting second level */
+ul.menu ul ul{
+	top:-1px;
+	margin-right:169px;
+	background:#fff;
+}
+
+ul.menu li:hover li:hover li,
+ul.menu li:hover li:hover li a,
+ul.menu li.hover li.hover li,
+ul.menu li.hover li.hover li a {color:#fff;}
+
+/* subsubmenu markup */
+ul.menu li:hover li:hover li:hover a,
+ul.menu li.hover li.hover li.hover a {background:#787878; color:#fff;}
+
+ul.menu li:hover li:hover li.active a,
+ul.menu li.hover li.hover li.active a {color:#f15c30;}
+
+ul.menu li:hover li:hover li:hover a.sub,
+ul.menu li.hover li.hover li.hover a.sub {background:#787878 url(../img/proto_arrow_right.png) no-repeat 5% 50%;}
+
+/* fourth level */
+/* resetting second level */
+ul.menu li:hover li:hover li:hover li,
+ul.menu li:hover li:hover li:hover li a,
+ul.menu li.hover li.hover li.hover li,
+ul.menu li.hover li.hover li.hover li a {color:#fff;}
+
+/* subsubmenu markup */
+ul.menu li:hover li:hover li:hover li:hover a,
+ul.menu li.hover li.hover li.hover li.hover a {background:#898989; color:#fff;}
+
+ul.menu li:hover li:hover li:hover li.active a,
+ul.menu li.hover li.hover li.hover li.active a {color:#f15c30;}
+
+ul.menu li:hover li:hover li:hover li a.sub,
+ul.menu li.hover li.hover li.hover li a.sub {background:#898989;}
+
+ul.menu li:hover li:hover li:hover li:hover a.sub,
+ul.menu li.hover li.hover li.hover li.hover a.sub {background:#8f8f8f;}
+
+/* hiding fifth level */
+div#nav ul ul ul ul ul {display:none;}
+
+/* show hide behaviour */
+ul.menu ul,
+ul.menu li:hover ul ul,
+ul.menu ul ul,
+ul.menu li:hover ul ul ul,
+ul.menu ul ul ul,
+ul.menu li:hover ul ul ul ul {position:fixed; right:-999em;}
+
+ul.menu li:hover ul,
+ul.menu li li:hover ul,
+ul.menu li li li:hover ul,
+ul.menu li li li li:hover ul {position:absolute; right:0px; z-index:999;}
+
+/* show hide behaviour with protofish */
+ul.menu li.hover ul ul,
+ul.menu li.hover ul ul ul,
+ul.menu li.hover ul ul ul ul {position:fixed; right:-999em;}
+
+ul.menu li.hover ul,
+ul.menu li li.hover ul,
+ul.menu li li li.hover ul,
+ul.menu li li li li.hover ul {position:absolute; right:0px; z-index:999;}

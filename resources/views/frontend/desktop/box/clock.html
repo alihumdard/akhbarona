@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<script type="text/javascript" src="https://www.sawa24.com/script/clock/js/swfobject.js"></script>
+	</head>
+	<body>
+		<p id="flashClock"><a href="https://www.sawa24.com/">Digital flash clock widget</a></p>
+		<script type="text/javascript">
+			var flashvars = {
+				clockSkin: "https://www.sawa24.com/script/clock/media/skins/skin001.png",
+				digitWidth: "20",
+				digitHeight: "32",
+				separatorWidth: "11",
+				ampmWidth: "23",
+				digitsColor: "794f1d",
+				secondsColor: "947856",
+				ampmColor: "e0be9a"
+			};
+			swfobject.embedSWF(
+				"https://www.sawa24.com/script/clock/media/devDigitalClock.swf", // path to the widget
+				"flashClock",
+				"170", // width of the widget
+				"30", // height of the widget
+				"8",
+				"https://www.sawa24.com/script/clock/media/expressInstall.swf",
+				flashvars,
+				{scale: "noscale", wmode: "transparent"}
+			);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+/* ==== START Ads Tabs By Sawa24.com ==== */
+
+.ad_tabs_right{
+    float: right;
+    height: 0;
+    position: relative;
+    right: -160px;
+    text-align: right;
+	z-index:999999;
+}
+
+.ad_tabs_left{
+    float: left;
+    height: 0;
+    position: relative;
+    left: -160px;
+    text-align: left;
+	z-index:999999;
+}
+
+/* ==== END Ads Tabs Sawa24.com ==== */
