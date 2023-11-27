@@ -1,1 +1,0 @@
- <div id='div-gpt-ad-1521102400350-6'> <script> googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521102400350-6'); }); </script> </div><?php /**PATH C:\xampp_7.4\htdocs\akhabarona\resources\views/frontend/desktop/adv/insection.blade.php ENDPATH**/ ?>

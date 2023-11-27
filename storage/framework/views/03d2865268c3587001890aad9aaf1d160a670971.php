@@ -1,0 +1,1 @@
+ <div id='div-gpt-ad-1521102400350-3' style='height:600px; width:160px;'> <script> googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521102400350-3'); }); </script> </div><?php /**PATH C:\xampp_7.4\htdocs\akhbarona\resources\views/frontend/desktop/adv/top_right_160_600.blade.php ENDPATH**/ ?>
