@@ -1,4 +1,4 @@
-@if(count($newsR02) > 0)
+@if(count($newsR02) > 0) 
     <div class="box1 box_white1">
     <div id="category_news_box" >
         <div class="main_news_box_row">
