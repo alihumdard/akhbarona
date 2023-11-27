@@ -1,44 +1,35 @@
 @if(count($newsR10n) > 0)
-<div id="category_news_box" >
-    <div class="main_news_box_row">
-        <a title="المزيد في علوم وتكنولوجيا" href="{{Common::mobileLink()}}technology"><h3 class="box_title_two title_two">علوم وتكنولوجيا</h3></a>
-    </div>
-    <div id="latest_news_two" class="box_two box_white_two">
-        <?php $article = $newsR10n[0];unset($newsR10n[0])?>
-        <div class="short">
-            <div class="short_holder">
-                @if($article->image)
-                    <div class="image">
-                        <a href="{{Common::article_link($article)}}">
-                            <img src="{{$fileRepo->getMedium($article->image,true,$article->md5_file)}}" width="305" height="200" alt="{{$article->image_caption?$article->image_caption:$article->title}}" /><br />
-                        </a>
-                    </div>
-                @endif
-            </div>
-            <h2 class="article_title"><a href="{{Common::article_link($article)}}">{{$article->title}}</a></h2>
-            <p>
-                {{$article->abstract?$article->abstract:Common::subWords($article->body,25)}} @if($article->body)...@endif
-                @if(!$article->link)
-                    @if($article->body)
-                        <a href="{{Common::article_link($article)}}"> {{Config::get("site.lang.LNG_FULL_STORY")}}</a>
-                    @endif
-                @else
-                    <a class="visit" href="{{$article->link}}"><img src="{{$fileRepo->getDesktopUrl("img/external.png")}}" alt="{{Config::get("site.lang.LNG_VISIT_WEBSITE")}}"/></a>
-                @endif
-            </p>
+    <div class="col-md-6 mt-3">
+        <div class="heading mt-4">
+            <span>علوم وتكنولوجيا</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
+            viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
+            <rect y="25" width="10" height="25" fill="#2E4866" />
+            <rect width="10" height="25" fill="#C2111E" />
+        </svg>
         </div>
-        <ul>
-            @foreach($newsR10n as $article)
-                <li>
+        <!-- horizantal line -->
+        <hr class="red-line">
+        <div class="main-div mt-3">
+            <?php $article = $newsR10n[0];unset($newsR10n[0])?>
+                @if($article->image)
                     <a href="{{Common::article_link($article)}}">
-                        {{$article->title}}
+                        <img class="image-fluid" src="{{$fileRepo->getMedium($article->image,true,$article->md5_file)}}" width="305" height="200" alt="{{$article->image_caption?$article->image_caption:$article->title}}" /><br />
                     </a>
-                </li>
-            @endforeach
-            <div class="more_sw"><a class="more_sw" href="{{Common::mobileLink()}}technology"></a></div>
-            <div class="clearer"> </div>
-        </ul>
+                @endif
+            <div>
+                @foreach($newsR10n as $article)
+                    <p> 
+                        <a style="color:black; text-decoration:none;" href="{{Common::article_link($article)}}" >{{$article->title}}</a>
+                    </p>
+                @endforeach        
+                <div>
+                    <a href="{{Common::mobileLink()}}technology">
+                        <button style="margin-right: 10px; margin-bottom: 10px;">
+                            اقرأ أكثر
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
 @endif

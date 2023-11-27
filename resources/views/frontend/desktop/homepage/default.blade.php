@@ -386,184 +386,25 @@
 
                           <!---------------------------------- section start حوادث وقضايا---------------------------->
                         <div class="newspaper-4">
-                            <div class="heading mt-4">
-                                <span>حوادث وقضايا</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-                                viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                <rect y="25" width="10" height="25" fill="#2E4866" />
-                                <rect width="10" height="25" fill="#C2111E" />
-                            </svg>
-                            </div>
-                            <!-- horizantal line -->
-                            <hr class="red-line">
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
-                                    <div class="main-box">
-                                        <img class="img-fluid" src="./images/newspaper-18.png" alt="">
-                                        <div class="main-box-text">
-                                            <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
-                                    <div class="main-box">
-                                        <img class="img-fluid" src="./images/newspaper-14.png" alt="">
-                                        <div class="main-box-text">
-                                            <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
-                                    <div class="main-box">
-                                        <img class="img-fluid" src="./images/newspaper-15.png" alt="">
-                                        <div class="main-box-text">
-                                            <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-4">
-                                    <div class="main-div d-flex">
-                                        <div>
-                                            <p class="pe-2">علاكوش يَشرح لـ"أخبارنا" أسباب استدعاء "أخنوش" النقابات
-                                                منفردة.. ويُفصّل في مخرجات "لقاء الاثنين"</p>
-                                        </div>
-                                        <div>
-                                            <img class="img-fluid" src="./images/newspaper-16.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-4">
-                                    <div class="main-div d-flex">
-                                        <div>
-                                            <p class="pe-2">علاكوش يَشرح لـ"أخبارنا" أسباب استدعاء "أخنوش" النقابات
-                                                منفردة.. ويُفصّل في مخرجات "لقاء الاثنين"</p>
-                                        </div>
-                                        <div>
-                                            <img class="img-fluid" src="./images/newspaper-17.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
+                             @include("frontend.desktop.box.news_r04",$columnCenter)
                         </div>
                           <!---------------------------------- section End حوادث وقضايا---------------------------->
 
                            <!---------------------------------- section start دولية---------------------------->
                         <div class="newspaper-6 mt-3" style="background-color: #F9F9F9; padding: 10px 15px;">
-                            <div class="heading mt-4">
-                                <span>دولية</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-                                viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                <rect y="25" width="10" height="25" fill="#2E4866" />
-                                <rect width="10" height="25" fill="#C2111E" />
-                            </svg>
-                            </div>
-                            <!-- horizantal line -->
-                            <hr class="red-line">
-                            <div>
-                                <div class="row">
-                                    <div class="col-12 col-md-12 col-lg-6">
-                                        <div class="row">
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box" style="border: none;">
-                                                    <img class="img-fluid" src="./images/newspaper-19.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box" style="border: none;">
-                                                    <img class="img-fluid" src="./images/newspaper-20.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box" style="border: none;">
-                                                    <img class="img-fluid" src="./images/newspaper-21.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box" style="border: none;">
-                                                    <img class="img-fluid" src="./images/newspaper-22.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-12 col-lg-6 mt-3">
-                                        <div class="news-6-last-img">
-                                            <img class="img-fluid" src="./images/newspaper-23.png" alt="">
-                                            <p>الملك: أنبوب غاز المغرب-نيجيريا مشروع للاندماج الجهوي.. ومشاكل الساحل لن
-                                                تُحلّ بالأبعاد الأمنية فقط</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
+                             @include("frontend.desktop.box.news_r06",$columnCenter)    
                         </div>
                            <!---------------------------------- section End دولية---------------------------->
 
 
                          <!---------------------------------- section start دين ودنيا---------------------------->
                         <div class="newspaper-7">
-                            <div class="heading mt-4">
-                                <span>دين ودنيا</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-                                viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                <rect y="25" width="10" height="25" fill="#2E4866" />
-                                <rect width="10" height="25" fill="#C2111E" />
-                            </svg>
+                            @include("frontend.desktop.box.news_r08",$columnCenter)
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <div class="hero-sec-adds-2">
+                                <h3>Adds-6</h3>
                             </div>
-                            <!-- horizantal line -->
-                            <hr class="red-line">
-                            <div>
-                                <div class="row">
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
-                                        <div class="main-box">
-                                            <img class="img-fluid" src="./images/newspaper-24.png" alt="">
-                                            <div class="main-box-text">
-                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
-                                        <div class="main-box">
-                                            <img class="img-fluid" src="./images/newspaper-25.png" alt="">
-                                            <div class="main-box-text">
-                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
-                                        <div class="main-box">
-                                            <img class="img-fluid" src="./images/newspaper-26.png" alt="">
-                                            <div class="main-box-text">
-                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
-                                        <div class="main-box">
-                                            <img class="img-fluid" src="./images/newspaper-27.png" alt="">
-                                            <div class="main-box-text">
-                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 mt-3">
-                                        <div class="hero-sec-adds-2">
-                                            <h3>Adds-6</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                          <!---------------------------------- section End دين ودنيا---------------------------->
 
@@ -586,163 +427,25 @@
                                             <h3>Adds 5</h3>
                                         </div>
                                     </div>
-                                    <div class="col-md-8 mt-3">
-                                        <div class="row">
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box">
-                                                    <img class="img-fluid" src="./images/newspaper-28.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box">
-                                                    <img class="img-fluid" src="./images/newspaper-29.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box">
-                                                    <img class="img-fluid" src="./images/newspaper-30.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box">
-                                                    <img class="img-fluid" src="./images/newspaper-31.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 mt-3">
-                                                <div class="d-flex"
-                                                    style="border: 0.5px solid #D0D0D0;">
-                                                    <p>علاكوش يَشرح لـ"أخبارنا" أسباب استدعاء "أخنوش" النقابات منفردة..
-                                                        ويُفصّل في مخرجات "لقاء الاثنين"</p>
-                                                    <div style="width: 207px; height: auto;">
-                                                        <img class="img-fluid h-100" src="./images/newspaper-32.png" alt="">
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @include("frontend.desktop.box.news_r07",$columnCenter)
                                 </div>
                             </div>
+
                         </div>
-<!---------------------------------- section End مستجدات التعليم---------------------------->
+                        <!---------------------------------- section End مستجدات التعليم---------------------------->
 
                         <!---------------------------------- section Start علوم وتكنولوجيا- ----------------------------->
                         <div class="newspaper-8 mt-3">
-                            <div>
-                                <div class="row">
-                                    <div class="col-md-6 mt-3">
-                                        <div class="heading mt-4">
-                                            <span>علوم وتكنولوجيا</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-                                            viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                            <rect y="25" width="10" height="25" fill="#2E4866" />
-                                            <rect width="10" height="25" fill="#C2111E" />
-                                        </svg>
-                                        </div>
-                                        <!-- horizantal line -->
-                                        <hr class="red-line">
-                                        <div class="main-div mt-3">
-                                            <img class="img-fluid" src="./images/mobile-img.png" alt="">
-                                            <div>
-                                                <p>حذاري : تطبيق شهير يستنزف بطارية هاتفك</p>
-                                                <p>حذاري : تطبيق شهير يستنزف بطارية هاتفك</p>
-                                                <p>حذاري : تطبيق شهير يستنزف بطارية هاتفك</p>
-                                                <p style="border-bottom: none;">حذاري : تطبيق شهير يستنزف بطارية هاتفك
-                                                </p>
-                                                <div>
-                                                    <a href="#">
-                                                        <button style="margin-right: 10px; margin-bottom: 10px;">
-                                                            اقرأ أكثر
-                                                        </button>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mt-3">
-                                        <div class="heading mt-4">
-                                            <span>طب وصحة</span><svg xmlns="http://www.w3.org/2000/svg" width="10"
-                                                height="47" viewBox="0 0 10 50"
-                                                style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                                <rect y="25" width="10" height="25" fill="#2E4866" />
-                                                <rect width="10" height="25" fill="#C2111E" />
-                                            </svg>
-                                        </div>
-                                        <!-- horizantal line -->
-                                        <hr class="red-line">
-                                        <div class="main-div mt-3">
-                                            <img class="img-fluid" src="./images/doctor-img.png" alt="">
-                                            <div>
-                                                <p>تعرف على أهم الفحوصات الضرورية للرجل</p>
-                                                <p>تعرف على أهم الفحوصات الضرورية للرجل</p>
-                                                <p>تعرف على أهم الفحوصات الضرورية للرجل</p>
-                                                <p style="border-bottom: none;">تعرف على أهم الفحوصات الضرورية للرجل</p>
-                                                <div>
-                                                    <a href="#">
-                                                        <button style="margin-right: 10px; margin-bottom: 10px;">
-                                                            اقرأ أكثر
-                                                        </button>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="row">
+                                @include("frontend.desktop.box.news_r10n",$columnCenter)
+                                @include("frontend.desktop.box.news_r09n",$columnCenter)
                             </div>
                         </div>
                         <!---------------------------------- section End علوم وتكنولوجيا- ----------------------------->
 
                            <!---------------------------------- section start ثقافة وفنون---------------------------->
                         <div class="newspaper-7">
-                            <div class="heading mt-4">
-                                <span>ثقافة وفنون</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-                                viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                <rect y="25" width="10" height="25" fill="#2E4866" />
-                                <rect width="10" height="25" fill="#C2111E" />
-                            </svg>
-                            </div>
-                            <!-- horizantal line -->
-                            <hr class="red-line">
-                            <div>
-                                <div class="row">
-                                    <div class="col-md-4 mt-3">
-                                        <div class="main-box">
-                                            <img class="img-fluid" src="./images/newspaper-33.png" alt="">
-                                            <div class="main-box-text">
-                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mt-3">
-                                        <div class="main-box">
-                                            <img class="img-fluid" src="./images/newspaper-34.png" alt="">
-                                            <div class="main-box-text">
-                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mt-3">
-                                        <div class="main-box">
-                                            <img class="img-fluid" src="./images/newspaper-35.png" alt="">
-                                            <div class="main-box-text">
-                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                        @include("frontend.desktop.box.news_r11n",$columnCenter)
                         </div>
                          <!---------------------------------- section End ثقافة وفنون---------------------------->
 
