@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Mail;
-
+use phpDocumentor\Reflection\Types\Null_;
 
 class HomeController extends Controller
 {
@@ -40,7 +40,7 @@ class HomeController extends Controller
         $cdnUrl = Config::get("app.cdn_url");
         $categories = $this->categoryRepo->getAll();
         $fileRepo = $this->fileRepo;
-        $latestNewsBhSw = $this->articleRepo->getList(["order_field"=>"order_num","not_tag"=>"1,2","order_by"=>"DESC","category_id"=>40,"limit"=>7]);
+        $latestNewsBhSw = $this->articleRepo->getList(["order_field"=>"order_num","not_tag"=>"1,2","order_by"=>"DESC","category_id"=>40,"limit"=>8]); //آخر الأخبار
         $fancyHeadlines = $this->articleRepo->getListFromTags(["order_field"=>"order_num","order_by"=>"DESC","tags"=>[1,2],"group_id"=>1,"limit"=>8]);
         $tickers = $this->articleRepo->getList(["order_field"=>"id","order_by"=>"DESC","limit"=>30]);
         $arrTicker = [];
@@ -57,31 +57,31 @@ class HomeController extends Controller
         }
         $columnCenter = [
             "fileRepo" => $fileRepo,
-            "newsR00" => $this->articleRepo->getListFromTags(["order_field"=>"order_num","order_by"=>"DESC","tags"=>2,"not_id"=>$arrFancyId,"group_id"=>1,"limit"=>8]),
-            "newsR01n" => $this->articleRepo->getList(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>16,"limit"=>5]),
-            "newsR02" => $this->articleRepo->getListWithBody(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>10,"limit"=>5]),
-            "newsR03" => $this->articleRepo->getListWithBody(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>2,"limit"=>5]),
-            "newsR04" => $this->articleRepo->getListWithBody(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>18,"limit"=>5]),
-            "newsR04n" => $this->articleRepo->getList(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>58,"limit"=>3]),
-            "newsR05" => $this->articleRepo->getListWithBody(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>[7,41,50,51,52,53,54,55],"limit"=>5]),
-            "newsR06" => $this->articleRepo->getListWithBody(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>12,"limit"=>5]),
-            "newsR07" => $this->articleRepo->getListWithBody(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>14,"limit"=>5]),
-            "newsR08" => $this->articleRepo->getListWithBody(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>5,"limit"=>5]),
-            "newsR09n" => $this->articleRepo->getListWithBody(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>9,"limit"=>5]),
-            "newsR10n" => $this->articleRepo->getListWithBody(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>11,"limit"=>5]),
-            "newsR11n" => $this->articleRepo->getList(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>6,"limit"=>3]),
-            "newsR12n" => $this->articleRepo->getListWithBody(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>13,"limit"=>5]),
+            "newsR00" => $this->articleRepo->getListFromTags(["order_field" => "order_num", "order_by" => "DESC", "tags" => 2, "not_id" => $arrFancyId, "group_id" => 1, "limit" => 8]), // أهم الأخبار portion...
+            "newsR01n" => $this->articleRepo->getList(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 16, "limit" => 5]), // أخبار وطنية سياسة portion ...
+            "newsR02" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 10, "limit" => 5]), //سياسة protion ...
+            "newsR03" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 2, "limit" => 5]), //إقتصاد 
+            "newsR04" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 18, "limit" => 5]), //حوادث وقضايا
+            "newsR04n" => $this->articleRepo->getList(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 58, "limit" => 3]), //قضايا المجتمع
+            "newsR05" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => [7, 41, 50, 51, 52, 53, 54, 55], "limit" => 5]), //رياضة
+            "newsR06" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 12, "limit" => 5]), //دولية
+            "newsR07" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 14, "limit" => 5]), //مستجدات التعليم
+            "newsR08" =>  $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 5, "limit" => 5]), // deen o dunia
+            "newsR09n" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 9, "limit" => 5]), //طب وصحة
+            "newsR10n" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 11, "limit" => 5]), // aloomo technalogy
+            "newsR11n" => $this->articleRepo->getList(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 6, "limit" => 3]), //ثقافة وفنون
+            "newsR12n" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 13, "limit" => 5]), //الأخيرة
         ];
         $setting = CustomConfig::getAllValue();
         $columnLeft = [
-                "fileRepo" => $fileRepo,
-                "setting" => $setting,
-                "newsL1" => $this->articleRepo->getList(["order_field"=>(isset($setting["VIVVO_HOMEPAGE_ARTICLE_LIST_ORDER"])?$setting["VIVVO_HOMEPAGE_ARTICLE_LIST_ORDER"]:"order_num"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>32,"limit"=>12]),
-                "newsL2" => $this->articleRepo->getList(["order_field"=>(isset($setting["VIVVO_MODULES_TICKER_ORDER"])?$setting["VIVVO_MODULES_TICKER_ORDER"]:Config::get("app.default_order")),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>17,"limit"=>(isset($setting["VIVVO_MODULES_TICKER_NUMBER"])?$setting["VIVVO_MODULES_TICKER_NUMBER"]:10)]),
-                "newsL3" => $this->articleRepo->getListWithBody(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>31,"limit"=>1]),
-                "newsL4" => $this->articleRepo->getList(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>23,"limit"=>3]),
-                "newsL8" => $this->articleRepo->getListWithBody(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>39,"limit"=>1]),
-                "newsL5" => $this->articleRepo->getList(["order_field"=>Config::get("app.default_order"),"not_tag"=>"1,2","order_by"=>"DESC","category_id"=>35,"limit"=>1]),
+            "fileRepo" => $fileRepo,
+            "setting" => $setting,
+            "newsL1" => $this->articleRepo->getList(["order_field" => (isset($setting["VIVVO_HOMEPAGE_ARTICLE_LIST_ORDER"]) ? $setting["VIVVO_HOMEPAGE_ARTICLE_LIST_ORDER"] : "order_num"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 32, "limit" => 12]), //شاشة أخبارنا
+            "newsL2" => $this->articleRepo->getList(["order_field" => (isset($setting["VIVVO_MODULES_TICKER_ORDER"]) ? $setting["VIVVO_MODULES_TICKER_ORDER"] : Config::get("app.default_order")), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 17, "limit" => (isset($setting["VIVVO_MODULES_TICKER_NUMBER"]) ? $setting["VIVVO_MODULES_TICKER_NUMBER"] : 10)]), //أقلام حرة
+            "newsL3" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 31, "limit" => 1]), //داءات إنسانية
+            "newsL4" => $this->articleRepo->getList(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 23, "limit" => 3]), //ركن المرأة
+            "newsL8" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 39, "limit" => 1]), //مباريات ووظائف
+            "newsL5" => $this->articleRepo->getList(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 35, "limit" => 1]), //كاريكاتير وصورة
         ];
         //dd($arrTicker);
         $content = view("frontend.desktop.homepage.default",

@@ -17,7 +17,7 @@
                         @foreach($latestNewsBhSw as $article)
                         <div class="col-12 col-sm-12 col-md-6 mt-3 col-lg-3 mt-3">
                             <div class="main-box">
-                                <img class="img-fluid" src="{{$article->image}}" alt="">
+                                <img class="img-fluid" src="{{ $article->image ?? 'admin/assets/img/no-image.png' }}" alt="no image available">
                                 <div class="main-box-text">
                                     <p>@include("frontend.desktop.box.latest_news_bh_date",[$article])<a href="{{Common::article_link($article)}}">{{$article->title}}</a></p>
                                 </div>
