@@ -84,155 +84,7 @@
 
                         <!---------------------------------- section start شاشة أخبارن-------------------------------->
                         <div class="newspaper-2">
-                            <div class="heading">
-                                <span>شاشة أخبارنا</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-                                viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                <rect y="25" width="10" height="25" fill="#2E4866" />
-                                <rect width="10" height="25" fill="#C2111E" />
-                            </svg>
-                            </div>
-                            <!-- horizantal line -->
-                            <hr class="red-line">
-                            <div>
-                                <div class="row">
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
-                                        <a href="#">
-                                            <div class="video-box-1">
-                                                <div class="icon mb-3 mt-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                        viewBox="0 0 36 36" fill="none">
-                                                        <circle cx="18.4258" cy="18.2212" r="16.5" stroke="white"
-                                                            stroke-width="2" />
-                                                        <path
-                                                            d="M27 18.5C27.0005 18.6698 26.9451 18.8367 26.8392 18.9847C26.7332 19.1326 26.5804 19.2565 26.3954 19.3443L14.9345 24.8528C14.7413 24.9458 14.52 24.9965 14.2935 24.9998C14.0669 25.0031 13.8434 24.9588 13.6459 24.8716C13.4503 24.7856 13.2874 24.6603 13.1739 24.5085C13.0603 24.3567 13.0003 24.1839 13 24.0079V12.9921C13.0003 12.8161 13.0603 12.6433 13.1739 12.4915C13.2874 12.3397 13.4503 12.2144 13.6459 12.1284C13.8434 12.0412 14.0669 11.9969 14.2935 12.0002C14.52 12.0035 14.7413 12.0542 14.9345 12.1472L26.3954 17.6557C26.5804 17.7435 26.7332 17.8674 26.8392 18.0153C26.9451 18.1633 27.0005 18.3302 27 18.5Z"
-                                                            fill="white" />
-                                                    </svg>
-                                                </div>
-                                                <p>جدل في فرنسا بسبب صلاة جماعية لمسلمين...</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
-                                        <a href="#">
-                                            <div class="video-box-2">
-                                                <div class="icon mb-3 mt-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                        viewBox="0 0 36 36" fill="none">
-                                                        <circle cx="18.4258" cy="18.2212" r="16.5" stroke="white"
-                                                            stroke-width="2" />
-                                                        <path
-                                                            d="M27 18.5C27.0005 18.6698 26.9451 18.8367 26.8392 18.9847C26.7332 19.1326 26.5804 19.2565 26.3954 19.3443L14.9345 24.8528C14.7413 24.9458 14.52 24.9965 14.2935 24.9998C14.0669 25.0031 13.8434 24.9588 13.6459 24.8716C13.4503 24.7856 13.2874 24.6603 13.1739 24.5085C13.0603 24.3567 13.0003 24.1839 13 24.0079V12.9921C13.0003 12.8161 13.0603 12.6433 13.1739 12.4915C13.2874 12.3397 13.4503 12.2144 13.6459 12.1284C13.8434 12.0412 14.0669 11.9969 14.2935 12.0002C14.52 12.0035 14.7413 12.0542 14.9345 12.1472L26.3954 17.6557C26.5804 17.7435 26.7332 17.8674 26.8392 18.0153C26.9451 18.1633 27.0005 18.3302 27 18.5Z"
-                                                            fill="white" />
-                                                    </svg>
-                                                </div>
-                                                <p>جدل في فرنسا بسبب صلاة جماعية لمسلمين...</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
-                                        <a href="#">
-                                            <div class="video-box-3">
-                                                <div class="icon mb-3 mt-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                        viewBox="0 0 36 36" fill="none">
-                                                        <circle cx="18.4258" cy="18.2212" r="16.5" stroke="white"
-                                                            stroke-width="2" />
-                                                        <path
-                                                            d="M27 18.5C27.0005 18.6698 26.9451 18.8367 26.8392 18.9847C26.7332 19.1326 26.5804 19.2565 26.3954 19.3443L14.9345 24.8528C14.7413 24.9458 14.52 24.9965 14.2935 24.9998C14.0669 25.0031 13.8434 24.9588 13.6459 24.8716C13.4503 24.7856 13.2874 24.6603 13.1739 24.5085C13.0603 24.3567 13.0003 24.1839 13 24.0079V12.9921C13.0003 12.8161 13.0603 12.6433 13.1739 12.4915C13.2874 12.3397 13.4503 12.2144 13.6459 12.1284C13.8434 12.0412 14.0669 11.9969 14.2935 12.0002C14.52 12.0035 14.7413 12.0542 14.9345 12.1472L26.3954 17.6557C26.5804 17.7435 26.7332 17.8674 26.8392 18.0153C26.9451 18.1633 27.0005 18.3302 27 18.5Z"
-                                                            fill="white" />
-                                                    </svg>
-                                                </div>
-                                                <p>جدل في فرنسا بسبب صلاة جماعية لمسلمين...</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
-                                        <a href="#">
-                                            <div class="video-box-4">
-                                                <div class="icon mb-3 mt-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                        viewBox="0 0 36 36" fill="none">
-                                                        <circle cx="18.4258" cy="18.2212" r="16.5" stroke="white"
-                                                            stroke-width="2" />
-                                                        <path
-                                                            d="M27 18.5C27.0005 18.6698 26.9451 18.8367 26.8392 18.9847C26.7332 19.1326 26.5804 19.2565 26.3954 19.3443L14.9345 24.8528C14.7413 24.9458 14.52 24.9965 14.2935 24.9998C14.0669 25.0031 13.8434 24.9588 13.6459 24.8716C13.4503 24.7856 13.2874 24.6603 13.1739 24.5085C13.0603 24.3567 13.0003 24.1839 13 24.0079V12.9921C13.0003 12.8161 13.0603 12.6433 13.1739 12.4915C13.2874 12.3397 13.4503 12.2144 13.6459 12.1284C13.8434 12.0412 14.0669 11.9969 14.2935 12.0002C14.52 12.0035 14.7413 12.0542 14.9345 12.1472L26.3954 17.6557C26.5804 17.7435 26.7332 17.8674 26.8392 18.0153C26.9451 18.1633 27.0005 18.3302 27 18.5Z"
-                                                            fill="white" />
-                                                    </svg>
-                                                </div>
-                                                <p>جدل في فرنسا بسبب صلاة جماعية لمسلمين...</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
-                                        <a href="#">
-                                            <div class="video-box-5">
-                                                <div class="icon mb-3 mt-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                        viewBox="0 0 36 36" fill="none">
-                                                        <circle cx="18.4258" cy="18.2212" r="16.5" stroke="white"
-                                                            stroke-width="2" />
-                                                        <path
-                                                            d="M27 18.5C27.0005 18.6698 26.9451 18.8367 26.8392 18.9847C26.7332 19.1326 26.5804 19.2565 26.3954 19.3443L14.9345 24.8528C14.7413 24.9458 14.52 24.9965 14.2935 24.9998C14.0669 25.0031 13.8434 24.9588 13.6459 24.8716C13.4503 24.7856 13.2874 24.6603 13.1739 24.5085C13.0603 24.3567 13.0003 24.1839 13 24.0079V12.9921C13.0003 12.8161 13.0603 12.6433 13.1739 12.4915C13.2874 12.3397 13.4503 12.2144 13.6459 12.1284C13.8434 12.0412 14.0669 11.9969 14.2935 12.0002C14.52 12.0035 14.7413 12.0542 14.9345 12.1472L26.3954 17.6557C26.5804 17.7435 26.7332 17.8674 26.8392 18.0153C26.9451 18.1633 27.0005 18.3302 27 18.5Z"
-                                                            fill="white" />
-                                                    </svg>
-                                                </div>
-                                                <p>جدل في فرنسا بسبب صلاة جماعية لمسلمين...</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
-                                        <a href="#">
-                                            <div class="video-box-6">
-                                                <div class="icon mb-3 mt-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                        viewBox="0 0 36 36" fill="none">
-                                                        <circle cx="18.4258" cy="18.2212" r="16.5" stroke="white"
-                                                            stroke-width="2" />
-                                                        <path
-                                                            d="M27 18.5C27.0005 18.6698 26.9451 18.8367 26.8392 18.9847C26.7332 19.1326 26.5804 19.2565 26.3954 19.3443L14.9345 24.8528C14.7413 24.9458 14.52 24.9965 14.2935 24.9998C14.0669 25.0031 13.8434 24.9588 13.6459 24.8716C13.4503 24.7856 13.2874 24.6603 13.1739 24.5085C13.0603 24.3567 13.0003 24.1839 13 24.0079V12.9921C13.0003 12.8161 13.0603 12.6433 13.1739 12.4915C13.2874 12.3397 13.4503 12.2144 13.6459 12.1284C13.8434 12.0412 14.0669 11.9969 14.2935 12.0002C14.52 12.0035 14.7413 12.0542 14.9345 12.1472L26.3954 17.6557C26.5804 17.7435 26.7332 17.8674 26.8392 18.0153C26.9451 18.1633 27.0005 18.3302 27 18.5Z"
-                                                            fill="white" />
-                                                    </svg>
-                                                </div>
-                                                <p>جدل في فرنسا بسبب صلاة جماعية لمسلمين...</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
-                                        <a href="#">
-                                            <div class="video-box-7">
-                                                <div class="icon mb-3 mt-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                        viewBox="0 0 36 36" fill="none">
-                                                        <circle cx="18.4258" cy="18.2212" r="16.5" stroke="white"
-                                                            stroke-width="2" />
-                                                        <path
-                                                            d="M27 18.5C27.0005 18.6698 26.9451 18.8367 26.8392 18.9847C26.7332 19.1326 26.5804 19.2565 26.3954 19.3443L14.9345 24.8528C14.7413 24.9458 14.52 24.9965 14.2935 24.9998C14.0669 25.0031 13.8434 24.9588 13.6459 24.8716C13.4503 24.7856 13.2874 24.6603 13.1739 24.5085C13.0603 24.3567 13.0003 24.1839 13 24.0079V12.9921C13.0003 12.8161 13.0603 12.6433 13.1739 12.4915C13.2874 12.3397 13.4503 12.2144 13.6459 12.1284C13.8434 12.0412 14.0669 11.9969 14.2935 12.0002C14.52 12.0035 14.7413 12.0542 14.9345 12.1472L26.3954 17.6557C26.5804 17.7435 26.7332 17.8674 26.8392 18.0153C26.9451 18.1633 27.0005 18.3302 27 18.5Z"
-                                                            fill="white" />
-                                                    </svg>
-                                                </div>
-                                                <p>جدل في فرنسا بسبب صلاة جماعية لمسلمين...</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
-                                        <a href="#">
-                                            <div class="video-box-8">
-                                                <div class="icon mb-3 mt-2">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                                                        viewBox="0 0 36 36" fill="none">
-                                                        <circle cx="18.4258" cy="18.2212" r="16.5" stroke="white"
-                                                            stroke-width="2" />
-                                                        <path
-                                                            d="M27 18.5C27.0005 18.6698 26.9451 18.8367 26.8392 18.9847C26.7332 19.1326 26.5804 19.2565 26.3954 19.3443L14.9345 24.8528C14.7413 24.9458 14.52 24.9965 14.2935 24.9998C14.0669 25.0031 13.8434 24.9588 13.6459 24.8716C13.4503 24.7856 13.2874 24.6603 13.1739 24.5085C13.0603 24.3567 13.0003 24.1839 13 24.0079V12.9921C13.0003 12.8161 13.0603 12.6433 13.1739 12.4915C13.2874 12.3397 13.4503 12.2144 13.6459 12.1284C13.8434 12.0412 14.0669 11.9969 14.2935 12.0002C14.52 12.0035 14.7413 12.0542 14.9345 12.1472L26.3954 17.6557C26.5804 17.7435 26.7332 17.8674 26.8392 18.0153C26.9451 18.1633 27.0005 18.3302 27 18.5Z"
-                                                            fill="white" />
-                                                    </svg>
-                                                </div>
-                                                <p>جدل في فرنسا بسبب صلاة جماعية لمسلمين...</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            @include("frontend.desktop.box.news_l1",$columnLeft)
                         </div>
                         <!---------------------------------- section End شاشة أخبارن---------------------------------->
 
@@ -255,132 +107,40 @@
                          <!---------------------------------- section End أقلام حرة---------------------------------------->
 
                         <!------------------------------------- newspaper-slider Section Start ------------------------------------->
-                        <div class="newspaper-slider mt-3">
-                            <div class="heading mt-4">
-                                <span>اخبار وطنية</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-                                viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                <rect y="25" width="10" height="25" fill="#2E4866" />
-                                <rect width="10" height="25" fill="#C2111E" />
-                            </svg>
-                            </div>
-                            <!-- horizantal line -->
-                            <hr class="red-line">
-                            <div class="swiper newspaperSwipper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="card">
-                                            <img class="img-fluid card-img-top" src="./images/swiper-slide-1.png" alt="">
-                                            <div class="card-body p-3">
-                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card">
-                                            <img class="img-fluid card-img-top" src="./images/video-bg-5.png" alt="">
-                                             <div class="card-body p-3">
-                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card">
-                                            <img class="img-fluid card-img-top" src="./images/video-bg-8.png" alt="">
-                                             <div class="card-body p-3">
-                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card">
-                                            <img class="img-fluid card-img-top" src="./images/video-bg-5.png" alt="">
-                                             <div class="card-body p-3">
-                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="down-dots d-flex align-items-center mt-5">
-                                    <div class="swiper-button-prev">
-                                        <img src="./images/carousel-btn-left.png" alt="" class="img-arrow">
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                    <div class="swiper-button-next">
-                                        <img src="./images/carousel-btn.png" alt="" class="img-arrow">
-                                    </div>
-                                </div>
-                            </div>
+                      <div class="newspaper-slider mt-3">
+                        @include("frontend.desktop.box.news_r01n",$columnCenter)
                         </div>
+                        <script>
+                            const swipers = new Swiper('.newspaperSwipper', {
+                                speed: 600,
+                                loop: true,
+                                autoplay: {
+                                    delay: 3000,
+                                    disableOnInteraction: false
+                                },
+                                slidesPerView: 3,
+                                breakpoints: {
+                                    320: { slidesPerView: 1, spaceBetween: 10 },
+                                    768: { slidesPerView: 2, spaceBetween:10 },
+                                    992: { slidesPerView: 3, spaceBetween: 10},
+                                    1920: { slidesPerView: 3, spaceBetween: 10}
+                                },
+                                pagination: {
+                                  el: '.swiper-pagination',
+                                  type: 'bullets',
+                                  clickable: true
+                                },
+                                navigation: {
+                                  nextEl: ".swiper-button-next",
+                                  prevEl: ".swiper-button-prev",
+                                },
+                              });
+                        </script>
                         <!--________________________ newspaper-slider Section End __________________________-->
 
                          <!---------------------------------- section start رياضة---------------------------->
                         <div class="newspaper-5">
-                            <div class="heading mt-4">
-                                <span>رياضة</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-                                viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                <rect y="25" width="10" height="25" fill="#2E4866" />
-                                <rect width="10" height="25" fill="#C2111E" />
-                            </svg>
-                            </div>
-                            <!-- horizantal line -->
-                            <hr class="red-line">
-                            <div>
-                                <div class="row">
-                                    <div class="col-md-4 mt-3">
-                                        <div class="hero-sec-adds-4">
-                                            <h3>Adds 5</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 mt-3">
-                                        <div class="row">
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box">
-                                                    <img class="img-fluid" src="./images/akhirul-akhbar-1.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box">
-                                                    <img class="img-fluid" src="./images/akhirul-akhbar-2.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box">
-                                                    <img class="img-fluid" src="./images/akhirul-akhbar-3.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box">
-                                                    <img class="img-fluid" src="./images/akhirul-akhbar-4.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12 mt-3">
-                                                <div class="d-flex"
-                                                    style="border: 0.5px solid #D0D0D0;">
-                                                    <p>علاكوش يَشرح لـ"أخبارنا" أسباب استدعاء "أخنوش" النقابات منفردة..
-                                                        ويُفصّل في مخرجات "لقاء الاثنين"</p>
-                                                    <div>
-                                                        <img class="img-fluid h-100" src="./images/newspaper-10.png" alt="">
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @include("frontend.desktop.box.news_r05",$columnCenter)
                         </div>
                          <!---------------------------------- section End رياضة---------------------------->
 
@@ -661,6 +421,7 @@
         </div>
     </section>
     @stop
+  
 @section("styles")
     <link media="all" type="text/css" rel="stylesheet" href="{{ url(Config::get('app.cdn_url_css').'themes/akhbarona210/css/homepage'.Config::get('app.css_extend').'.css') }}">
 @stop
