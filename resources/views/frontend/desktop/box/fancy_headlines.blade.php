@@ -27,4 +27,6 @@
         </div>
     </div>   
 </div>
-
+<script type="text/javascript">
+    var rotating_headlines_tabs = new vivvoRotatingHeadlines('rotating_headlines', {{isset($setting["VIVVO_MODULES_HEADLINES_ROTATION_TIME"])?$setting["VIVVO_MODULES_HEADLINES_ROTATION_TIME"]:8}});
+</script>
