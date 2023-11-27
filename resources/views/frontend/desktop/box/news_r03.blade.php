@@ -13,6 +13,7 @@
     <!-- horizantal line -->
     <hr class="red-line">
     <div>
+        <?php $article = $newsR03[0];unset($newsR03[0]); ?>
         <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-3">
           
@@ -25,56 +26,20 @@
                     </div>
                 </div>
             </div>
+            <?php foreach($newsR03 as $index=>$article) { ?>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-3">
                 <div class="news-main-box d-flex">
                     <div>
-                        <p>إقليم الإندلس.. الاحتفاء بالمغرب وتنوعه الثقافي خلال شهر نونبر</p>
+                        <p><a href="{{Common::article_link($article)}}">{{$article->title}}</a></p>
                     </div>
-                    <div>
-                        <img src="./images/news-radius-1.png" alt="">
+                    @if($article->image)
+                    <div href="{{Common::article_link($article)}}">
+                       <a ><img width="113px" height="89px" src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" alt=""></a>
                     </div>
+                    @endif
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-3">
-                <div class="news-main-box d-flex">
-                    <div>
-                        <p>إقليم الإندلس.. الاحتفاء بالمغرب وتنوعه الثقافي خلال شهر نونبر</p>
-                    </div>
-                    <div>
-                        <img src="./images/news-radius-2.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-3">
-                <div class="news-main-box d-flex">
-                    <div>
-                        <p>إقليم الإندلس.. الاحتفاء بالمغرب وتنوعه الثقافي خلال شهر نونبر</p>
-                    </div>
-                    <div>
-                        <img src="./images/news-radius-3.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-3">
-                <div class="news-main-box d-flex">
-                    <div>
-                        <p>إقليم الإندلس.. الاحتفاء بالمغرب وتنوعه الثقافي خلال شهر نونبر</p>
-                    </div>
-                    <div>
-                        <img src="./images/news-radius-3.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-3">
-                <div class="news-main-box d-flex">
-                    <div>
-                        <p>إقليم الإندلس.. الاحتفاء بالمغرب وتنوعه الثقافي خلال شهر نونبر</p>
-                    </div>
-                    <div>
-                        <img src="./images/news-radius-4.png" alt="">
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </div>
