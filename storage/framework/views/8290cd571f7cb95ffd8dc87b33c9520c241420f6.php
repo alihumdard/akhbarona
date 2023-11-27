@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp_7.4\htdocs\akhbarona\resources\views/frontend/desktop/adv/headline_banner.blade.php ENDPATH**/ ?>

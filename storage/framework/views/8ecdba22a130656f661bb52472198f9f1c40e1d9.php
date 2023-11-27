@@ -1,0 +1,1 @@
+<h1>Section 6</h1> <p></p> <div class="headline_banner"> <div id='div-gpt-ad-1518636279794-0' style='height:250px; width:300px;'> <script> googletag.cmd.push(function() { googletag.display('div-gpt-ad-1518636279794-0'); }); </script> </div> </div><?php /**PATH C:\xampp_7.4\htdocs\akhbarona\resources\views/frontend/desktop/adv/left_banner_home_2.blade.php ENDPATH**/ ?>
