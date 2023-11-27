@@ -18,7 +18,6 @@ class Handler extends ExceptionHandler
     protected $dontReport = [
         //
     ];
-
     /**
      * Report or log an exception.
      *

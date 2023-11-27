@@ -1,0 +1,1 @@
+ <div class="ad_tabs_right"><?php echo $__env->make("frontend.desktop.adv.top_right_160_600", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?></div><?php /**PATH C:\xampp\htdocs\akhabarona\resources\views/frontend/desktop/adv/ad_tabs_right.blade.php ENDPATH**/ ?>

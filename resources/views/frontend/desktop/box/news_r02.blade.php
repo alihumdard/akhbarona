@@ -1,54 +1,40 @@
 @if(count($newsR02) > 0)
-    <div class="box1 box_white1">
-    <div id="category_news_box" >
-        <div class="main_news_box_row">
-        <a title="المزيد في سياسة" href="{{Common::mobileLink()}}politic"><h3 class="box_title_two title_two">سياسة</h3></a>
-        </div>
-        <div id="latest_news_two" class="box_two box_white_two">
-            <ul>
-                <?php $article = $newsR02[0];unset($newsR02[0]); ?>
-
-                    <div class="short_two_one">
-                        <div class="short_holder_two_one">
-                            @if($article->image)
-                                <div class="image">
-                                    <a href="{{Common::article_link($article)}}">
-                                        <img src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" width="250" height="200" alt="{{$article->image_caption?$article->image_caption:$article->title}}" /><br />
-                                    </a>
-                                </div>
-                            @endif
-                        <div class="clearer"> </div>
-                            <h2 class="article_title_two_one"><a href="{{Common::article_link($article)}}">{{$article->title}}</a></h2>
-                            <p>
-                                {{$article->abstract?$article->abstract:Common::subWords($article->body,25)}} @if($article->body)...@endif
-                                @if(!$article->link)
-                                    @if($article->body)
-                                        <span class="mor_full"><a href="{{Common::article_link($article)}}">{{Config::get("site.lang.LNG_FULL_STORY")}}</a></span>
-                                    @endif
-                                @else
-                                    <a class="visit" href="{{$article->link}}"><img src="{{$fileRepo->getDesktopUrl("img/external.png")}}" alt="{{Config::get("site.lang.LNG_VISIT_WEBSITE")}}"/></a>
-                                @endif
-                            </p>
-                        </div>
-                    </div>
-                <?php foreach($newsR02 as $index=>$article) { ?>
-                    <div class="short_two">
-                        <div class="short_holder_two">
-                            @if($article->image)
-                                <div class="image">
-                                    <a href="{{Common::article_link($article)}}">
-                                        <img src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" width="161" height="110" alt="{{$article->image_caption?$article->image_caption:$article->title}}" /><br />
-                                    </a>
-                                </div>
-                            @endif
-                        <div class="clearer"> </div>
-                            <h2 class="article_title_two"><a href="{{Common::article_link($article)}}">{{$article->title}}</a></h2>
-                        </div>
-                    </div>
-                <?php } ?>
-                <div class="clearer"> </div>
-            </ul>
-        </div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+<div class="newspaper-4">
+    <div class="heading mt-4">
+        <a title="المزيد في سياسة" href="{{Common::mobileLink()}}politic" style="text-decoration: none;
+        color: black;"><span style="padding:10px 15px;background: #f5f8f9;    font-size: 20px;
+            font-weight: 700;">سياسة</span></a><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
+        viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
+        <rect y="25" width="10" height="25" fill="#2E4866" />
+        <rect width="10" height="25" fill="#C2111E" />
+    </svg>
     </div>
+    <!-- horizantal line -->
+    <hr class="red-line">
+    <div class="row">
+        <?php $article = $newsR02[0];unset($newsR02[0]); ?>
+        <?php foreach($newsR02 as $index=>$article) { ?>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
+            <div class="main-box">
+                @if($article->image)
+                <a href="{{Common::article_link($article)}}">
+                <img class="img-fluid" src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" alt="">
+            </a>
+            @endif
+                <div class="main-box-text">
+                    <p><a href="{{Common::article_link($article)}}">{{$article->title}}</a></p>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+    </div>
+
+
+</div>
+</div>
+<div class="col-md-2"></div>
 </div>
 @endif

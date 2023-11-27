@@ -8,8 +8,5 @@
             @foreach($popularBox as $article)
                 @include("frontend.desktop.summary.summary_popular",[$article,$fileRepo])
             @endforeach
-
         </div>
-
-
 </div>

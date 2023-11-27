@@ -1,3 +1,4 @@
+
 <div class="top_bar">
     <span class="current_date">
         <script type="text/javascript" language="javascript">

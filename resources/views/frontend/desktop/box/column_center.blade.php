@@ -1,3 +1,4 @@
+<h1>Section 3</h1>
 <div id="latest_news_right">
     @include("frontend.desktop.box.news_r00",[$columnCenter])
 </div>
