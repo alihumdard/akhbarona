@@ -1,7 +1,4 @@
 @if(count($newsR03) > 0)
-<div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
 <div class="newspaper-3">
     <div class="heading mt-4">
         <a href="{{Common::mobileLink()}}economy"><span style="padding:10px 15px;background: #f5f8f9; font-size: 20px; font-weight: 700;">إقتصاد</span></a><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
@@ -47,7 +44,5 @@
         </div>
     </div>
 </div>
-</div>
-<div class="col-md-2"></div>
-</div>
+
 @endif

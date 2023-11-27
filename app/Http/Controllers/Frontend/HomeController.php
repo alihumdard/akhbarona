@@ -41,7 +41,7 @@ class HomeController extends Controller
         $categories = $this->categoryRepo->getAll();
         $fileRepo = $this->fileRepo;
         $latestNewsBhSw = $this->articleRepo->getList(["order_field"=>"order_num","not_tag"=>"1,2","order_by"=>"DESC","category_id"=>40,"limit"=>8]); //آخر الأخبار
-        $fancyHeadlines = $this->articleRepo->getListFromTags(["order_field"=>"order_num","order_by"=>"DESC","tags"=>[1,2],"group_id"=>1,"limit"=>8]);
+        $fancyHeadlines = $this->articleRepo->getListFromTags(["order_field"=>"order_num","order_by"=>"DESC","tags"=>[1,2],"group_id"=>1,"limit"=>8]); // slides ...
         $tickers = $this->articleRepo->getList(["order_field"=>"id","order_by"=>"DESC","limit"=>30]);
         $arrTicker = [];
         if($tickers) {
@@ -60,7 +60,7 @@ class HomeController extends Controller
             "newsR00" => $this->articleRepo->getListFromTags(["order_field" => "order_num", "order_by" => "DESC", "tags" => 2, "not_id" => $arrFancyId, "group_id" => 1, "limit" => 8]), // أهم الأخبار portion...
             "newsR01n" => $this->articleRepo->getList(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 16, "limit" => 5]), // أخبار وطنية سياسة portion ...
             "newsR02" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 10, "limit" => 5]), //سياسة protion ...
-            "newsR03" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 2, "limit" => 5]), //إقتصاد 
+            "newsR03" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 2, "limit" => 6]), //إقتصاد 
             "newsR04" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 18, "limit" => 5]), //حوادث وقضايا
             "newsR04n" => $this->articleRepo->getList(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 58, "limit" => 3]), //قضايا المجتمع
             "newsR05" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => [7, 41, 50, 51, 52, 53, 54, 55], "limit" => 5]), //رياضة
