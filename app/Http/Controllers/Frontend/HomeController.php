@@ -41,7 +41,7 @@ class HomeController extends Controller
         $categories = $this->categoryRepo->getAll();
         $fileRepo = $this->fileRepo;
         $latestNewsBhSw = $this->articleRepo->getList(["order_field"=>"order_num","not_tag"=>"1,2","order_by"=>"DESC","category_id"=>40,"limit"=>8]); //آخر الأخبار
-        $fancyHeadlines = $this->articleRepo->getListFromTags(["order_field"=>"order_num","order_by"=>"DESC","tags"=>[1,2],"group_id"=>1,"limit"=>8]); // slides ...
+        $fancyHeadlines = $this->articleRepo->getListFromTags(["order_field"=>"order_num","order_by"=>"DESC","tags"=>[1,2],"group_id"=>1,"limit"=>8]); // slider;
         $tickers = $this->articleRepo->getList(["order_field"=>"id","order_by"=>"DESC","limit"=>30]);
         $arrTicker = [];
         if($tickers) {
@@ -66,7 +66,7 @@ class HomeController extends Controller
             "newsR05" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => [7, 41, 50, 51, 52, 53, 54, 55], "limit" => 5]), //رياضة
             "newsR06" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 12, "limit" => 5]), //دولية
             "newsR07" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 14, "limit" => 5]), //مستجدات التعليم
-            "newsR08" =>  $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 5, "limit" => 5]), // deen o dunia
+            "newsR08" =>  $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 5, "limit" => 4]), // deen o dunia
             "newsR09n" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 9, "limit" => 5]), //طب وصحة
             "newsR10n" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 11, "limit" => 5]), // aloomo technalogy
             "newsR11n" => $this->articleRepo->getList(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 6, "limit" => 3]), //ثقافة وفنون
