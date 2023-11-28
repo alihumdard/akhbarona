@@ -267,13 +267,13 @@
 
                     </div>
                 </div>
+            </div>
                 <div class="col-md-2 ps-0">
                     <div class="hero-sec-adds-3">
                         <h3>Adds-3</h3>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
     @stop
