@@ -18,6 +18,7 @@
                 <div class="row">
                 <?php foreach($newsR05 as $index=>$article) { ?>
                     @if($index < 4)
+                    
                     <div class="col-md-6 mt-3">
                         <div class="main-box">
                             <a href="{{Common::article_link($article)}}">
