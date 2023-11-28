@@ -1,36 +1,30 @@
-
-<h1>Section 12</h1>
-<div class="">
-    <div class="box">
-        <div class="main_news_box_row">
-            <a title="المزيد في كاريكاتير وصورة" href="{{Common::mobileLink()}}caricature"><h3 class="box_title_two title_two">كاريكاتير وصورة</h3></a>
-        </div>
-        <div id="latest_news_two" class="box_caric box_white_caric">
-            <div class="box_content">
-                <div id="article_category_stripe">
-                    <div id="article_category_stripe_stripe_body" style="width:100%; overflow:hidden;">
-                        <div class="scroller">
-                            <div class="content">
-                                @foreach($newsL5 as $index=>$article)
-                                <div id="article_category_stripe_section{{$index}}" class="section">
-                                        <h2 class="article_title_caric"><a href="{{Common::article_link($article)}}">{{$article->title}}</a></h2>
-                                        <div class="stripe_summary_holder">
-                                            @if($article->image)
-                                                <div class="image">
-                                                    <a href="{{Common::article_link($article)}}">
-                                                        <img src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" width="278" height="200" alt="{{$article->image_caption?$article->image_caption:$article->title}}" /><br />
-                                                    </a>
-                                                </div>
-                                            @endif
-                                        </div>
-
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="heading">
+    <span>كاريكاتير وصورة</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
+    viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
+    <rect y="25" width="10" height="25" fill="#2E4866" />
+    <rect width="10" height="25" fill="#C2111E" />
+</svg>
+</div>
+<!-- horizantal line -->
+<hr class="red-line">
+@foreach($newsL5 as $index=>$article)
+<div id="article_category_stripe_section{{$index}}" class="section" style="border-right: 1px solid #D8D8D8; padding-right: 10px;">
+    <div class="main-div mt-3">
+        @if($article->image)
+            <a href="{{Common::article_link($article)}}">
+                <img class="img-fluid"  src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" alt="{{$article->image_caption?$article->image_caption:$article->title}}" /><br />
+            </a>
+        @endif
+        <div>
+            <p><a style="color:black; text-decoration:none;" href="{{Common::article_link($article)}}">{{$article->title}}</a></p>
+            <div>
+                <a href="{{Common::article_link($article)}}">
+                    <button>
+                        اقرأ أكثر
+                    </button>
+                </a>
             </div>
         </div>
     </div>
 </div>
+@endforeach

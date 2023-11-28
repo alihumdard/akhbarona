@@ -214,30 +214,7 @@
                             <div>
                                 <div class="row">
                                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-3">
-                                        <div class="heading">
-                                            <span>كاريكاتير وصورة</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-                                            viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                            <rect y="25" width="10" height="25" fill="#2E4866" />
-                                            <rect width="10" height="25" fill="#C2111E" />
-                                        </svg>
-                                        </div>
-                                        <!-- horizantal line -->
-                                        <hr class="red-line">
-                                        <div style="border-right: 1px solid #D8D8D8; padding-right: 10px;">
-                                            <div class="main-div mt-3">
-                                                <img class="img-fluid" src="./images/newspaper-36.png" alt="">
-                                                <div>
-                                                    <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    <div>
-                                                        <a href="#">
-                                                            <button>
-                                                                اقرأ أكثر
-                                                            </button>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                         @include("frontend.desktop.box.news_l5",$columnLeft)
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-3">
                                         <div class="heading">
@@ -267,28 +244,7 @@
 
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-4 mb-3">
-                                        <div class="heading">
-                                            <span>مباريات ووظائف</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-                                            viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                            <rect y="25" width="10" height="25" fill="#2E4866" />
-                                            <rect width="10" height="25" fill="#C2111E" />
-                                        </svg>
-                                        </div>
-                                        <!-- horizantal line -->
-                                        <hr class="red-line">
-                                        <div class="main-div mt-3">
-                                            <img class="img-fluid" src="./images/newspaper-38.png" alt="">
-                                            <div>
-                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                <div>
-                                                    <a href="#">
-                                                        <button>
-                                                            اقرأ أكثر
-                                                        </button>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @include("frontend.desktop.box.news_l8",$columnLeft)
                                     </div>
                                 </div>
                             </div>
@@ -298,52 +254,7 @@
 
                          <!---------------------------------- section start ركن المرأة------------------------>
                         <div class="newspaper-10">
-                            <div class="heading mt-4">
-                                <span>ركن المرأة</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-                                viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                <rect y="25" width="10" height="25" fill="#2E4866" />
-                                <rect width="10" height="25" fill="#C2111E" />
-                            </svg>
-                            </div>
-                            <!-- horizantal line -->
-                            <hr class="red-line">
-                            <div>
-                                <div class="row">
-                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
-                                        <div class="main-sec d-flex justify-content-between align-items-center">
-                                            <div>
-                                                <p>حيل ذهبية تمنع سيلان المكياج وتجعله يدوم طويلاً</p>
-                                            </div>
-                                            <div>
-                                                <img src="./images/newspaper-39.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
-                                        <div class="main-sec d-flex justify-content-between align-items-center">
-                                            <div>
-                                                <p>حيل ذهبية تمنع سيلان المكياج وتجعله يدوم طويلاً</p>
-                                            </div>
-                                            <div>
-                                                <img src="./images/newspaper-40.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
-                                        <div class="main-sec d-flex justify-content-between align-items-center">
-                                            <div>
-                                                <p>حيل ذهبية تمنع سيلان المكياج وتجعله يدوم طويلاً</p>
-                                            </div>
-                                            <div>
-                                                <img src="./images/newspaper-41.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
+                            @include("frontend.desktop.box.news_l4",$columnLeft)
                         </div>
                          <!---------------------------------- section End ركن المرأة-------------------------->
 
