@@ -260,63 +260,8 @@
 
                          <!---------------------------------- section start الأخيرة---------------------------->
                         <div class="newspaper-6 mt-3">
-                            <div class="heading mt-4">
-                                <span>الأخيرة</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
-                                viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
-                                <rect y="25" width="10" height="25" fill="#2E4866" />
-                                <rect width="10" height="25" fill="#C2111E" />
-                            </svg>
-                            </div>
-                            <!-- horizantal line -->
-                            <hr class="red-line">
-                            <div>
-                                <div class="row">
-                                    <div class="col-12 col-md-12 col-lg-6">
-                                        <div class="row">
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box" style="border: none;">
-                                                    <img class="img-fluid" src="./images/akhitrata-1.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box" style="border: none;">
-                                                    <img class="img-fluid" src="./images/akhitrata-2.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box" style="border: none;">
-                                                    <img class="img-fluid" src="./images/akhitrata-3.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="main-box" style="border: none;">
-                                                    <img class="img-fluid" src="./images/akhitrata-4.png" alt="">
-                                                    <div class="main-box-text">
-                                                        <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-12 col-lg-6 mt-3">
-                                        <div class="news-6-last-img">
-                                            <img class="img-fluid" src="./images/akhitrata-5.png" alt="">
-                                            <p>الملك: أنبوب غاز المغرب-نيجيريا مشروع للاندماج الجهوي.. ومشاكل الساحل لن
-                                                تُحلّ بالأبعاد الأمنية فقط</p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
+                            @include("frontend.desktop.box.news_r12",$columnCenter)
+                            
                         </div>
                          <!---------------------------------- section End الأخيرة------------------------------>
 
