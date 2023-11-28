@@ -75,7 +75,6 @@ $setting = \App\Models\Config::getAllValue();
                             </nav>
                         </div>
                     </div> 
-               
                 <div class="col-6 col-md-6 col-lg-4">
                     <div class="logo">
                         <a href="{{Common::mobileLink()}}"><img height="46px" widh="126px"  src="{{Config::get("app.cdn_url")}}themes/akhbarona210/img/logo.png" alt="{{$setting["VIVVO_WEBSITE_TITLE"]}}" title="{{$setting["VIVVO_WEBSITE_TITLE"]}}" /></a>
@@ -99,22 +98,37 @@ $setting = \App\Models\Config::getAllValue();
 <!-- navgation bar for desktop views -->
 <section class="navigarion-desktop text-center">
     <div>
-        @if($total > 0 )
-                        @foreach($menus as $menu)
-        <span @if($controllerCurrent == 'HomeController')
-        @if($actionCurrent == 'page' && strpos($menu->redirect,"advertising") !== false)
-            class="selected"
-        @elseif($actionCurrent == 'desktop' && $menu->redirect  && strpos($menu->redirect,"advertising") === false)
-        class="active"
-        @endif
-    @elseif($controllerCurrent == 'CategoryController')
-        @if($segment == $menu->sefriendly)
-            class="selected"
-        @endif
-    @endif><a href="{{$menu->redirect?$menu->redirect:Common::link("frontend.category.index",[$menu->sefriendly,1])}}">
-        {{$menu->category_name}}
-    </a></span>
-        @endforeach
+        @if($total > 0)
+        @php
+        // Swap the positions of index 1 and index 2
+        if (count($menus) >= 2) {
+            $temp = $menus[1];
+            $menus[1] = $menus[2];
+            $menus[2] = $temp;
+        }
+    @endphp
+        @for($i = 0; $i < min(7, count($menus)); $i++)
+            @php
+                $menu = $menus[$i];
+            @endphp
+    
+            <span @if($controllerCurrent == 'HomeController')
+                    @if($actionCurrent == 'page' && strpos($menu->redirect,"advertising") !== false)
+                        class="selected"
+                    @elseif($actionCurrent == 'desktop' && $menu->redirect && strpos($menu->redirect,"advertising") === false)
+                        class="active"
                     @endif
+                @elseif($controllerCurrent == 'CategoryController')
+                    @if($segment == $menu->sefriendly)
+                        class="selected"
+                    @endif
+                @endif>
+                <a href="{{$menu->redirect?$menu->redirect:Common::link("frontend.category.index",[$menu->sefriendly,1])}}">
+                    {{$menu->category_name}}
+                </a>
+            </span>
+        @endfor
+    @endif
+    
     </div>
 </section>

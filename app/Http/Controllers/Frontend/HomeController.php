@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Mail;
 use phpDocumentor\Reflection\Types\Null_;
 
+
+
 class HomeController extends Controller
 {
     protected $categoryRepo,$articleRepo,$fileRepo;
@@ -93,6 +95,7 @@ class HomeController extends Controller
         unset($this->articleRepo);unset($this->fileRepo);
         return $content;
     }
+
     function mobile(Request $request) {
         $keyCache = 'mobile_homepage';
         $cache = new CustomCache();
@@ -146,7 +149,6 @@ class HomeController extends Controller
         } else {
             abort(404);
         }
-
     }
     function contact(Request $request) {
         if($request->isMethod('POST')) {
