@@ -16,7 +16,7 @@ $setting = \App\Models\Config::getAllValue();
         <div class="row">
             <div class="col-md-8 m-auto">
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block text-end">
+                    <div class="col-6 col-md-6 col-lg-4">
                         <div class="navigation-bar">
                             <nav class="navbar navbar-light ">
                                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
@@ -81,7 +81,7 @@ $setting = \App\Models\Config::getAllValue();
                         <a href="{{Common::mobileLink()}}"><img height="46px" widh="126px"  src="{{Config::get("app.cdn_url")}}themes/akhbarona210/img/logo.png" alt="{{$setting["VIVVO_WEBSITE_TITLE"]}}" title="{{$setting["VIVVO_WEBSITE_TITLE"]}}" /></a>
                     </div>
                 </div>
-                <div class="col-6 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block text-end">
                     <div class="top-links" style="
                     float: right;
                 ">
