@@ -1,24 +1,29 @@
-<h1>Section 10</h1>
-<div class="box1 box_white1">
-    <div id="category_news_box" >
-        <div class="main_news_box_row">
-            <a title="المزيد في ركن المرأة" href="{{Common::mobileLink()}}woman"><h3 class="box_title_wem title_wem">ركن المرأة</h3></a>
-        </div>
-        <div id="latest_news_two" class="box_two box_white_two">
-            @foreach($newsL4 as $article)
-                <div class="short">
-                    <div class="short_holder">
+<div class="heading mt-4">
+    <span>ركن المرأة</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="47"
+    viewBox="0 0 10 50" style="margin-bottom: 8px; margin-left: -5px;" fill="none">
+    <rect y="25" width="10" height="25" fill="#2E4866" />
+    <rect width="10" height="25" fill="#C2111E" />
+</svg>
+</div>
+<!-- horizantal line -->
+<hr class="red-line">
+<div>
+    <div class="row">
+        @foreach($newsL4 as $article)
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-3">
+                <div class="main-sec d-flex justify-content-between align-items-center">
+                    <div>
+                        <p><a style="color:black; text-decoration:none;" href="{{Common::article_link($article)}}">{{$article->title}}</a></p>
+                    </div>
+                    <div>
                         @if($article->image)
-                            <div class="image">
-                                <a href="{{Common::article_link($article)}}">
-                                    <img src="{{$fileRepo->getSummaryLarge($article->image,true,$article->md5_file)}}" width="120" height="90" alt="{{$article->image_caption?$article->image_caption:$article->title}}" /><br />
-                                </a>
-                            </div>
+                            <a href="{{Common::article_link($article)}}">
+                                <img class="image-fluid" src="{{$fileRepo->getSummaryLarge($article->image,true,$article->md5_file)}}" alt="{{$article->image_caption?$article->image_caption:$article->title}}" />
+                            </a>
                         @endif
-                        <h2 class="article_title_two_one"><a href="{{Common::article_link($article)}}">{{$article->title}}</a></h2>
                     </div>
                 </div>
-            @endforeach
-        </div>
+            </div>
+        @endforeach
     </div>
 </div>
