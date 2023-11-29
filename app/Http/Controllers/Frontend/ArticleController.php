@@ -35,6 +35,8 @@ class ArticleController extends Controller
         }
         return $this->desktopRender($request,$parent,$slug,$id);
     }
+
+    // articles details remder
     function desktopDetail(Request $request,$slug,$id) {
         $mobileUrl = Common::redirectMobile();
         if($mobileUrl) {
@@ -42,6 +44,8 @@ class ArticleController extends Controller
         }
         return $this->desktopRender($request,"",$slug,$id);
     }
+
+    // articles details pages ...
     protected function desktopRender($request,$parent,$slug,$id) {
         $keyCache = 'desktop_detail_html'.$id.rand();
         $cache    = new CustomCache();

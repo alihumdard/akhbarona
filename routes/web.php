@@ -48,12 +48,14 @@ Route::get("", ['as'=>"homepage",'uses'=>'HomeController@desktop']);
 Route::get("/feed/{slug}/{id}.{type}",["as"=>"article.detail.rss","uses"=>"ArticleController@feed"])->where("slug","[a-zA-Z\-0-9]+")->where("id","[0-9]+")->where('type',"rss|atom");
 Route::get("/feed/{parent}/{slug}/{id}.{type}",["as"=>"article.detail.rss_parent","uses"=>"ArticleController@feed2"])->where("parent","[a-zA-Z\-0-9]+")->where("slug","[a-zA-Z\-0-9]+")->where("id","[0-9]+")->where('type',"rss|atom");
 
+// article detail pages...
 Route::get("/{slug}/{id}.html",["as"=>"article.detail","uses"=>"ArticleController@desktopDetail"])->where("slug","[a-zA-Z\-0-9]+")->where("id","[0-9]+");
 Route::get("/{parent}/{slug}/{id}.html",["as"=>"article.detail.parent","uses"=>"ArticleController@desktopLevel2"])->where("parent","[a-zA-Z\-0-9]+")->where("slug","[a-zA-Z\-0-9]+")->where("id","[0-9]+");
 
 Route::get("/feed/{slug}/index.{page}.{type}",["as"=>"frontend.categoryFeed.index","uses"=>"CategoryController@feed"])->where("slug","[a-zA-Z\-0-9]+")->where("page","[0-9]+")->where('type',"rss|atom");
 Route::get("/feed/{parent}/{slug}/index.{page}.{type}",["as"=>"frontend.categoryFeed.level2","uses"=>"CategoryController@feed2"])->where("parent","[a-zA-Z\-0-9]+")->where("slug","[a-zA-Z\-0-9]+")->where("page","[0-9]+")->where('type',"rss|atom");
 
+// inner detail pages...
 Route::get("/{slug}/index.{page}.html",["as"=>"frontend.category.index","uses"=>"CategoryController@desktopIndex"])->where("slug","[a-zA-Z\-0-9]+")->where("page","[0-9]+");
 Route::get("/{parent}/{slug}/index.{page}.html",["as"=>"frontend.category.level2","uses"=>"CategoryController@desktopLevel2"])->where("parent","[a-zA-Z\-0-9]+")->where("slug","[a-zA-Z\-0-9]+")->where("page","[0-9]+");
 Route::get("/{slug}",["as"=>"frontend.category.shortIndex","uses"=>"CategoryController@desktopIndex"])->where("slug","[a-zA-Z\-0-9]+");
