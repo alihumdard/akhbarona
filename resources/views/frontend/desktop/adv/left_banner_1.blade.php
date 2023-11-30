@@ -5,4 +5,3 @@
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1521102400350-2'); });
 </script>
 </div>
-

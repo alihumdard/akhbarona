@@ -13,7 +13,6 @@
     <meta name="copyright" content="akhbarona.com"/>
     <meta name="author" content="akhbarona.com"/>
     <meta name="robots" content="index, follow"/>
-
     <?php $cdnUrl = Config::get('app.cdn_url_css');?>
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url($cdnUrl.'themes/icons/apple-touch-icon-144x144.png') }}" />
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ url($cdnUrl.'themes/icons/apple-touch-icon-152x152.png') }}" />
