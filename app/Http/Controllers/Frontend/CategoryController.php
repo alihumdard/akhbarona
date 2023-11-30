@@ -28,6 +28,8 @@ class CategoryController extends Controller
         }
         return $this->desktopRender($request,$parent,$slug,$page);
     }
+
+    //inner pages of categories render
     function desktopIndex(Request $request, $slug,$page=1) {
         $mobileUrl = Common::redirectMobile();
         if($mobileUrl) {
@@ -35,6 +37,7 @@ class CategoryController extends Controller
         }
         return $this->desktopRender($request,"",$slug,$page);
     }
+    //inner pages of categories detail
     protected function desktopRender($request,$parent,$slug,$page) {
         if($page > 20) {
             $page = 20;

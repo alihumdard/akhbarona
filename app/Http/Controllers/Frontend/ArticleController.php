@@ -35,6 +35,8 @@ class ArticleController extends Controller
         }
         return $this->desktopRender($request,$parent,$slug,$id);
     }
+
+    // articles details remder
     function desktopDetail(Request $request,$slug,$id) {
         $mobileUrl = Common::redirectMobile();
         if($mobileUrl) {
@@ -42,6 +44,8 @@ class ArticleController extends Controller
         }
         return $this->desktopRender($request,"",$slug,$id);
     }
+
+    // articles details pages ...
     protected function desktopRender($request,$parent,$slug,$id) {
         $keyCache = 'desktop_detail_html'.$id.rand();
         $cache    = new CustomCache();
@@ -104,6 +108,7 @@ class ArticleController extends Controller
         $categoryRelated = $this->articleRepo->getList(["order_field"=>Config::get("app.default_order"),"order_by"=>"DESC","category_id"=>$article->category_id,"limit"=>5]);
         switch ($template) {
             case "default_sport":
+                //رياضة
                 $latestNewsArtSw = $this->articleRepo->getList(["order_field"=>"order_num","order_by"=>"DESC","limit"=>5,"category_id"=>[2,10,12,16,18]]);
                 $newsSportL01 = $this->articleRepo->getList(["order_field"=>(isset($setting["VIVVO_HOMEPAGE_ARTICLE_LIST_ORDER"])?$setting["VIVVO_HOMEPAGE_ARTICLE_LIST_ORDER"]:"order_num"),"order_by"=>"DESC","category_id"=>57,"limit"=>10]);
                 $newsSportL02 = $this->articleRepo->getList(["order_field"=>Config::get("app.default_order"),"order_by"=>"DESC","category_id"=>56,"limit"=>3]);
@@ -121,6 +126,7 @@ class ArticleController extends Controller
                 //dd($content);
                 break;
             case "writers":
+                // أقلام حرة
                 $relatedNews = $this->articleRepo->getRelated($article->id);
                 $latestNewsArtSw = $this->articleRepo->getList(["order_field"=>"order_num","order_by"=>"DESC","limit"=>5,"category_id"=>[2,10,12,16,18]]);
                 $newL1A = $this->articleRepo->getList(["order_field"=>(isset($setting["VIVVO_HOMEPAGE_ARTICLE_LIST_ORDER"])?$setting["VIVVO_HOMEPAGE_ARTICLE_LIST_ORDER"]:"order_num"),"order_by"=>"DESC","category_id"=>32,"limit"=>8]);

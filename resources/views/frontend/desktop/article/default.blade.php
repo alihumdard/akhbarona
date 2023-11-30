@@ -32,109 +32,329 @@
 @stop
 
 @section("content")
-    <div id="container">
-        @include("frontend.desktop.adv.ad_tabs")
-        @include("frontend.desktop.box.ticker_typer_homepage",[$arrTicker])
-            <div class="page_top"> </div>
-			<div id="content">
-				<div id="dynamic_box_center">
-					<div id="box_center_holder">
-						@include("frontend.desktop.box.article_breadcrumb",[$article,$breadcrumbs])
-						<div id="article_holder">
-							<h1 class="page_title">{{$article->title}}</h1>
-							<div class="story_stamp">
-                            	@if(isset($setting["VIVVO_ARTICLE_SHOW_AUTHOR"]) && $setting["VIVVO_ARTICLE_SHOW_AUTHOR"])
-                                    @if(isset($setting["VIVVO_ARTICLE_SHOW_AUTHOR_INFO"]) && $setting["VIVVO_ARTICLE_SHOW_AUTHOR_INFO"])
-										{{Config::get("site.lang.LNG_AUTHOR_BY")}} <span class="story_author"><a href="javascript:;">{{$article->author}}</a></span>
-                                    @else
-										 {{Config::get("site.lang.LNG_AUTHOR_BY")}} <span class="story_author">{{$article->author}}</span>
-									@endif
-                                @endif
-                                @if(isset($setting["VIVVO_ARTICLE_SHOW_DATE"]) && $setting["VIVVO_ARTICLE_SHOW_DATE"])
-									<span class="story_date">{{\App\Helper\Common::pretty_date($article->created)}}</span>
-								@endif
-							</div>
-							@include("frontend.desktop.box.font_size",[$article,$fileRepo])
-							<div id="article_columns">
-								<div id="article_column_right">
-									<div class="article_tools" >
-										@include("frontend.desktop.box.latest_news_art_sw",[$latestNewsArtSw])
-										<div class="headline_banner">
-											@include("frontend.desktop.adv.right_article_160_600")
-										</div>
-									</div>
-								</div>
-								<div id="article_column_center">
-									<div id="article_body">
-                                        @if($article->image)
-											<div class="image" style="width:{{$setting["VIVVO_ARTICLE_MEDIUM_IMAGE_WIDTH"]}}px;">
-												<img src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" width="440" height="300" alt="{{$article->image_caption?$article->image_caption:$article->title}}" />
-												<span class="image_caption">{{$article->image_caption?$article->image_caption:""}}</span>
-											</div>
-											<div style="clear:both;">&nbsp;</div>
-										@endif
-										@if($article->abstract)
-											<p class="article_abstract">{{$article->abstract}}</p>
-										@endif
-										<div id="bodystr" class="bodystr">
-										<?php 
-										$modstring = $article->body;
-										if($article->enabled_videojs){
-											
-										$modstring =  str_replace('<iframe','<div class="fwparent"><iframe',$modstring); 
-										$modstring =  str_replace('</iframe>','</iframe></div>',$modstring); 
-										}
-										echo $modstring;
-										?>
-										</div>
-                                        @if(count($galleries) > 0)
-										    @include("frontend.desktop.box.plugin_image_gallery_lightbox",[$galleries,$article,$fileRepo,$setting])
+
+    <!-- Hero section Start -->
+    <section class="hero-sec mt-3">
+        <div class="container-body">
+            <div class="row">
+                <div class="col-md-2 pe-0">
+                    <div class="hero-sec-adds-1">
+                        <h3>Adds 1</h3>
+                    </div>
+                </div>
+                <div class="col-md-8 px-0">
+                    <div class="hero-sec-adds-2">
+                        <h3>Adds 2</h3>
+                    </div>
+                    <div class=" hero-sec-button mt-3 d-flex" style="gap: 10px;">
+                        <div class="order-2 order-lg-1">
+                            <a href="#"><button>العلامات</button></a>
+                            <a href="#"><button>العلامات</button></a>
+                            <a href="#"><button>العلامات</button></a>
+                            <a href="#"><button>العلامات</button></a>
+                            <a href="#"><button>العلامات</button></a>
+
+                        </div>
+                        <h5 class="order-1 order-lg-2" style="color: #C2111E;"> :الكلمات الشعبية</h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 mt-3">
+                            <div class="hero-sec-adds-4">
+                                <h3>Adds 4</h3>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 mt-3">
+                            <div class="hero-swiper">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                    class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+										@if($article->image)
+											<img class="img-fluid" src="{{$article->image}}" alt="{{$article->image_caption?$article->image_caption:$article->title}}"/>
+											<p>{{$article->image_caption ?? $article->title }}</p>
                                         @endif
-                                        @if(count($attachments) > 0)
-										    @include("frontend.desktop.box.plugin_multiple_attachments",[$attachments,$article,$fileRepo,$setting])
-                                        @endif
-									</div>
-								</div>
-							</div>
-							@include("frontend.desktop.box.social_facebook",$article)
-							@include("frontend.desktop.box.article_social_bookmarks",$article)
-							<div class="headline_banner">
-								@include("frontend.desktop.adv.article_bottom")
-								@include("frontend.desktop.adv.article_bottom_2")
-							</div>
-                            @if($article->link)
-                                <p><a class="visit" href="{{$article->link}}">{{Config::get("site.lang.LNG_FULL_STORY")}} <img src="{{$fileRepo->getDesktopUrl("img/external.png")}}" alt="{{Config::get("site.lang.LNG_VISIT_WEBSITE")}}" /></a></p>
-                            @endif
-							@if($article->show_comment)
-								@include("frontend.desktop.box.comments",[$comments,$article,$fileRepo,$setting,$commentPages,"security"=>$article->security,$isAdmin])
-							@endif
-						</div>
-					</div>
-				</div>
-				<div id="dynamic_box_right">
-					<div id="box_right_holder">
-						<div class="headline_banner">@include("frontend.desktop.adv.left_banner_1")</div>
-						<div class="headline_banner">@include("frontend.desktop.adv.left_banner_article_2")</div>
-						@include("frontend.desktop.box.news_l1_a",[$article,$newL1A,$setting,$fileRepo])
-						@include("frontend.desktop.box.popular_box",[$fileRepo,$popularBox])
-                        @include("frontend.desktop.box.category_related",[$article,$categoryRelated])
-						@include("frontend.desktop.box.news_l2_a",[$article,$newL2A,$setting,$fileRepo])
-                        @include("frontend.desktop.box.related_news",$relatedNews)
-						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fakhbaronacom%2F&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-						<div class="headline_banner">@include("frontend.desktop.adv.left_banner_3")</div>
-					</div>
-				</div>
-			</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------------------------- Newspaper-section Start  --------------------------------->
+                    <div class="newspaper-sec">
+                        <!---------------------------------- section start  آخر الأخبار-------------------------------->
+                        <div class="newspaper-1 mt-3">
+                            <div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 mt-3 col-lg-3 mt-3">
+                                        <div class="main-box">
+                                            <img class="img-fluid" src="./images/newpaper-1.png" alt="">
+                                            <div class="main-box-text">
+                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
+                                            </div>
+                                        </div>
+                                        <div class="main-box mt-3">
+                                            <img class="img-fluid" src="./images/detail-img-1.png" alt="">
+                                            <div class="main-box-text">
+                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-9 mt-3">
+                                        <div class="main-box">
+                                            <div class="detail-heading">
+                                                <h4>{{ $article->title }}</h4>
+                                                <p>وزير الخارجية البريطاني الجديد: سنواصل تقديم الدعم المعنوي
+                                                    والدبلوماسي والاقتصادي، لكن قبل كل شيء، الدعم العسكري الذي تحتاجون
+                                                    إليه.. مهما طال الوقت
+                                                    <br><br>
+
+                                                    التقى وزير الخارجية البريطاني المعيّن حديثاً ديفيد كاميرون، الرئيس
+                                                    الأوكراني فولوديمير زيلينسكي لإجراء محادثات في مجال الدفاع خلال
+                                                    زيارة لأوكرانيا لم يعلن عنها مسبقاً، وفق ما أعلنت الرئاسة
+                                                    الأوكرانية، اليوم الخميس.
+                                                    <br><br>
+                                                    وقال زيلينسكي في بيان على الشبكات الاجتماعية مرفق بصور تظهره مع
+                                                    كاميرون: "أسلحة لجبهات القتال وتعزيز منظومات الدفاع الجوي وحماية
+                                                    شعبنا والبنى التحتية الحيوية. أنا ممتن للمملكة المتحدة على دعمها".
+                                                    <br><br>
+                                                    وهذه الزيارة الأولى لكاميرون كوزير لخارجية المملكة المتحدة التي كانت
+                                                    حليفاً عسكرياً وسياسياً لأوكرانيا منذ اندلاع الحرب مع روسيا.
+                                                    <br><br>
+                                                    التقى وزير الخارجية البريطاني المعيّن حديثاً ديفيد كاميرون، الرئيس
+                                                    الأوكراني فولوديمير زيلينسكي لإجراء محادثات في مجال الدفاع خلال
+                                                    زيارة لأوكرانيا لم يعلن عنها مسبقاً، وفق ما أعلنت الرئاسة
+                                                    الأوكرانية، اليوم الخميس.
+                                                    <br><br>
+                                                    وقال زيلينسكي في بيان على الشبكات الاجتماعية مرفق بصور تظهره مع
+                                                    كاميرون: "أسلحة لجبهات القتال وتعزيز منظومات الدفاع الجوي وحماية
+                                                    شعبنا والبنى التحتية الحيوية. أنا ممتن للمملكة المتحدة على دعمها".
+
+
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!---------------------------------- section End  آخر الأخبار---------------------------------->
+
+                        <!-- adds section -->
+                        <div class="adds-5 mb-3 mt-3">
+                            <h3>Adds 5</h3>
+                        </div>
+
+
+
+                        <div class="newspaper-1 mt-3">
+                            <div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 mt-3 col-lg-3 mt-3">
+                                        <div class="main-box">
+                                            <img class="img-fluid" src="./images/akhirul-akhbar-5.png" alt="">
+                                            <div class="main-box-text">
+                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
+                                            </div>
+                                        </div>
+                                        <div class="main-box mt-3">
+                                            <img class="img-fluid" src="./images/akhirul-akhbar-9.png" alt="">
+                                            <div class="main-box-text">
+                                                <p>الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 mt-3 col-lg-9 mt-3">
+                                        <div class="main-box">
+                                            <div class="detail-heading">
+                                                <p>وزير الخارجية البريطاني الجديد: سنواصل تقديم الدعم المعنوي
+                                                    والدبلوماسي والاقتصادي، لكن قبل كل شيء، الدعم العسكري الذي تحتاجون
+                                                    إليه.. مهما طال الوقت
+                                                    <br><br>
+
+                                                    التقى وزير الخارجية البريطاني المعيّن حديثاً ديفيد كاميرون، الرئيس
+                                                    الأوكراني فولوديمير زيلينسكي لإجراء محادثات في مجال الدفاع خلال
+                                                    زيارة لأوكرانيا لم يعلن عنها مسبقاً، وفق ما أعلنت الرئاسة
+                                                    الأوكرانية، اليوم الخميس.
+                                                    <br><br>
+                                                    وقال زيلينسكي في بيان على الشبكات الاجتماعية مرفق بصور تظهره مع
+                                                    كاميرون: "أسلحة لجبهات القتال وتعزيز منظومات الدفاع الجوي وحماية
+                                                    شعبنا والبنى التحتية الحيوية. أنا ممتن للمملكة المتحدة على دعمها".
+                                                    <br><br>
+                                                    وهذه الزيارة الأولى لكاميرون كوزير لخارجية المملكة المتحدة التي كانت
+                                                    حليفاً عسكرياً وسياسياً لأوكرانيا منذ اندلاع الحرب مع روسيا.
+                                                    <br><br>
+                                                    التقى وزير الخارجية البريطاني المعيّن حديثاً ديفيد كاميرون، الرئيس
+                                                    الأوكراني فولوديمير زيلينسكي لإجراء محادثات في مجال الدفاع خلال
+                                                    زيارة لأوكرانيا لم يعلن عنها مسبقاً، وفق ما أعلنت الرئاسة
+                                                    الأوكرانية، اليوم الخميس.
+                                                    <br><br>
+                                                    وقال زيلينسكي في بيان على الشبكات الاجتماعية مرفق بصور تظهره مع
+                                                    كاميرون: "أسلحة لجبهات القتال وتعزيز منظومات الدفاع الجوي وحماية
+                                                    شعبنا والبنى التحتية الحيوية. أنا ممتن للمملكة المتحدة على دعمها".
+
+
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="newspaper-8" style="background: none;">
+                            <div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3 ">
+                                        <div class="akhirul-akhbar-sec-8">
+                                            <div class="heading">
+                                                <span>علوم وتكنولوجيا</span><svg xmlns="http://www.w3.org/2000/svg"
+                                                    width="10" height="47" viewBox="0 0 10 50"
+                                                    style="margin-bottom: 8px; margin-left: -5px;" fill="none">
+                                                    <rect y="25" width="10" height="25" fill="#2E4866" />
+                                                    <rect width="10" height="25" fill="#C2111E" />
+                                                </svg>
+                                            </div>
+                                            <!-- horizantal line -->
+                                            <div class="container">
+                                                <hr class="red-line">
+                                            </div>
+
+                                            <div class="main-div">
+                                                <div>
+                                                    <p>حذاري : تطبيق شهير يستنزف بطارية هاتفك</p>
+                                                    <p>حذاري : تطبيق شهير يستنزف بطارية هاتفك</p>
+                                                    <p>حذاري : تطبيق شهير يستنزف بطارية هاتفك</p>
+                                                    <p>حذاري : تطبيق شهير يستنزف بطارية هاتفك
+                                                    </p>
+                                                    <div class="mt-3">
+                                                        <a href="#">
+                                                            <button style="margin-right: 10px; margin-bottom: 10px;">
+                                                                اقرأ أكثر
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-3">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                <div class="main-box">
+                                                    <img class="img-fluid" src="./images/akhirul-akhbar-13.png" alt="">
+                                                    <div class="main-box-text">
+                                                        <p style="border-bottom: none;">الخطاب الملكي السامي بمناسبة
+                                                            الذكرى 48 للمسيرة الخضراء</p>
+                                                    </div>
+                                                </div>
+                                                <div class="main-box">
+                                                    <img class="img-fluid" src="./images/akhirul-akhbar-14.png" alt="">
+                                                    <div class="main-box-text">
+                                                        <p style="border-bottom: none;">الخطاب الملكي السامي بمناسبة
+                                                            الذكرى 48 للمسيرة الخضراء</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                <div class="main-box">
+                                                    <img class="img-fluid" src="./images/akhirul-akhbar-15.png" alt="">
+                                                    <div class="main-box-text">
+                                                        <p style="border-bottom: none;">الخطاب الملكي السامي بمناسبة
+                                                            الذكرى 48 للمسيرة الخضراء</p>
+                                                    </div>
+                                                </div>
+                                                <div class="main-box">
+                                                    <img class="img-fluid" src="./images/akhirul-akhbar-16.png" alt="">
+                                                    <div class="main-box-text">
+                                                        <p style="border-bottom: none;">الخطاب الملكي السامي بمناسبة
+                                                            الذكرى 48 للمسيرة الخضراء</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Search Section Start -->
+
+                        <section class="search-sec">
+                            <div class="container-body">
+                                <h4>اشترك في النشرة الإخبارية لدينا للحصول على آخر الأخبار</h4>
+                                <div class="row last-search align-items-center">
+                                    <div class="col-12 col-md-4 col-lg-3 mt-3">
+                                        <div class="btns">
+                                            <a href="#"><button>يشترك</button></a>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12 col-md-8 col-lg-9 mt-3">
+                                        <input class="form-control placeholder-css rtl me-2" type="search"
+                                            placeholder="أدخل بريدك الإلكتروني" aria-label="Search">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- contact form -->
+                        <section class="contact-us mt-3">
+                            <h3 class="text-center">أضف تعليقك</h3>
+                            <div class="row">
+                                <div class="col-md-6 mt-3">
+                                    <div>
+                                        <input class="form-control placeholder-css me-2" type="text"
+                                        placeholder="أدخل بريدك الإلكتروني">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <div>
+                                        <input class="form-control placeholder-css me-2" type="text"
+                                        placeholder="أدخل أسمك">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <div>
+                                        <div class="form-floating">
+                                            <textarea class="form-control textarea-placeholder" placeholder="اكتب تعليق" id="floatingTextarea" style="height: 150px"></textarea>
+                                          </div>
+                                    </div>
+                                    <div class="contact-us-btn text-center mt-4">
+
+                                        <a href="#">إرسال تعليق</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-md-2 ps-0">
+                    <div class="hero-sec-adds-3">
+                        <h3>Adds-3</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
 @stop
 @section("styles")
-    <link media="all" type="text/css" rel="stylesheet" href="{{ url(Config::get('app.cdn_url_css').'themes/akhbarona210/css/article_detail'.Config::get('app.css_extend').'.css') }}">
+    <!-- <link media="all" type="text/css" rel="stylesheet" href="{{ url(Config::get('app.cdn_url_css').'themes/akhbarona210/css/article_detail'.Config::get('app.css_extend').'.css') }}"> -->
     @if(count($galleries) > 0)
-        <link type="text/css" rel="stylesheet" href="{{ url(Config::get('app.cdn_url_css').'themes/akhbarona210/css/lightbox.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ url(Config::get('app.cdn_url_css').'themes/akhbarona210/css/plugin_image_gallery.css') }}">
+        <!-- <link type="text/css" rel="stylesheet" href="{{ url(Config::get('app.cdn_url_css').'themes/akhbarona210/css/lightbox.css') }}"> -->
+        <!-- <link type="text/css" rel="stylesheet" href="{{ url(Config::get('app.cdn_url_css').'themes/akhbarona210/css/plugin_image_gallery.css') }}"> -->
     @endif
 @stop
 @section("header_scripts")
-    <script src="{{ url(Config::get('app.cdn_url_css').'themes/akhbarona210/js/article.js?v=1.1') }}"></script>
+    <!-- <script src="{{ url(Config::get('app.cdn_url_css').'themes/akhbarona210/js/article.js?v=1.1') }}"></script> -->
 @stop
 @section("scripts")
     @if(Config::get("site.VIVVO_ANALYTICS_TRACKER_ID"))
