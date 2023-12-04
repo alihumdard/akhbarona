@@ -86,6 +86,7 @@ class CategoryController extends Controller
             }
         } else {
             if($defaultPage) {
+                // menu's categories ...
                 $canonical = route("frontend.category.index",[$category->sefriendly,$defaultPage]);
                 $alternate = route("mobile.frontend.category.index",[$category->sefriendly,$defaultPage]);
             } else {
@@ -126,7 +127,7 @@ class CategoryController extends Controller
                 unset($sportHeadlines);unset($columnCenterSport);unset($columnLeftSport);
                 break;
             default:
-                //dd($canonical);
+                // dd($canonical);
                 $arrData = $this->articleRepo->getListByCat($category->id,$page,$perPage);
                 $popularBox = $this->articleRepo->getList(["order_field"=>"today_read","order_by"=>"DESC","limit"=>6]);
                 $latestNewsSw = $this->articleRepo->getList(["order_field"=>"order_num","order_by"=>"DESC","limit"=>5,"category_id"=>[2,10,12,16,18]]);
