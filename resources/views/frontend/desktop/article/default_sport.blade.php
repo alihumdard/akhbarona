@@ -68,6 +68,7 @@
                                             <span class="image_caption">{{$article->image_caption?$article->image_caption:""}}</span>
                                         </div>
                                         <div style="clear:both;">&nbsp;</div>
+                                    
                                     @endif
                                     @if($article->abstract)
                                         <p class="article_abstract">{{$article->abstract}}</p>

@@ -111,7 +111,6 @@ $setting = \App\Models\Config::getAllValue();
             @php
                 $menu = $menus[$i];
             @endphp
-    
             <span @if($controllerCurrent == 'HomeController')
                     @if($actionCurrent == 'page' && strpos($menu->redirect,"advertising") !== false)
                         class="selected"

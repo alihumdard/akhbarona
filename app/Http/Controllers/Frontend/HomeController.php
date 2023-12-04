@@ -196,7 +196,6 @@ class HomeController extends Controller
             }
             unset($data);unset($fields);
             return redirect(route("frontend.contact"))->withSuccess($form->message);
-
         }
         return $this->page("contact",true);
     }
