@@ -17,8 +17,7 @@
                                         @foreach($newsL1 as $article)
                                         <div class="col-12 col-sm-12 col-md-6 col-lg-3 mt-3">
                                             @if($article->image)
-                                            <a href="{{Common::article_link($article)}}">
-                                                
+                                            <a href="{{Common::article_link($article)}}">      
                                                 <div class="video-box">
                                                     <div class="icon mb-3 mt-2">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
@@ -37,7 +36,6 @@
                                             @endif
                                         </div>
                                         @endforeach
-                                     
                                     </div>
                                 </div>
                             </div>
