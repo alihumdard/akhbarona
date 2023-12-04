@@ -1,18 +1,26 @@
 @if($total > 0)
-<div id="box_pagination">
+<nav id="box_pagination" aria-label="Page navigation example">
     @if($total > $perPage)
         <?php $numberPage = ceil($total/$perPage)?>
-        <span class="pagination">
+        <ul class="pagination">
             @if(($currentPage-10) > 0)
                 <?php
                     $routeParam["page"] = $currentPage-10;
-                ?>
-                <a href="{{Common::link($routeName,$routeParam)}}" class="page_groups"><img src="{{$fileRepo->getDesktopUrl("img/pagination_first.gif")}}" alt="first" /></a>
+                ?>                        
+                <li class="page-item">
+                    <a href="{{Common::link($routeName,$routeParam)}}" class="page-link pagi-active pagi-active-1" aria-label="Previous">
+                        <span aria-hidden="true"><</span>
+                    </a>
+                </li>
             @endif
 
             @if($currentPage > 1)
                 <?php $routeParam["page"] = $currentPage-1;?>
-                <a href="{{Common::link($routeName,$routeParam)}}" class="page_groups"><img src="{{$fileRepo->getDesktopUrl("img/pagination_back.gif")}}" alt="back" /></a>
+                <li class="page-item">
+                    <a href="{{Common::link($routeName,$routeParam)}}" class="page-link pagi-active pagi-active-1" aria-label="Previous">
+                        <span aria-hidden="true"><</span>
+                    </a>
+                </li>
             @endif
             <?php
                 $rangePage = 10;
@@ -34,22 +42,30 @@
             @for($i=$startPage; $i<= $endPage;$i++)
                 <?php $routeParam["page"] = $i;?>
                 @if($i != $currentPage)
-                    <a href="{{Common::link($routeName,$routeParam)}}">{{$i}}</a>
+                <li class="page-item"><a class="page-link pagi-active" href="{{Common::link($routeName,$routeParam)}}">{{$i}}</a></li>
                 @else
-                    <span class="page_active">{{$i}}</span>
+                <li class="page-item">{{$i}}</li>
                 @endif
             @endfor
 
             @if($currentPage < $numberPage )
                 <?php $routeParam["page"] = $currentPage+1;?>
-                <a href="{{Common::link($routeName,$routeParam)}}" class="page_groups"><img src="{{$fileRepo->getDesktopUrl("img/pagination_next.gif")}}" alt="next" /></a>
+                <li class="page-item">
+                    <a href="{{Common::link($routeName,$routeParam)}}" class="page-link pagi-active pagi-active-1" aria-label="Previous">
+                        <span aria-hidden="true">></span>
+                    </a>
+                </li>
             @endif
 
             @if(($currentPage+10) < $numberPage)
                 <?php $routeParam["page"] = $currentPage+10;?>
-                <a href="{{Common::link($routeName,$routeParam)}}" class="page_groups"><img src="{{$fileRepo->getDesktopUrl("img/pagination_last.gif")}}" alt="last" /></a>
+                <li class="page-item">
+                    <a href="{{Common::link($routeName,$routeParam)}}" class="page-link pagi-active pagi-active-1" aria-label="Previous">
+                        <span aria-hidden="true">></span>
+                    </a>
+                </li>
             @endif
-        </span>
+        </ul>
     @endif
 
     {{Config::get("site.lang.LNG_TOTAL")}}:
@@ -63,5 +79,5 @@
     <span class="pagination_total">
         {{($perPage*($currentPage-1)+1).' - '.(($perPage*$currentPage) > $total?$total:($perPage*$currentPage))}}
     </span>
-</div>
+</nav>
 @endif
