@@ -62,8 +62,7 @@
 								<div id="bodystr" class="bodystr">
 										<?php 
 										$modstring = $article->body;
-										if($article->enabled_videojs){
-											
+										if($article->enabled_videojs){	
 										$modstring =  str_replace('<iframe','<div class="fwparent"><iframe',$modstring); 
 										$modstring =  str_replace('</iframe>','</iframe></div>',$modstring); 
 										}
@@ -77,6 +76,9 @@
                                     @include("frontend.desktop.box.plugin_multiple_attachments",[$attachments,$article,$fileRepo,$setting])
                                 @endif
 							</div>
+
+
+                            
                             @include("frontend.desktop.box.social_facebook",$article)
                             @include("frontend.desktop.box.article_social_bookmarks",$article)
 							<div class="headline_banner">
