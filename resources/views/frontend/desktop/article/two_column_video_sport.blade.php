@@ -13,6 +13,7 @@
     <meta name="twitter:url" content="{{Common::article_link($article)}}"/>
     <meta name="twitter:title" content="{{$article->title}}"/>
     <meta name="twitter:description" content="{{$article->description?$article->description:($article->abstract?$article->abstract:(Common::subWords($article->body,25)?htmlentities(Common::subWords($article->body,25)):$article->title))}}"/>
+    
     <meta name="twitter:image" content="{{$metaImage}}"/>
 @stop
 @section("og_image")
@@ -24,6 +25,7 @@
     @if(isset($setting["VIVVO_ARTICLE_LARGE_IMAGE_HEIGHT"]))
         <meta property="og:image:height" content="{{$setting["VIVVO_ARTICLE_LARGE_IMAGE_HEIGHT"]}}"/>
     @endif
+
 @stop
 @section("header_menu")
     @include('frontend.desktop.box.header')

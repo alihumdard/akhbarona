@@ -1,43 +1,34 @@
 <div id="comment_form_holder">
-    <h4 class="title_comments_n">هل ترغب بالتعليق على الموضوع؟</h4>
-    <div class="border_title_comments_n"></div>
     <div id="comment_dump_container" class="result"> </div>
     <form method="post" id="comment_form" onsubmit="return updateComments();">
+        @csrf
         <input type="hidden" name="action" value="comment" />
         <input type="hidden" name="cmd" value="add" />
         <input type="hidden" name="article_id" value="{{$id}}" />
-        <div id="post-reply" class="box">
-            <div id="comment_right">
-                <div class="form_line">
-                    <label>الاسم: </label>
-                    <div class="formElement">
-                        <input name="author" maxlength="50" class="text default_fields" type="text" value="" required="required"/>
-                    </div>
-                </div>
-                <div class="form_line">
-                    <label>عنوان التعليق: </label>
-                    <div class="formElement">
-                        <input name="www" maxlength="100" class="text default_fields" type="text" value="" required="required" />
-                    </div>
-                </div>
-            </div>
-            <div id="comment_left" class="border_comments_n">
-                التعليقات المنشورة لا تعبر بالضرورة عن رأي الموقع<br /><br />
-                من شروط النشر: عدم الإساءة للكاتب أو للأشخاص أو للمقدسات
-            </div>
-            <div class="clearer"> </div>
-            <div class="form_line">
-                <label>{{Config::get("site.lang.LNG_ADD_COMMENTS")}}:</label>
-                <div class="formElement">
-                    <textarea required="required" minlength="30" maxlength="1000" class="add_comment default_fields" name="description" rows="7" cols="40" onfocus="this.value='';this.onfocus = null;"> </textarea>
-                </div>
-            </div>
-            <div class="form_line">
-                <label><!-- --></label>
-                <div class="formElement_sw">
-                    <input type="submit" class="button_sw" value="{{Config::get("site.lang.LNG_ADD_COMMENTS_BUTTON")}}" />
-                </div>
+        <h3>أضف تعليقك</h3>
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <div>
+                <input name="author" maxlength="50" class="form-control placeholder-css me-2" type="text" placeholder="أدخل بريدك الإلكتروني" required>
             </div>
         </div>
-    </form>
+        <div class="col-md-6 mt-3">
+            <div>
+                <input name="www" maxlength="100" class="form-control placeholder-css me-2" type="text" placeholder="أدخل اسمك" required>
+            </div>
+        </div>
+        <div class="col-md-12 mt-3">
+            <div>
+                <div class="form-floating">
+                    <textarea minlength="30" maxlength="1000" class="form-control textarea-placeholder" name="description" rows="7" cols="40" onfocus="this.value='';this.onfocus = null;" placeholder="اكتب تعليق" id="floatingTextarea" style="height: 150px" required></textarea>
+                </div>
+            </div>
+            <div class="contact-us-btn text-center mt-4">
+                <button type="submit">{{Config::get("site.lang.LNG_ADD_COMMENTS_BUTTON")}}</button>
+            </div>
+        </div>
+    </div>
+</form>
 </div>
+
+

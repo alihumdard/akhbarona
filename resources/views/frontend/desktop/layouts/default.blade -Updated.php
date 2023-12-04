@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml" lang="ar-MA" xml:lang="ar-MA">
 <head>
-
     <title>@yield('page-title')</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="generator" content="Akhbarona almaghrebia"/>

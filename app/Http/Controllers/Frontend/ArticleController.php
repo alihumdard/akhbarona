@@ -236,9 +236,9 @@ class ArticleController extends Controller
        abort(404);
     }
     function desktopComment(Request $request) {
-        if(!$request->ajax()) {
-            return "No Ajax!";
-        }
+        // if(!$request->ajax()) {
+        //     return "No Ajax!";
+        // }
         $this->_init();
         switch ($request->cmd) {
             case "proxy":

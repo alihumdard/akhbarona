@@ -29,7 +29,9 @@
 @include('frontend.desktop.box.header')
 @include("frontend.desktop.adv.headline_banner")
 @stop
+
 @section("content")
+
 <!-- Hero section Start -->
 <section class="hero-sec mt-3">
 <div class="container-body">
@@ -50,6 +52,7 @@
 					<a href="#"><button>العلامات</button></a>
 					<a href="#"><button>العلامات</button></a>
 					<a href="#"><button>العلامات</button></a>
+
 				</div>
 				<h5 class="order-1 order-lg-2" style="color: #C2111E;"> :الكلمات الشعبية</h5>
 			</div>
@@ -70,6 +73,7 @@
 									<p>{{$article->image_caption ?? $article->title }}</p>
 								@endif
 								</div>
+
 							</div>
 						</div>
 					</div>
@@ -78,7 +82,6 @@
 			<!-------------------------------------- Newspaper-section Start  --------------------------------->
 			<div class="newspaper-sec">
 				<!---------------------------------- section start  آخر الأخبار-------------------------------->
-			
 				<div class="newspaper-1 mt-3">
 					<div>
 						<div class="row">
@@ -100,40 +103,36 @@
 								<div class="main-box">
 									<div class="detail-heading">
 										<h4>{{ $article->title }}</h4>
-					
+					<p>وزير الخارجية البريطاني الجديد: سنواصل تقديم الدعم المعنوي
+						والدبلوماسي والاقتصادي، لكن قبل كل شيء، الدعم العسكري الذي تحتاجون
+						إليه.. مهما طال الوقت
+						<br><br>
+
+						التقى وزير الخارجية البريطاني المعيّن حديثاً ديفيد كاميرون، الرئيس
+						الأوكراني فولوديمير زيلينسكي لإجراء محادثات في مجال الدفاع خلال
+						زيارة لأوكرانيا لم يعلن عنها مسبقاً، وفق ما أعلنت الرئاسة
+						الأوكرانية، اليوم الخميس.
+						<br><br>
+						وقال زيلينسكي في بيان على الشبكات الاجتماعية مرفق بصور تظهره مع
+						كاميرون: "أسلحة لجبهات القتال وتعزيز منظومات الدفاع الجوي وحماية
+						شعبنا والبنى التحتية الحيوية. أنا ممتن للمملكة المتحدة على دعمها".
+						<br><br>
+						وهذه الزيارة الأولى لكاميرون كوزير لخارجية المملكة المتحدة التي كانت
+						حليفاً عسكرياً وسياسياً لأوكرانيا منذ اندلاع الحرب مع روسيا.
+						<br><br>
+						التقى وزير الخارجية البريطاني المعيّن حديثاً ديفيد كاميرون، الرئيس
+						الأوكراني فولوديمير زيلينسكي لإجراء محادثات في مجال الدفاع خلال
+						زيارة لأوكرانيا لم يعلن عنها مسبقاً، وفق ما أعلنت الرئاسة
+						الأوكرانية، اليوم الخميس.
+						<br><br>
+						وقال زيلينسكي في بيان على الشبكات الاجتماعية مرفق بصور تظهره مع
+						كاميرون: "أسلحة لجبهات القتال وتعزيز منظومات الدفاع الجوي وحماية
+						شعبنا والبنى التحتية الحيوية. أنا ممتن للمملكة المتحدة على دعمها".
+
+
+					</p>
 									</div>
-									<div id="article_column_center">
-										<div id="article_body">
-											@if($article->image)
-												<div class="image" style="width:{{$setting["VIVVO_ARTICLE_MEDIUM_IMAGE_WIDTH"]}}px;">
-													<img src="{{$fileRepo->getLarge($article->image,true,$article->md5_file)}}" width="440" height="300" alt="{{$article->image_caption?$article->image_caption:$article->title}}" />
-													<span class="image_caption">{{$article->image_caption?$article->image_caption:""}}</span>
-												</div>
-												<div style="clear:both;">&nbsp;</div>
-											@endif
-											@if($article->abstract)
-												<p class="article_abstract">{{$article->abstract}}</p>
-											@endif
-											<div id="bodystr" class="bodystr">
-											<?php 
-											$modstring = $article->body;
-											if($article->enabled_videojs){
-												
-											$modstring =  str_replace('<iframe','<div class="fwparent"><iframe',$modstring); 
-											$modstring =  str_replace('</iframe>','</iframe></div>',$modstring); 
-											}
-											echo $modstring;
-											?>
-										</div>
-											@if(count($galleries) > 0)
-												@include("frontend.desktop.box.plugin_image_gallery_lightbox",[$galleries,$article,$fileRepo,$setting])
-											@endif
-											@if(count($attachments) > 0)
-												@include("frontend.desktop.box.plugin_multiple_attachments",[$attachments,$article,$fileRepo,$setting])
-											@endif
-										</div>
-									</div>
-				
+
 								</div>
 							</div>
 						</div>
@@ -147,7 +146,7 @@
 				</div>
 
 
-                {{--  static section  below--}}
+
 				<div class="newspaper-1 mt-3">
 					<div>
 						<div class="row">
@@ -205,7 +204,7 @@
 				</div>
 
 
-                 {{--  static section below --}}
+
 				<div class="newspaper-8" style="background: none;">
 					<div>
 						<div class="row">
@@ -282,6 +281,7 @@
 						</div>
 					</div>
 				</div>
+
 				<!-- Search Section Start -->
 
 				<section class="search-sec">
@@ -292,6 +292,7 @@
 								<div class="btns">
 									<a href="#"><button>يشترك</button></a>
 								</div>
+
 							</div>
 							<div class="col-12 col-md-8 col-lg-9 mt-3">
 								<input class="form-control placeholder-css rtl me-2" type="search"
@@ -304,12 +305,35 @@
 
 				<!-- contact form -->
 				<section class="contact-us mt-3">
-					@if($article->show_comment)
-								@include("frontend.desktop.box.comments",[$comments,$article,$fileRepo,$setting,$commentPages,"security"=>$article->security,$isAdmin])
-				    @endif
-					
+					<h3 class="text-center">أضف تعليقك</h3>
+					<div class="row">
+						<div class="col-md-6 mt-3">
+							<div>
+								<input class="form-control placeholder-css me-2" type="text"
+								placeholder="أدخل بريدك الإلكتروني">
+							</div>
+						</div>
+						<div class="col-md-6 mt-3">
+							<div>
+								<input class="form-control placeholder-css me-2" type="text"
+								placeholder="أدخل أسمك">
+							</div>
+						</div>
+						<div class="col-md-12 mt-3">
+							<div>
+								<div class="form-floating">
+									<textarea class="form-control textarea-placeholder" placeholder="اكتب تعليق" id="floatingTextarea" style="height: 150px"></textarea>
+									</div>
+							</div>
+							<div class="contact-us-btn text-center mt-4">
+
+								<a href="#">إرسال تعليق</a>
+							</div>
+						</div>
+					</div>
 				</section>
 			</div>
+			{{--  thats all sara kam with in these sections hai just enha dynamic krna hai nothing else  --}}
 		</div>
 		<div class="col-md-2 ps-0">
 			<div class="hero-sec-adds-3">
