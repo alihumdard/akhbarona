@@ -1,0 +1,1833 @@
+/* fonts */
+@font-face {
+    font-family: Helvetica Rounded !important;
+    src: url(./Helvetica-Font/helvetica-rounded-bold-5871d05ead8de.otf);
+    font-weight: 700;
+  }
+  
+  /* Globle classes */
+  .active {
+    border-bottom: 1px solid #000;
+    padding-bottom: 4px;
+  }
+  
+  .hero-sec-adds-1,
+  .hero-sec-adds-3 {
+    display: flex;
+    align-items: center;
+    height: 600px;
+    margin: auto;
+    justify-content: center;
+    background: #c2111e;
+  }
+  
+  .container-body {
+    margin: 0 40px;
+  }
+  
+  .hero-sec-adds-2 {
+    display: flex;
+    align-items: center;
+    height: 230px;
+    margin: auto;
+    justify-content: center;
+    background: #f2f2f2;
+  }
+  
+  .hero-sec-adds-4 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    background: #f2f2f2;
+  }
+  
+  .adds-5 {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    margin: auto;
+    justify-content: center;
+    background: #f2f2f2;
+  }
+  
+  .red-line {
+    height: 5px !important;
+    background-color: #2e4866;
+    opacity: 1 !important;
+    margin: 0 !important;
+  }
+  
+  .red-line::before {
+    content: "";
+    display: block;
+    background-color: #c2111e;
+    width: 15%;
+    height: 5px;
+    margin-left: auto;
+  }
+  
+  .heading {
+    text-align: right;
+  }
+  
+  .newspaper-1 p,
+  .newspaper-4 p {
+    margin-bottom: 0;
+    margin-top: 8px;
+    color: #000;
+    text-align: right;
+    /* font-family: Helvetica; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 24px */
+  }
+  
+  
+  
+  /* .newspaper-1 .main-box-text .text-desc::after {
+    content: '...';
+    display: inline-block;
+  } */
+  
+  .down-dots {
+    margin-left: 15px;
+  }
+  
+  /* topbar */
+  .topbar {
+    background: linear-gradient(180deg, #2e4866 50%, #001022 133.39%);
+    padding: 10px 0 13px 0;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  .nav .topbar .topbar-content {
+    justify-content: space-between;
+    /* align-items: center; */
+  }
+  
+  .topbar .logo {
+    margin-top: 4px;
+    text-align: center;
+  }
+  
+  .topbar .top-links {
+    margin-top: 13px;
+    margin-right: -7px;
+  }
+  
+  .topbar .top-links a {
+    margin-right: 5px;
+  }
+  
+  .navbar-light .navbar-toggler {
+    border: none;
+    padding: 5px 0 !important;
+  }
+  
+  .topbar .navbar-menu a {
+    color: #fff !important;
+    text-decoration: none;
+  }
+  
+  /* navigarion-desktop */
+  .navigarion-desktop {
+    padding: 10px 0;
+    background: var(--color);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .navigarion-desktop a {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  
+  /* Hero Section start */
+  
+  .hero-sec h3 {
+    padding-top: 13px;
+  }
+  
+  .hero-sec .hero-sec-button {
+    text-align: center;
+    background: #ecf1f8;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px 0;
+  }
+  
+  .hero-sec-button button {
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 61px;
+    background: linear-gradient(0deg,
+        #2e4866 0%,
+        #5e7189 63.09%,
+        #96a3b2 100.94%,
+        #c7ced6 127.49%,
+        #fff 127.5%);
+    margin: 10px 3px;
+    border: none;
+    /* padding: 7px 36px; */
+  }
+  
+  .hero-sec .hero-sec-button a {
+    color: #fff;
+    text-decoration: none;
+    /* font-family: Helvetica Rounded; */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  /* banner-news */
+  
+  .banner-news .child-1 {
+    border-bottom: 1px solid #D8D8D8;
+    width: 85%;
+    background: #E4473E;
+    color: white;
+    text-align: right;
+    padding: 8px;
+  }
+  
+  .banner-news .child-2 {
+    background: #000000;
+    color: white;
+    text-align: center;
+    width: 15%;
+    padding: 8px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+  }
+  
+  /* hero section swiper slider */
+  .hero-swiper .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hero-swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-swiper .swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-swiper .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .hero-swiper .mySwiper2 {
+    height: 80%;
+    width: 100%;
+  }
+  
+  .hero-swiper .mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    /* padding: 10px 0; */
+  }
+  
+  .hero-swiper .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    /* opacity: 0.4; */
+  }
+  
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+    border: 2px solid #c2111e;
+  }
+  
+  .mySwiper .swiper-slide-thumb-active::before {
+    background-color: rgba(0, 0, 0, 0.37);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .hero-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-swiper .swiper p {
+    position: absolute;
+    color: #fff;
+    bottom: 0px;
+    padding: 10px 22px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #FFF;
+    text-align: right;
+    font-family: DIN Next LT Arabic;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%;
+  }
+  
+  /* Newspaper Section styling */
+  
+  .swiper-slide .card .card-body p {
+    text-align: right;
+    margin-bottom: 0;
+  }
+  
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after,
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    content: " " !important;
+  }
+  
+  .newspaperSwipper .swiper-button-next,
+  .newspaperSwipper .swiper-button-prev {
+    position: static;
+  }
+  
+  .newspaperSwipper .swiper-button-next .img-arrow,
+  .newspaperSwipper .swiper-button-prev .img-arrow {
+    height: auto;
+    max-width: 36px;
+  }
+  
+  .newspaperSwipper .swiper-pagination {
+    position: static;
+    width: auto !important;
+    margin: 0 15px 25px 17px;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: black !important;
+  }
+  
+  .hero-swiper
+  
+  /**************************** newspaper-1 styling Start ******************************/
+  .newspaper-1 {
+    text-align: right;
+  }
+  
+  .newspaper-1 .main-box img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .newspaper-sec .heading span {
+    padding: 10px 15px;
+    background: #f5f8f9;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  
+  .banner-heading {
+    position: absolute;
+    right: 20px;
+    bottom: 90px;
+    color: white;
+    text-align: right;
+    font-family: DIN Next LT Arabic;
+    font-size: 20px;
+    font-style: normal;
+    padding: 0 20px;
+    font-weight: 900;
+    border-radius: 10px;
+    background: rgba(141, 198, 63, 0.80);
+    line-height: 30px;
+  }
+  
+  /**************************** newspaper-1 styling End ******************************/
+  
+  /**************************** newspaper-2 styling start *****************************/
+  .newspaper-2 {
+    text-align: center;
+    background: #f5f8f9;
+    padding: 15px 10px;
+  }
+  
+  .newspaper-2 .video-box-1 {
+    background: linear-gradient(0deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.51) 61.91%,
+        rgba(0, 0, 0, 0) 100%),
+      url(./images/video-bg-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 5px 10px 5px;
+  }
+  
+  .newspaper-2 .video-box-2 {
+    background: linear-gradient(0deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.51) 61.91%,
+        rgba(0, 0, 0, 0) 100%),
+      url(./images/video-bg-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 5px 10px 5px;
+  }
+  
+  .newspaper-2 .video-box-3 {
+    background: linear-gradient(0deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.51) 61.91%,
+        rgba(0, 0, 0, 0) 100%),
+      url(./images/video-bg-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 5px 10px 5px;
+  }
+  
+  .newspaper-2 .video-box-4 {
+    background: linear-gradient(0deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.51) 61.91%,
+        rgba(0, 0, 0, 0) 100%),
+      url(./images/video-bg-4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 5px 10px 5px;
+  }
+  
+  .newspaper-2 .video-box-5 {
+    background: linear-gradient(0deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.51) 61.91%,
+        rgba(0, 0, 0, 0) 100%),
+      url(./images/video-bg-5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 5px 10px 5px;
+  }
+  
+  .newspaper-2 .video-box-6 {
+    background: linear-gradient(0deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.51) 61.91%,
+        rgba(0, 0, 0, 0) 100%),
+      url(./images/video-bg-6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 5px 10px 5px;
+  }
+  
+  .newspaper-2 .video-box-7 {
+    background: linear-gradient(0deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.51) 61.91%,
+        rgba(0, 0, 0, 0) 100%),
+      url(./images/video-bg-7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 5px 10px 5px;
+  }
+  
+  .newspaper-2 .video-box-8 {
+    background: linear-gradient(0deg,
+        #000 0%,
+        rgba(0, 0, 0, 0.51) 61.91%,
+        rgba(0, 0, 0, 0) 100%),
+      url(./images/video-bg-8.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 5px 10px 5px;
+  }
+  
+  
+  .newspaper-2 a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /**************************** newspaper-2 styling End ******************************/
+  
+  /**************************** newspaper-3 styling start *****************************/
+  
+  .newspaper-3 .news-main-box {
+    background: #000;
+  }
+  
+  .newspaper-3 .news-main-box img {
+    height: 100%;
+  }
+  
+  .newspaper-3 .news-main-box p {
+    margin-bottom: 0;
+    color: #fff;
+    text-align: right;
+    /* font-family: Helvetica Rounded; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    padding: 15px 6px 10px 6px;
+  }
+  
+  .newspaper-5 .news-main-div {
+    border-radius: 44.5px;
+    background: #000;
+  }
+  
+  .newspaper-4 .main-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* newspaper-slide Section Styling Start */
+  .newspaper-slider {
+    padding: 10px 15px;
+    background: #f9f9f9;
+  }
+  
+  /****************************** Newspaper-5-6 Section Start  *************************************/
+  .newspaper-5 p {
+    margin-bottom: 0;
+    color: #000;
+    text-align: right !important;
+    /* font-family: Helvetica Rounded; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    padding: 10px;
+    margin-top: 15px;
+  }
+  
+  .newspaper-5 .main-box {
+    border: 0.5px solid #d0d0d0;
+    background: #fff;
+  }
+  
+  
+  
+  .newspaper-6 p {
+    margin-bottom: 0;
+    color: #000;
+    text-align: right !important;
+    /* font-family: Helvetica Rounded; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    padding: 10px;
+  }
+  
+  .newspaper-6 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /****************************** Newspaper-5-6 Section End  *************************************/
+  
+  /****************************** Newspaper-7 Section Start  *************************************/
+  .newspaper-7 p {
+    margin-bottom: 0;
+    color: #000;
+    text-align: right !important;
+    /* font-family: Helvetica Rounded; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    padding: 10px;
+  }
+  
+  .newspaper-7 .main-box img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /****************************** Newspaper-7 Section End  *************************************/
+  
+  /****************************** Newspaper-8 Section Start  ************************************/
+  .newspaper-8 p {
+    color: #000;
+    text-align: right !important;
+    /* font-family: Helvetica Rounded; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    border-bottom: 1px solid #d0d0d0;
+    padding: 10px 10px;
+    margin: 0;
+  }
+  
+  .newspaper-8 .main-div {
+    border: 0.5px solid #d0d0d0;
+    background: #f9f9f9;
+    text-align: end;
+  }
+  
+  button {
+    padding: 8px 30px;
+    /* font-family: Helvetica Rounded; */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 61px;
+    background: #2e3641;
+    border: none;
+    /* margin: 0 15px 15px 0; */
+  }
+  
+  a button {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .newspaper-8 {
+    padding: 10px 15px;
+    background: #f9f9f9;
+  }
+  
+  /****************************** Newspaper-8 Section End  ************************************/
+  
+  /****************************** Newspaper-9 Section End  *************************************/
+  
+  /****************************** Newspaper-9 Section Start  *************************************/
+  .newspaper-9 .main-div {
+    text-align: end;
+  }
+  
+  .newspaper-9 p {
+    color: #000;
+    text-align: right !important;
+    /* font-family: Helvetica Rounded; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    padding: 15px 10px;
+    margin: 0;
+  }
+  
+  .newspaper-9 {
+    background: #f5f8f9;
+    padding: 10px 15px;
+  }
+  
+  /****************************** Newspaper-9 Section End  *************************************/
+  
+  /****************************** Newspaper-10 Section Start  *************************************/
+  .newspaper-10 .main-sec {
+    background: #f5f8f9;
+  }
+  
+  .newspaper-10 p {
+    color: #000;
+    text-align: right !important;
+    /* font-family: Helvetica Rounded; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    padding: 15px 10px;
+    margin: 0;
+  }
+  
+  /****************************** Newspaper-10 Section End  *************************************/
+  
+  /****************************** footer section Styling Start  **********************************/
+  .footer-sec {
+    padding: 20px 0;
+    background: #2e4866;
+    color: #fff;
+  }
+  
+  .footer-sec a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-sec li {
+    padding: 3px 0;
+  }
+  
+  .footer-sec h4 {
+    text-align: end;
+    margin-right: 20px;
+  }
+  
+  .footer-sec .footer-social-links {
+    text-align: center;
+  }
+  
+  .footer-sec .footer-social-links a {
+    margin-right: 8px;
+    margin-top: 15px;
+  }
+  
+  .footer-sec .footer-social-links img {
+    margin-top: 15px;
+  }
+  
+  .footer-sec .contact-btn {
+    padding-left: 25px;
+  }
+  
+  .footer-sec .contact-btn img {
+    border-radius: 7px;
+  }
+  
+  .footer-sec .contact-btn h5 {
+    margin-left: 40px;
+  }
+  
+  .copyright {
+    border-top: 1px dashed #fff;
+    border-bottom: 1px dashed #fff;
+    padding: 15px 0;
+  }
+  
+  /****************************** footer section Styling End  ******************************************/
+  
+  
+  /******************************|-------------------------------------------|***************************/
+  /******************************|                                           |***************************/
+  /******************************|      AKHIRUAL-AKBAR PAGE  STYLING         |***************************/
+  /******************************|                                           |***************************/
+  /******************************|-------------------------------------------|***************************/
+  
+  /************************************ akhirul-akhbar-sec-8 styling Start ****************************************/
+  .akhirul-akhbar-main-sec {
+    background: linear-gradient(rgba(46, 72, 102, 0.60), rgba(46, 72, 102, 0.60)), url(./images/akhirul-akhbar-main-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 263.092px;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+  }
+  
+  
+  
+  .akhirul-akhbar-sec-8 {
+    background-color: #F2F2F2;
+  }
+  
+  .akhirul-akhbar-sec-8 .main-div {
+    border: none;
+    background: none;
+  }
+  
+  .main-box img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .akhirul-akhbar-sec-8 .main-div p {
+    color: #000;
+    text-align: right !important;
+    /* font-family: Helvetica Rounded; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    border-bottom: 1px solid #d0d0d0;
+    padding: 20px 15px;
+    margin: 0;
+  }
+  
+  .akhirul-akhbar-sec-8 .main-box p {
+    border-bottom: none;
+  }
+  
+  .paginations .pagination {
+    justify-content: end;
+  }
+  
+  .paginations .pagination li {
+    margin: 0 5px;
+  }
+  
+  .paginations .pagination li a {
+    font-weight: bold;
+    color: black;
+  }
+  
+  .page-link {
+    border: 1px solid #C2111E !important;
+    padding: 0px 7px !important;
+  }
+  
+  .pagi-active {
+    color: #C2111E !important;
+  }
+  
+  .pagi-active-1 {
+    background-color: #C2111E !important;
+    color: white !important;
+  }
+  
+  .news-links {
+    text-decoration: none;
+  }
+  
+  /* akhirul-akhbar-page update styling */
+  .akhirul-akhbar-hero-sec p{
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+  .akhirul-akhbar-image-sec{
+    width: 250px;
+    height: 130px;
+    margin-left: 20px;
+  }
+  .akhirul-akhbar-image-sec img{
+    width: 100%;
+    height: 100%;
+  } 
+  
+  .akhirul-akhbar-hero-sec{
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 20px;
+    text-align: right;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /****************************** Detail Page Styling Start  ***************************/
+  
+  .banner-dates span {
+    color: #606060;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 27px */
+  }
+  
+  .detail-social-links a{
+    margin: 10px  15px ;
+    margin-right: 22px;
+  }
+  .detail-social-links{
+    padding: 15px 0;
+    background-color: #F9F9F9;
+  }
+  
+  .detail-heading {
+    text-align: end;
+  }
+  
+  .detail-heading p {
+    color: #656565;
+    text-align: right;
+    font-family: Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 18px */
+  }
+  
+  .detail-pages-btn {
+    justify-content: end;
+  }
+  
+  .detail-pages-btn button {
+    border-radius: 5px;
+    background: #EEE;
+    color: #4E4E4E;
+    text-align: right;
+    margin-left: 10px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 10px;
+  }
+  
+  
+  
+  /* Search section start */
+  .search-sec {
+    text-align: -webkit-center;
+    background: #2E3641;
+    padding: 30px 35px 30px 0;
+    color: white;
+  }
+  
+  .search-sec button {
+    background: #C2111E;
+    color: white;
+    padding: 8px 46px;
+    border-radius: 60px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .search-sec .form-control {
+    border-radius: 25px;
+    background: white;
+    text-align: right !important;
+    padding: 8px;
+  }
+  
+  .search-sec .row .btns {
+    text-align: end;
+  }
+  
+  .placeholder-css::placeholder {
+    /* text-align: right; */
+    color: #656565 !important;
+  }
+  
+  .form-control.textarea-placeholder::placeholder {
+    color: #656565;
+  }
+  
+  
+  
+  /******************************|-------------------------------------------|***************************/
+  /******************************|                                           |***************************/
+  /******************************|            SPORTS PAGE  STYLING           |***************************/
+  /******************************|                                           |***************************/
+  /******************************|-------------------------------------------|***************************/
+  
+  /************************************ akhirul-akhbar-sec-8 styling Start ****************************************/
+  
+  .sports-banner-heading {
+    background: #B55918;
+    color: white;
+    text-align: end;
+    padding: 2px 12px;
+  }
+  
+  .newspaper-5 p {
+    margin-top: 0;
+  }
+  
+  .soprts-main-sec {
+    background: linear-gradient(rgba(46, 72, 102, 0.60), rgba(46, 72, 102, 0.60)), url(./images/spots-main-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 263.092px;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+  }
+  
+  
+  .nav-pills .nav-link {
+    color: #000 !important;
+    background-color: #F9F9F9 !important;
+    margin-top: 15px;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .sports-tabs-left .left-image-sec {
+    height: 87px;
+    width: 160px;
+  
+  }
+  
+  .sports-tabs-left .left-image-sec img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .sports-tabs-left .active {
+    border: none !important;
+  }
+  
+  .tab-content {
+    width: 100% !important;
+    height: 100%;
+  }
+  
+  .sprots-tabs-right {
+    position: relative;
+  }
+  
+  .sprots-tabs-right .tabs-right-content {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.70);
+    color: white;
+  }
+  
+  .sprots-tabs-right .right-image-sec {
+    height: 596px;
+    width: 100%;
+  }
+  
+  .sprots-tabs-right .right-image-sec img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .sports-tabs-left .tab-content .tab-pane p {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 21px */
+  }
+  
+  .sports-tabs-left .tabs-right-content-teblete {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.70);
+    color: white;
+  }
+  
+  .sports-tabs-left .tabs-right-content-teblete {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.70);
+    color: white;
+  }
+  
+  .tabs-right-content {
+    display: block !important;
+  }
+  
+  .sports-tabs-left .tabs-right-content-teblete {
+    display: none;
+  }
+  
+  .mobile-view-tabs .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.70);
+    color: white;
+    width: 100%;
+    left: 0;
+  }
+  
+  .mobile-view-tabs .active {
+    border: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* text trancate */
+  .text-desc {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    direction: rtl;
+  }
+  
+  
+  /* sports btn */
+  .sports-btn a {
+    text-decoration: none;
+    color: #2E4866;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 24px */
+  }
+  
+  /* *************************** soprts-corta-section styling start *************************************/
+  
+  .soprts-corta-sec {
+    background: #F9F9F9;
+    text-align: right;
+    padding: 30px 0;
+  }
+  
+  .soprts-corta-sec .corta-left-image-sec {
+    width: 100%;
+    height: 100px;
+  }
+  
+  .soprts-corta-sec .corta-left-image-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .soprts-corta-sec .corta-left-content {
+    padding: 0 15px;
+    color: #000;
+    /* text-align: right; */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 24px */
+  }
+  
+  .soprts-corta-sec .corta-right-image-sec {
+    width: 100%;
+    height: 225px;
+  }
+  
+  .soprts-corta-sec .corta-right-image-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  
+  .soprts-corta-sec .spotrs-utality-text p {
+    color: #656565;
+    text-align: right;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 21px */
+  }
+  
+  .soprts-corta-sec .corta-btn {
+    margin-top: 20px;
+  }
+  
+  .soprts-corta-sec .corta-btn a {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 8px 35px;
+    text-decoration: none;
+    border-radius: 61px;
+    background: #2E3641;
+  }
+  
+  .corta-right-full-sec {
+    padding-right: 25px;
+  }
+  
+  .spotrs-utality-text strong {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  .globle-text a {
+    color: #C2111E !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700 !important;
+    text-decoration: none;
+    line-height: normal;
+  }
+  
+  /* *************************** soprts-corta-section styling End *************************************/
+  
+  
+  
+  /************************ sports-shashta-section styling Start **********************************/
+  .sports-shashta-sec .shashta-start-image-sec {
+    width: 100%;
+    height: 120px;
+  }
+  
+  /* .sports-shashta-sec .main-sec {
+    border: 0.5px solid #D0D0D0;
+    background: #FFF;
+  } */
+  
+  .sports-shashta-sec .shashta-start-image-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .sports-shashta-sec .main-sec p {
+    color: #000;
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    padding: 15px;
+    margin-bottom: 0;
+  }
+  
+  .sports-shashta-sec .main-sec .down-image-sec {
+    width: 100%;
+    height: 133px;
+  }
+  
+  .sports-shashta-sec .main-sec .down-image-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .sports-shashta-sec .shashta-end-text {
+    text-align: right;
+    padding: 0 15px;
+  }
+  
+  .sports-shashta-sec .shashta-end-text p {
+    color: #656565;
+    font-size: 14px;
+    font-style: normal;
+    padding: 10px 0 22px 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 150%;
+    /* 21px */
+  }
+  
+  .sports-shashta-sec .shashta-end-text strong {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  .sports-shashta-sec .shashta-end-image-sec {
+    width: 100%;
+    height: 216px;
+  }
+  
+  .sports-shashta-sec .shashta-end-image-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /************************ sports-shashta-section styling End **********************************/
+  
+  
+  
+  
+  /* makalat-sec start */
+  .makalat-sec .makalt-image-sec {
+    width: 100%;
+    height: 90px;
+  }
+  
+  .makalat-sec .makalt-image-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .makalat-sec p {
+    color: #000;
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    padding: 10px 15px;
+    margin-bottom: 0;
+  }
+  
+  .malakat-main-sec {
+    background: #F5F8F9;
+  }
+  
+  /* makalat-sec End */
+  
+  /* Reyal-section Start */
+  
+  .reyal-sec .reyal-main-sec {
+    text-align: right;
+  }
+  
+  .reyal-sec .reyal-main-sec .reyal-image-sec {
+    width: 100%;
+    height: 130px;
+  }
+  
+  .reyal-sec .reyal-main-sec .reyal-image-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .reyal-sec .reyal-main-sec strong {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .reyal-sec .reyal-main-sec p {
+    color: #656565;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 18px */
+  }
+  
+  
+  
+  .newspaper-7 .newspaper-7-image-sec {
+    width: 100%;
+    height: 150px;
+  }
+  
+  .newspaper-7 .newspaper-7-image-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  .newspaper-5 .main-box .newspaper-5-image-sec {
+    height: 125px;
+    width: 100%;
+  }
+  
+  .newspaper-5 .main-box .newspaper-5-image-sec img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .newspaper-5 .newspaper-5-down-image-sec {
+    width: 200px;
+    height: 100px;
+  }
+  
+  .newspaper-5 .newspaper-5-down-image-sec img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  
+  .mobile-view-tabs {
+    display: none;
+  }
+  
+  .mobile-view-tabs .active {
+    border: 0 !important;
+    padding: 0 !;
+  
+  }
+  
+  /****************************** Media Queries for Mobile Size Start  **********************************/
+  @media (max-width: 767px) {
+    .topbar .navbar-menu a {
+      font-size: 12px !important;
+    }
+  
+    .hero-sec .swiper p {
+      padding: 15px;
+      font-size: 14px;
+    }
+  
+    .top-links,
+    .navigarion-desktop,
+    .hero-sec-adds-1,
+    .hero-sec-adds-3,
+    .hero-sec-adds-4 {
+      display: none;
+    }
+  
+    .newspaper-sec,
+    .newspaper-sec span,
+    .newspaper-sec p,
+    .newspaper-sec .main-box,
+    .newspaper-sec,
+    .footer-sec h4 {
+      text-align: center !important;
+    }
+  
+    .main-div {
+      text-align: center !important;
+    }
+  
+    .newspaper-3 .news-main-box {
+      flex-direction: column-reverse;
+      padding: 20px 0;
+    }
+  
+    .main-div button {
+      margin: 0 !important;
+      margin-bottom: 15px !important;
+    }
+  
+    .owl-theme .owl-dots,
+    .owl-theme .owl-nav {
+      text-align: center !important;
+    }
+  
+    .footer-sec .contact-btn {
+      padding-left: 0 !important;
+    }
+  
+    .down-dots {
+      justify-content: center !important;
+      margin-left: 0 !important;
+    }
+  
+    .newspaper-4 .main-div {
+      flex-direction: column-reverse;
+    }
+  
+    .search-sec .last-search {
+      flex-direction: column-reverse;
+      justify-content: center !important;
+    }
+  
+    .btns {
+      text-align: center !important;
+    }
+  
+    .search-sec .form-control {
+      margin-left: 0 !important;
+    }
+  
+    .paginations .pagination {
+      justify-content: center !important;
+    }
+  
+    .akhirul-akhbar-hero-sec {
+      flex-direction: column-reverse !important;
+      text-align: center !important;
+  }
+  
+    .akhirul-akhbar-image-sec {
+      width: 100% !important;
+      height: auto !important;
+      margin-bottom: 10px;
+      margin-left: 0 !important;
+  }
+  
+  
+    /********************************************* sport page media quaries ********************************************/
+    .banner-heading {
+      position: absolute;
+      right: 18px !important;
+      bottom: 50px !important;
+      color: white;
+      text-align: right;
+      font-family: DIN Next LT Arabic;
+      font-size: 16px !important;
+      font-style: normal;
+      padding: 0 15px !important;
+      font-weight: 900;
+      border-radius: 10px;
+      background: rgba(141, 198, 63, 0.80);
+      line-height: 26px !important;
+    }
+  
+    .sports-tabs-left {
+      display: none;
+    }
+  
+    .sports-tabs-left {
+      display: none;
+    }
+  
+    .mobile-view-tabs {
+      display: block !important;
+    }
+  
+    .soprts-corta-sec {
+      text-align: center !important;
+    }
+  
+    .sports-shashta-sec .shashta-end-text {
+      text-align: center !important;
+    }
+  
+    .spotrs-utality-text {
+      text-align: center !important;
+    }
+  
+    .sports-shashta-sec .main-sec p {
+      font-size: 14px !important;
+    }
+  
+    .mobile-view-tabs .carousel-caption {
+      text-align: center !important;
+      /* padding: 5px 10px !important; */
+    }
+  
+    .mobile-view-tabs .carousel-caption h5 {
+      font-size: 16px !important;
+    }
+  
+    .mobile-view-tabs .carousel-caption p {
+      font-size: 12px !important;
+    }
+  
+    .soprts-corta-sec .corta-btn {
+      margin-top: 30px !important;
+    }
+  
+  }
+  
+  
+  /* Contact us section styling Start  */
+  
+  
+  .contact-us-btn a {
+    border-radius: 61px;
+    background: #2E3641;
+    padding: 8px 30px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .contact-us .form-control {
+    padding: 15px 10px !important;
+    text-align: right;
+    border-radius: 5px;
+    border: 0.5px solid #D0D0D0;
+    background: #F9F9F9;
+  }
+  
+  .contact-us .form-control:focus {
+    box-shadow: none;
+  }
+  
+  .google-sec {
+    text-align: -webkit-right;
+  }
+  
+  .google-sec a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 24px */
+  }
+  
+  .google-btn {
+    border: 1px solid #DFDFDF;
+    background: #F6F6F6;
+    text-align: end;
+    padding: 8px 15px;
+    width: 50%;
+  }
+  
+  .malhoza-sec {
+    background: rgba(194, 17, 30, 0.10);
+    padding: 20px 0;
+  }
+  
+  
+  .malhoza-sec ul li::marker {
+    color: #C2111E;
+  }
+  
+  
+  .detail-page-last-sec .eye-sec {
+    background: #EDEDED;
+    color: #656565;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+  }
+  
+  .detail-page-last-sec .detail-main-sec{
+    border-bottom: 2px solid #DDD;
+    padding-bottom: 15px;
+  }
+  
+  .detail-page-last-sec .numbers span {
+    padding: 3px 12px;
+    border-radius: 50%;
+    border: 2px solid #C2111E;
+    color: #C2111E;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .detail-page-last-sec .numbers-1 span {
+    padding: 2px 14px;
+    border-radius: 50%;
+    border: 2px solid #C2111E;
+    color: #C2111E;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .detail-page-last-sec .numbers-10 span{
+    padding: 3px 8px;
+    border-radius: 50%;
+    border: 2px solid #C2111E;
+    color: #C2111E;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  
+  .detail-page-last-sec p {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .detail-page-last-sec .text {
+    color: #C2111E;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 18px */
+  }
+  
+  .mobile-view .detail-page-last-sec{
+    display: none;
+  }
+  
+  /****************************** Media Queries for Mobile Size End  **********************************/
+  
+  /****************************** Media Queries for Medium (Teblete) Size Start  ***********************/
+  @media (max-width: 992px) {
+  
+    /* .top-links{
+          display: none;
+      } */
+    .topbar .logo {
+      text-align: end !important;
+    }
+  
+    .newspaper-3 .news-main-box {
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
+  
+    .footer-sec,
+    .footer-sec h4 {
+      text-align: center !important;
+    }
+  
+    .footer-sec .contact-btn h5 {
+      margin-left: 0 !important;
+    }
+  
+    .newspaper-10 .main-sec {
+      padding: 20px 0;
+      flex-direction: column-reverse;
+    }
+  
+    .newspaper-3 .news-main-box {
+      border-radius: 15px !important;
+      padding: 10px !important;
+      text-align: center !important;
+      flex-direction: column-reverse;
+    }
+  
+    .navigarion-desktop {
+      display: none;
+    }
+  
+    .newspaper-5 p {
+      margin-top: 0 !important;
+    }
+  
+    .newspaper-6 .news-6-last-img {
+      text-align: center !important;
+    }
+  
+    .newspaper-9 p {
+      text-align: center !important;
+    }
+  
+    .newspaper-9 .main-div {
+      text-align: center !important;
+    }
+  
+    .search-sec .form-control {
+      margin-left: 12px;
+    }
+  
+    .search-sec {
+      padding: 30px 10px 30px 0 !important;
+    }
+  
+    .tabs-right-content {
+      display: none !important;
+    }
+  
+    .tabs-right-content-teblete {
+      display: block !important;
+    }
+  
+    .sprots-tabs-right .right-image-sec {
+      height: 290px !important;
+      width: 100%;
+    }
+  
+    .google-btn {
+      width: 100% !important;
+    }
+  
+    .detail-pages-btn {
+      text-align: center !important;
+    }
+  
+    .detail-page-last-sec{
+      display: none;
+    }
+    .mobile-view .detail-page-last-sec{
+      display: block !important;
+    }
+  
+  
+  
+  
+    /******************************* Makalat section media quaries  *****************************************************/
+  
+    .malakat-main-sec {
+      flex-direction: column-reverse;
+      text-align: center !important;
+      border: 0.5px solid #D0D0D0;
+    }
+  
+    .malakat-main-sec p {
+      text-align: center !important;
+    }
+  
+    .teblete-view {
+      display: none;
+    }
+  
+    .sports-tabs-left button p {
+      font-size: 14px !important;
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    /*************************************** SPORTS PAGE TEBLETE SIZE MEDIA QUARIES ***************************************/
+    .corta-right-full-sec {
+      padding-right: 0 !important;
+    }
+  
+    .spotrs-utality-text {
+      padding: 0 15px !important;
+    }
+  
+  
+  
+  
+  }
+  
+  /****************************** Media Queries for Medium (Teblete) Size End  ***********************/
+  
+  /****************************** Media Queries for Large (Desktop) Size Start  **********************/
+  
+  @media (min-width: 992px) and (max-width: 1240px) {
+    .newspaper-3 .news-main-box {
+      border-radius: 15px !important;
+      padding: 10px !important;
+      text-align: center !important;
+      flex-direction: column-reverse;
+    }
+  
+    .newspaper-5 p {
+      margin-top: 0 !important;
+    }
+  
+    .topbar .logo {
+      text-align: center !important;
+    }
+  
+    .newspaper-10 .main-sec {
+      padding: 20px 0;
+      flex-direction: column-reverse;
+    }
+  
+    .search-sec {
+      padding: 30px 0px 30px 0 !important;
+    }
+  
+    .newspaper-3 .news-main-box p {
+      text-align: center !important;
+    }
+  
+    /******************************* Makalat section media quaries  *****************************************************/
+  
+    .malakat-main-sec {
+      flex-direction: column-reverse;
+      text-align: center !important;
+      border: 0.5px solid #D0D0D0;
+    }
+  
+    .malakat-main-sec p {
+      text-align: center !important;
+    }
+  
+  
+  }
+  
+  /****************************** Media Queries for Large (Desktop) Size End  ***********************/
