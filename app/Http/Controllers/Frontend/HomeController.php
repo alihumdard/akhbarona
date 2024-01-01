@@ -78,8 +78,8 @@ class HomeController extends Controller
         $columnLeft = [
             "fileRepo" => $fileRepo,
             "setting" => $setting,
-            "newsL1" => $this->articleRepo->getList(["order_field" => (isset($setting["VIVVO_HOMEPAGE_ARTICLE_LIST_ORDER"]) ? $setting["VIVVO_HOMEPAGE_ARTICLE_LIST_ORDER"] : "order_num"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 32, "limit" => 12]), //شاشة أخبارنا
-            "newsL2" => $this->articleRepo->getList(["order_field" => (isset($setting["VIVVO_MODULES_TICKER_ORDER"]) ? $setting["VIVVO_MODULES_TICKER_ORDER"] : Config::get("app.default_order")), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 17, "limit" => (isset($setting["VIVVO_MODULES_TICKER_NUMBER"]) ? $setting["VIVVO_MODULES_TICKER_NUMBER"] : 10)]), //أقلام حرة
+            "newsL1" => $this->articleRepo->getList(["order_field" => (isset($setting["VIVVO_HOMEPAGE_ARTICLE_LIST_ORDER"]) ? $setting["VIVVO_HOMEPAGE_ARTICLE_LIST_ORDER"] : "order_num"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 32, "limit" => 8]), //شاشة أخبارنا
+            "newsL2" => $this->articleRepo->getList(["order_field" => (isset($setting["VIVVO_MODULES_TICKER_ORDER"]) ? $setting["VIVVO_MODULES_TICKER_ORDER"] : Config::get("app.default_order")), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 17, "limit" => 6]), //أقلام حرة
             "newsL3" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 31, "limit" => 1]), //داءات إنسانية
             "newsL4" => $this->articleRepo->getList(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 23, "limit" => 3]), //ركن المرأة
             "newsL8" => $this->articleRepo->getListWithBody(["order_field" => Config::get("app.default_order"), "not_tag" => "1,2", "order_by" => "DESC", "category_id" => 39, "limit" => 1]), //مباريات ووظائف

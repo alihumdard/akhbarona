@@ -1,5 +1,5 @@
 @include("frontend.desktop.adv.mega_970_homepage")
-<div id="content_sw">
+<!-- <div id="content_sw">
     <ul class="ticker">
         @foreach($arrTicker as $i=>$ticker)
             <li class="category" style="display: none">
@@ -16,4 +16,13 @@
         var tickers = document.querySelectorAll('ul.ticker');
         new vivvoTickerTyper(tickers[0]);
     </script>
+</div> -->
+
+<div class="banner-news d-flex  mt-3">
+    <div class="child-1">
+        <p class="mb-0">قرعة ثمن نهائي أبطال أوروبا تسفر عن مواجهات قوية</p>
+    </div>
+    <div class="child-2">
+        <span>آخر خبر</span>
+    </div>
 </div>

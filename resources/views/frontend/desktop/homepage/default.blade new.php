@@ -1,3 +1,5 @@
+
+    
 @extends("frontend.desktop.layouts.homepage")
 @section("page-title"){{$setting["VIVVO_WEBSITE_TITLE"]}}@stop
 @section("page-des"){{$setting["VIVVO_GENERAL_META_DESCRIPTION"]}}@stop
@@ -24,6 +26,8 @@
     @include("frontend.desktop.adv.headline_banner")
 @stop
 @section("content")
+    
+
     <!-- Hero section Start -->
     <section class="hero-sec mt-3">
         <div class="container-body">
@@ -39,8 +43,17 @@
                     </div>
                     
                     <!--______________________________ Hero section Buttons Start ______________________________________-->
-                    <!-- ticker  -->
-                    @include("frontend.desktop.box.ticker_typer_homepage",[$arrTicker])
+                    <div class=" hero-sec-button mt-3 d-flex" style="gap: 10px;">
+                        <div class="order-2 order-lg-1">
+                            <a href="#"><button>العلامات</button></a>
+                            <a href="#"><button>العلامات</button></a>
+                            <a href="#"><button>العلامات</button></a>
+                            <a href="#"><button>العلامات</button></a>
+                            <a href="#"><button>العلامات</button></a>
+
+                        </div>
+                        <h5 class="order-1 order-lg-2" style="color: #C2111E;"> :الكلمات الشعبية</h5>
+                    </div>
 
                         <!--______________________________ Hero section Buttons End ______________________________________-->
 
